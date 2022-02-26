@@ -1,8 +1,8 @@
 {
-  "name": "electron-react-typescript",
-  "author": "Diego Fernandes <diego.schell.f@gmail.com>",
-  "version": "2.0.0",
-  "description": "An Electron boilerplate including TypeScript, React, Jest and ESLint.",
+  "name": "kk-react",
+  "author": "苏佳彬 20182132025",
+  "version": "1.0.0",
+  "description": "毕业设计",
   "main": "./.webpack/main/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -65,9 +65,9 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "name": "Electron starter",
+        "name": "kk-react",
         "executableName": "electron-starter",
-        "icon": "assets/icon",
+        "icon": "assets/kok-s0s.icns",
         "extraResource": [
           "assets"
         ]
@@ -97,7 +97,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "Electron Starter"
+            "name": "kk-react"
           }
         },
         {
