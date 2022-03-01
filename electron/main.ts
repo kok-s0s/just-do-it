@@ -13,8 +13,10 @@ declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
 function createWindow() {
   mainWindow = new BrowserWindow({
     icon: "assets/kok-s0s.icns",
-    width: 1100,
-    height: 700,
+    width: 1300,
+    height: 800,
+    minWidth: 1300,
+    minHeight: 800,
     backgroundColor: '#191622',
     webPreferences: {
       nodeIntegration: false,
