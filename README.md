@@ -63,3 +63,25 @@ yarn config set electron_custom_dir v13.1.2
 ```
 
 </details>
+
+### UI 组件库
+
+<details><summary>Details</summary>
+
+<br />
+
+目前使用的是 [MUI](https://mui.com/)
+
+</details>
+
+### 静态资源
+
+<details><summary>Details</summary>
+
+<br />
+
+所有静态资源存放在 `assets` 文件夹中
+
+注意引入写法 git-commit->[add Welcome Page](https://github.com/kok-s0s/kk-react/commit/aac846155d157bc9d5d95c1f76be6644db269602)
+
+</details>
