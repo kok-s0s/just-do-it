@@ -1,5 +1,6 @@
 import { Container, Logo, Desc, Text, Button, FDBK, SubText } from './styles'
 import logoUrl from '../../../assets/images/logo.png'
+import { Link } from 'react-router-dom'
 
 export function Welcome() {
   return (
@@ -11,7 +12,7 @@ export function Welcome() {
         <Text>这个项目最终会开源，你可以任意修改其中的代码管理你自己的所知所想。</Text>
         <Text>当然最重要的是，学计算机，玩得开心！</Text>
       </Desc>
-      <Button>开始使用</Button>
+      <Link to="/home"><Button>开始使用</Button></Link>
       <FDBK href="https://github.com/kok-s0s" target="_blank">
         <SubText>反馈</SubText>
       </FDBK>

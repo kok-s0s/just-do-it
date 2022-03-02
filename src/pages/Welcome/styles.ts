@@ -45,7 +45,7 @@ export const Button = styled.button`
   text-align: center;
   text-decoration: none #000000 solid;
   text-decoration-thickness: auto;
-  width: 100%;
+  width: 450px;
   max-width: 460px;
   position: relative;
   cursor: pointer;
@@ -61,7 +61,7 @@ export const Button = styled.button`
   &:after {
     content: '';
     position: absolute;
-    border: 1px solid #000000;
+    border: 2.2px solid #000000;
     bottom: 4px;
     left: 4px;
     width: calc(100% - 1px);

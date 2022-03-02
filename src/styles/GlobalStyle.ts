@@ -13,4 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     // color: #E1E1E6;
     background-color: #181521;
   }
+
+  a {
+    text-decoration: none
+  }
 `
