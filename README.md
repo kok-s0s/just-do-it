@@ -86,6 +86,20 @@ yarn config set electron_custom_dir v13.1.2
 
 </details>
 
+### 路由配置
+
+<details><summary>Details</summary>
+
+<br />
+
+引入 `react router v6`
+
+注意 electron 使用的是 `HashRouter`
+
+git-commit->[add React Router v6 && make a test file](https://github.com/kok-s0s/kk-react/commit/d0ce34bf0f9adffd23b82ed49dfa06530ad6129e)
+
+</details>
+
 ## 项目 Bug
 
 [子文件-->Bugs](./Bugs.md)
