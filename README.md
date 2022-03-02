@@ -85,3 +85,7 @@ yarn config set electron_custom_dir v13.1.2
 注意引入写法 git-commit->[add Welcome Page](https://github.com/kok-s0s/kk-react/commit/aac846155d157bc9d5d95c1f76be6644db269602)
 
 </details>
+
+## 项目 Bug
+
+[子文件-->Bugs](./Bugs.md)
