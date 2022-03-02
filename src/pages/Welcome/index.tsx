@@ -1,4 +1,4 @@
-import { Container, Logo, Desc, Text, Button, FDBK, SubText } from './styles'
+import { Container, Logo, Desc, Text, Button, FDBK, BText } from './styles'
 import logoUrl from '../../../assets/images/logo.png'
 import { Link } from 'react-router-dom'
 
@@ -14,7 +14,7 @@ export function Welcome() {
       </Desc>
       <Link to="/home"><Button>开始使用</Button></Link>
       <FDBK href="https://github.com/kok-s0s" target="_blank">
-        <SubText>反馈</SubText>
+        <BText>反馈</BText>
       </FDBK>
     </Container>
   )

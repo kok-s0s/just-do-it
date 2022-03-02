@@ -92,7 +92,7 @@ export const FDBK = styled.a`
   }
 `
 
-export const SubText = styled.div`
+export const BText = styled.div`
   display: flex;
   align-items: center;
   justify-content: center; 
