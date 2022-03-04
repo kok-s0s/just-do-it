@@ -12,15 +12,14 @@ const paperStyle = {
   flexDirection: 'column',
   borderRadius: '50px',
   height: '100%',
-  padding: '3rem 0 1rem 0',
+  padding: '1rem 0 0 0',
   backgroundColor: '#fffffe',
 }
 
 const iconStyle = {
-  marginTop: '1.3rem',
-  marginBottom: '1.5rem',
-  fontSize: 380,
-  width: '100%',
+  marginTop: '1vh',
+  marginBottom: '1.5vh',
+  fontSize: 370,
   color: '#bae8e8'
 }
 

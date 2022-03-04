@@ -40,7 +40,7 @@ export const BTitle = styled.div`
 `
 
 export const Button = styled.button`
-  width: 300px;
+  width: 270px;
   align-self: center;
   background-color: #bae8e8;
   background-image: none;
