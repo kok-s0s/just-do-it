@@ -13,7 +13,7 @@ export function Welcome() {
         <Text>当然最重要的是，学计算机，玩得开心！</Text>
       </Desc>
       <Link to="/home"><Button>开始使用</Button></Link>
-      <FDBK href="https://github.com/kok-s0s" target="_blank">
+      <FDBK href="https://github.com/kok-s0s/kk-react/issues" target="_blank">
         <BText>反馈</BText>
       </FDBK>
     </Container>

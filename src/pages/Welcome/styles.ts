@@ -19,7 +19,7 @@ export const Desc = styled.div`
   flex-direction: column; 
   align-items: center;
   justify-content: center;
-  padding: 2rem 0 5rem 0;
+  padding: 2rem 0 3rem 0;
 `
 
 export const Text = styled.p`
@@ -30,47 +30,27 @@ export const Text = styled.p`
 `
 
 export const Button = styled.button`
-  background-color: #3DD1E7;
-  border: 0 solid #E5E7EB;
-  box-sizing: border-box;
-  color: #000000;
-  display: flex;
-  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1.75rem;
-  padding: .75rem 1.65rem;
-  position: relative;
-  text-align: center;
-  text-decoration: none #000000 solid;
-  text-decoration-thickness: auto;
-  width: 450px;
-  max-width: 460px;
-  position: relative;
+  width: 400px;
+  height: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
   cursor: pointer;
-  transform: rotate(-2deg);
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 
-  &:focus {
-    outline: 0;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    border: 2.2px solid #000000;
-    bottom: 4px;
-    left: 4px;
-    width: calc(100% - 1px);
-    height: calc(100% - 1px);
-  }
-
-  &:hover:after {
-    bottom: 2px;
-    left: 2px;
+  &:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
   }
 `
 
