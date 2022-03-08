@@ -37,10 +37,15 @@ export function TodoItemView({ item }: Props) {
     const ordinalNumber = (n: number) => {
         return n + (['st', 'nd', 'rd'][n < 20 ? n - 1 : (n % 10) - 1] || 'th')
     }
+    const appendZero = (n: number) => {
+        if (n < 10) return `0${n}`
+        else return n
+    }
+
     const date = item.time
         ? `Added on ${Month.get(item.time.getMonth())} ${ordinalNumber(
               item.time.getDate()
-          )} at ${item.time.getHours()}:${item.time.getMinutes()}`
+          )} at ${item.time.getHours()}:${appendZero(item.time.getMinutes())}`
         : ''
 
     return (
