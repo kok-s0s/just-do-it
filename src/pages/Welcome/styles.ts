@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #D8EFEF;
+  background-color: #d8efef;
 `
 
 export const Logo = styled.img`
@@ -16,7 +16,7 @@ export const Logo = styled.img`
 
 export const Desc = styled.div`
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem 0 3rem 0;
@@ -32,7 +32,7 @@ export const Text = styled.p`
 export const Button = styled.button`
   width: 400px;
   height: 50px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
   text-decoration: none;
@@ -41,7 +41,8 @@ export const Button = styled.button`
   cursor: pointer;
   border: 3px solid;
   padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
   position: relative;
   user-select: none;
   -webkit-user-select: none;
@@ -60,12 +61,12 @@ export const FDBK = styled.a`
   bottom: 1.5rem;
   border-radius: 50%;
   padding: 15px;
-  background-color: #69A9C9;
+  background-color: #69a9c9;
   color: white;
-  text-decoration : none;
+  text-decoration: none;
   &:hover,
   &:focus {
-    color: #3874CB;
+    color: #3874cb;
   }
   &:active {
     color: #cfdef2;
@@ -75,7 +76,7 @@ export const FDBK = styled.a`
 export const BText = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   box-sizing: border-box;
   width: 32px;
   height: 32px;

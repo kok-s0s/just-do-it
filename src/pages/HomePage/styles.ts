@@ -17,12 +17,12 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #D8EFEF;
+  background-color: #d8efef;
 `
 
 export const BClickSame = styled.div`
   height: 70vh;
-  background-color: #D8EFEF;
+  background-color: #d8efef;
 `
 
 export const BClickLeft = styled(BClickSame)`
@@ -50,7 +50,7 @@ export const Button = styled.button`
   border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
   border-style: solid;
   border-width: 2px;
-  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
   box-sizing: border-box;
   color: #272343;
   cursor: pointer;
@@ -60,7 +60,7 @@ export const Button = styled.button`
   font-weight: 600;
   line-height: 23px;
   outline: none;
-  padding: .75rem;
+  padding: 0.75rem;
   text-decoration: none;
   transition: all 235ms ease-in-out;
   border-bottom-left-radius: 15px 255px;
@@ -72,12 +72,12 @@ export const Button = styled.button`
   touch-action: manipulation;
 
   &:hover {
-    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
     transform: translate3d(0, 2px, 0);
   }
 
   &:focus {
-    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
   }
 `
 
@@ -87,14 +87,14 @@ export const Back = styled.button`
   bottom: 1.5rem;
   border-radius: 50%;
   padding: 15px;
-  background-color: #69A9C9;
+  background-color: #69a9c9;
   color: white;
   cursor: pointer;
   border: none;
   font-size: 1rem;
   &:hover,
   &:focus {
-    color: #3874CB;
+    color: #3874cb;
   }
   &:active {
     color: #cfdef2;
@@ -104,7 +104,7 @@ export const Back = styled.button`
 export const BText = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   box-sizing: border-box;
   width: 32px;
   height: 32px;
