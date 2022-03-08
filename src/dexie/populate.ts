@@ -16,6 +16,11 @@ export async function populate() {
             title: '延误计划',
             subTitle: '熬夜',
             time: new Date()
+        },
+        {
+            title: '永久废弃',
+            subTitle: '测试',
+            time: new Date()
         }
     ]
 
