@@ -18,10 +18,10 @@ import { Link } from 'react-router-dom'
 const paperStyle = {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     flexDirection: 'column',
     borderRadius: '50px',
     height: '100%',
-    padding: '1rem 0 0 0',
     backgroundColor: '#fffffe'
 }
 
