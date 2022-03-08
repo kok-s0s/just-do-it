@@ -15,8 +15,9 @@ export const More = styled.span`
     right: 0.4rem;
 `
 
-export const Note = styled.div`
-    margin: 0.2rem 2rem 0 2rem;
+export const Note = styled.p`
+    margin: 0.2rem 2rem 1.5rem 2rem;
+    word-wrap: break-word;
     font-size: 14px;
 `
 

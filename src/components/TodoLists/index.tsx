@@ -22,9 +22,13 @@ export function TodoLists() {
                         padding: 0
                     }}
                 >
-                    {lists.map(list => (
-                        <TodoListView key={list.id} todoList={list} />
-                    ))}
+                    {lists.map((list, index) =>
+                        index < 3 ? (
+                            <TodoListView key={list.id} todoList={list} />
+                        ) : (
+                            ''
+                        )
+                    )}
                 </Stack>
             </PlanScreen>
         </>

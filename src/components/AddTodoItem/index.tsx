@@ -1,14 +1,16 @@
 import { Cancel, Confirm, Input, FlexBox } from './styles'
-import { useState } from 'react'
+import { Dispatch, useState, SetStateAction } from 'react'
 import { db } from '../../dexie/db'
 import { TodoList } from '../../dexie/TodoList'
 import Box from '@mui/material/Box'
 
 interface Props {
     todoList: TodoList
+    hidden: boolean
+    setHidden: Dispatch<SetStateAction<boolean>>
 }
 
-export function AddTodoItem({ todoList }: Props) {
+export function AddTodoItem({ todoList, hidden, setHidden }: Props) {
     const [item, setItem] = useState({
         todoListId: typeof todoList.id === 'number' ? todoList.id : 0,
         title: '',
@@ -48,12 +50,13 @@ export function AddTodoItem({ todoList }: Props) {
                                 title: '',
                                 time: new Date()
                             })
+                            setHidden(!hidden)
                         }
                     }}
                 >
                     确认
                 </Confirm>
-                <Cancel>取消</Cancel>
+                <Cancel onClick={() => setHidden(!hidden)}>取消</Cancel>
             </FlexBox>
         </Box>
     )

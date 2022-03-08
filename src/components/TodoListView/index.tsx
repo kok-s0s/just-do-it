@@ -48,7 +48,15 @@ export function TodoListView({ todoList }: Props) {
             </Header>
 
             <Content>
-                {hidden ? <AddTodoItem todoList={todoList} /> : ``}
+                {hidden ? (
+                    <AddTodoItem
+                        todoList={todoList}
+                        hidden={hidden}
+                        setHidden={setHidden}
+                    />
+                ) : (
+                    ``
+                )}
 
                 {items.map(item => (
                     <TodoItemView key={item.id} item={item} />

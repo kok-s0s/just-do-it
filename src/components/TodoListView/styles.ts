@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const PlanItem = styled.div`
     position: relative;
     background-color: #f6f8fa;
-    height: 76vh;
-    max-height: 76vh;
+    height: 78vh;
+    max-height: 78vh;
     width: 20.6vw;
     border-radius: 5px;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
