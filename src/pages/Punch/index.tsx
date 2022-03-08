@@ -1,43 +1,39 @@
-import { useState, SyntheticEvent } from 'react';
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
 import { Container, Back, BText } from './styles'
 import { Link } from 'react-router-dom'
+import { TodoLists } from '../../components/TodoLists'
+import { ResetDatabaseButton } from '../../components/ResetDatabaseButton'
+import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid'
 
 export function Punch() {
-  const [value, setValue] = useState('1');
-
-  const handleChange = (event: SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-  };
-
-
-  return (
-    <Container>
-      <Box sx={{ width: '100%', typography: 'body1' }}>
-        <TabContext value={value}>
-          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <TabList onChange={handleChange} aria-label="lab API tabs example">
-              <Tab label="Item One" value="1" />
-              <Tab label="Item Two" value="2" />
-              <Tab label="Item Three" value="3" />
-            </TabList>
-          </Box>
-          <TabPanel value="1">Item One</TabPanel>
-          <TabPanel value="2">Item Two</TabPanel>
-          <TabPanel value="3">Item Three</TabPanel>
-        </TabContext>
-      </Box>
-
-      <Link to="/home">
-        <Back>
-          <BText>返回</BText>
-        </Back>
-      </Link>
-    </Container>
-  )
+    return (
+        <>
+            <Container>
+                <Box sx={{ flexGrow: 1 }}>
+                    <Grid
+                        container
+                        spacing={2}
+                        sx={{
+                            margin: 0,
+                            padding: 0,
+                            width: '100vw'
+                        }}
+                    >
+                        <Grid item xs={8}>
+                            <TodoLists />
+                            <ResetDatabaseButton />
+                        </Grid>
+                        <Grid item xs={4}>
+                            Github Information
+                        </Grid>
+                    </Grid>
+                </Box>
+            </Container>
+            <Link to="/home">
+                <Back>
+                    <BText>返回</BText>
+                </Back>
+            </Link>
+        </>
+    )
 }
-
