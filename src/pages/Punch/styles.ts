@@ -33,3 +33,10 @@ export const BText = styled.div`
     width: 32px;
     height: 32px;
 `
+
+export const LFooter = styled.div`
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`

@@ -1,6 +1,7 @@
-import { Container, Back, BText } from './styles'
+import { Container, Back, BText, LFooter } from './styles'
 import { Link } from 'react-router-dom'
 import { TodoLists } from '../../components/TodoLists'
+import { Abandoned } from '../../components/Abandoned'
 import { ResetDatabaseButton } from '../../components/ResetDatabaseButton'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
@@ -21,7 +22,10 @@ export function Punch() {
                     >
                         <Grid item xs={8}>
                             <TodoLists />
-                            <ResetDatabaseButton />
+                            <LFooter>
+                                <ResetDatabaseButton />
+                                <Abandoned />
+                            </LFooter>
                         </Grid>
                         <Grid item xs={4}>
                             Github Information
