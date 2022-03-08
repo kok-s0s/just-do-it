@@ -100,6 +100,18 @@ git-commit->[add React Router v6 && make a test file](https://github.com/kok-s0s
 
 </details>
 
+### Dexie.js
+
+<details><summary>Details</summary>
+
+<br />
+
+用于在本地存储长期数据
+
+git-commit->[add Todo Function](https://github.com/kok-s0s/kk-react/commit/b6b2c0f5e02684aa63076e919b46553dede4798f)
+
+</details>
+
 ## 项目 Bug
 
 [子文件-->Bugs](./Bugs.md)
