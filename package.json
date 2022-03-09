@@ -22,6 +22,7 @@
         "@mui/lab": "^5.0.0-alpha.71",
         "@mui/material": "^5.4.4",
         "@mui/styled-engine-sc": "^5.4.2",
+        "axios": "^0.26.0",
         "dexie": "^3.2.1",
         "dexie-export-import": "^1.0.3",
         "dexie-react-hooks": "^1.1.1",
