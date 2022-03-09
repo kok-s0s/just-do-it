@@ -10,6 +10,15 @@
 
   <script>
     const global = globalThis;
+    window.onkeydown = function (e) {
+      if (
+        (e.ctrlKey && e.keyCode === 82) ||
+        (e.metaKey && e.keyCode === 82) ||
+        (e.ctrlKey && e.keyCode === 116)
+      ) {
+        return false;
+      }
+    };
   </script>
 </head>
 
