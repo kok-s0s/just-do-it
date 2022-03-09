@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { TodoLists } from '../../components/TodoLists'
 import { Abandoned } from '../../components/Abandoned'
 import { ResetDatabaseButton } from '../../components/ResetDatabaseButton'
+import { GithubInfo } from '../../components/GithubInfo'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
@@ -28,7 +29,7 @@ export function Punch() {
                             </LFooter>
                         </Grid>
                         <Grid item xs={4}>
-                            Github Information
+                            <GithubInfo />
                         </Grid>
                     </Grid>
                 </Box>
