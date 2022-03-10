@@ -24,7 +24,7 @@ export function Welcome() {
                 </Link>
             </Container>
             <FDBK
-                href="https://github.com/kok-s0s/kk-react/issues"
+                href="https://github.com/kok-s0s/just-do-it/issues"
                 target="_blank"
             >
                 <BText>反馈</BText>
