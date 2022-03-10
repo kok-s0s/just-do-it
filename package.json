@@ -1,7 +1,7 @@
 {
-    "name": "kk-react",
+    "name": "just-do-it",
     "author": "苏佳彬 20182132025",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "毕业设计",
     "main": "./.webpack/main/index.js",
     "scripts": {
@@ -79,7 +79,7 @@
     "config": {
         "forge": {
             "packagerConfig": {
-                "name": "kk-react",
+                "name": "just-do-it",
                 "executableName": "electron-starter",
                 "icon": "assets/kok-s0s.icns",
                 "extraResource": [
@@ -111,7 +111,7 @@
                 {
                     "name": "@electron-forge/maker-squirrel",
                     "config": {
-                        "name": "kk-react"
+                        "name": "just-do-it"
                     }
                 },
                 {

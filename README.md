@@ -82,7 +82,7 @@ yarn config set electron_custom_dir v13.1.2
 
 所有静态资源存放在 `assets` 文件夹中
 
-注意引入写法 git-commit->[add Welcome Page](https://github.com/kok-s0s/kk-react/commit/aac846155d157bc9d5d95c1f76be6644db269602)
+注意引入写法 git-commit->[add Welcome Page](https://github.com/kok-s0s/just-do-it/commit/aac846155d157bc9d5d95c1f76be6644db269602)
 
 </details>
 
@@ -96,7 +96,7 @@ yarn config set electron_custom_dir v13.1.2
 
 注意 electron 使用的是 `HashRouter`
 
-git-commit->[add React Router v6 && make a test file](https://github.com/kok-s0s/kk-react/commit/d0ce34bf0f9adffd23b82ed49dfa06530ad6129e)
+git-commit->[add React Router v6 && make a test file](https://github.com/kok-s0s/just-do-it/commit/d0ce34bf0f9adffd23b82ed49dfa06530ad6129e)
 
 </details>
 
@@ -108,7 +108,7 @@ git-commit->[add React Router v6 && make a test file](https://github.com/kok-s0s
 
 用于在本地存储长期数据
 
-git-commit->[add Todo Function](https://github.com/kok-s0s/kk-react/commit/b6b2c0f5e02684aa63076e919b46553dede4798f)
+git-commit->[add Todo Function](https://github.com/kok-s0s/just-do-it/commit/b6b2c0f5e02684aa63076e919b46553dede4798f)
 
 </details>
 
