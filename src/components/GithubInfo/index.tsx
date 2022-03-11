@@ -17,6 +17,7 @@ import Button from '@mui/material/Button'
 import Snackbar from '@mui/material/Snackbar'
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined'
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined'
+import { Weather } from '../Weather'
 const axios = require('axios').default
 
 const style = {
@@ -164,6 +165,7 @@ export function GithubInfo() {
                         </Blog>
                     )}
                 </AlignRight>
+                <Weather />
             </InfoScreen>
             <RFooter>
                 <ChangeButton onClick={handleOpen}>更换用户</ChangeButton>
