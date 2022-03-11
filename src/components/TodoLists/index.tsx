@@ -1,8 +1,8 @@
 import { PlanScreen } from './styles'
-import { useLiveQuery } from 'dexie-react-hooks'
-import { db } from '../../dexie/db'
-import { TodoListView } from '../TodoListView'
 import Stack from '@mui/material/Stack'
+import { TodoListView } from '../TodoListView'
+import { db } from '../../dexie/db'
+import { useLiveQuery } from 'dexie-react-hooks'
 
 export function TodoLists() {
     const lists = useLiveQuery(() => db.todoLists.toArray())

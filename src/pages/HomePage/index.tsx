@@ -1,8 +1,3 @@
-import ArrowCircleUpRoundedIcon from '@mui/icons-material/ArrowCircleUpRounded'
-import PunchClockRoundedIcon from '@mui/icons-material/PunchClockRounded'
-import TravelExploreRoundedIcon from '@mui/icons-material/TravelExploreRounded'
-import Grid from '@mui/material/Grid'
-import Paper from '@mui/material/Paper'
 import {
     Container,
     Back,
@@ -13,6 +8,11 @@ import {
     Button,
     Image
 } from './styles'
+import ArrowCircleUpRoundedIcon from '@mui/icons-material/ArrowCircleUpRounded'
+import PunchClockRoundedIcon from '@mui/icons-material/PunchClockRounded'
+import TravelExploreRoundedIcon from '@mui/icons-material/TravelExploreRounded'
+import Grid from '@mui/material/Grid'
+import Paper from '@mui/material/Paper'
 import { Link } from 'react-router-dom'
 
 const paperStyle = {

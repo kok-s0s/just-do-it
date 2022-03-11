@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import { useLiveQuery } from 'dexie-react-hooks'
-import { db } from '../../dexie/db'
 import { Button } from './styles'
-import { AbandonedList } from '../AbandonedList'
 import Drawer from '@mui/material/Drawer'
+import { AbandonedList } from '../AbandonedList'
+import { db } from '../../dexie/db'
+import { useLiveQuery } from 'dexie-react-hooks'
+import { useState } from 'react'
 
 export function Abandoned() {
     const lists = useLiveQuery(() => db.todoLists.toArray())

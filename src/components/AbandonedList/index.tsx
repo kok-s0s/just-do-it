@@ -1,8 +1,8 @@
-import { useLiveQuery } from 'dexie-react-hooks'
-import { TodoList } from '../../dexie/TodoList'
-import { db } from '../../dexie/db'
 import { Content } from './styles'
 import { AbandonedItem } from '../AbandonedItem'
+import { db } from '../../dexie/db'
+import { TodoList } from '../../dexie/TodoList'
+import { useLiveQuery } from 'dexie-react-hooks'
 
 interface Props {
     todoList: TodoList

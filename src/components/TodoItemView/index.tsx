@@ -1,13 +1,13 @@
 import { ShowItem, More, Note, Time } from './styles'
-import { useState, MouseEvent } from 'react'
-import { useLiveQuery } from 'dexie-react-hooks'
-import { db } from '../../dexie/db'
-import { TodoItem } from '../../dexie/TodoItem'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import EventNoteOutlinedIcon from '@mui/icons-material/EventNoteOutlined'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
+import { db } from '../../dexie/db'
+import { TodoItem } from '../../dexie/TodoItem'
 import { Month, ordinalNumber, appendZero } from '../../utils/DateHandle'
+import { useState, MouseEvent } from 'react'
+import { useLiveQuery } from 'dexie-react-hooks'
 
 interface Props {
     item: TodoItem

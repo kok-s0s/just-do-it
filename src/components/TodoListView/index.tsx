@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {
     PlanItem,
     Header,
@@ -8,12 +7,13 @@ import {
     Combination,
     Content
 } from './styles'
-import { useLiveQuery } from 'dexie-react-hooks'
+import AddIcon from '@mui/icons-material/Add'
 import { TodoList } from '../../dexie/TodoList'
-import { db } from '../../dexie/db'
 import { TodoItemView } from '../TodoItemView'
 import { AddTodoItem } from '../AddTodoItem'
-import AddIcon from '@mui/icons-material/Add'
+import { db } from '../../dexie/db'
+import { useState } from 'react'
+import { useLiveQuery } from 'dexie-react-hooks'
 
 interface Props {
     todoList: TodoList

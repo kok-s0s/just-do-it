@@ -1,8 +1,8 @@
 import { Cancel, Confirm, Input, FlexBox } from './styles'
-import { Dispatch, useState, SetStateAction } from 'react'
+import Box from '@mui/material/Box'
 import { db } from '../../dexie/db'
 import { TodoList } from '../../dexie/TodoList'
-import Box from '@mui/material/Box'
+import { Dispatch, useState, SetStateAction } from 'react'
 
 interface Props {
     todoList: TodoList

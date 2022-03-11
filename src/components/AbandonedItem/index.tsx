@@ -1,7 +1,7 @@
 import { Card, Note, Time } from './styles'
-import { TodoItem } from '../../dexie/TodoItem'
-import { db } from '../../dexie/db'
 import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded'
+import { db } from '../../dexie/db'
+import { TodoItem } from '../../dexie/TodoItem'
 import { Month, ordinalNumber, appendZero } from '../../utils/DateHandle'
 
 interface Props {

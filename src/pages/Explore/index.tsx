@@ -1,10 +1,11 @@
-import { useState, SyntheticEvent } from 'react'
+import { Container, Back, BText } from './styles'
 import Box from '@mui/material/Box'
 import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
 import TabPanel from '@mui/lab/TabPanel'
-import { Container, Back, BText } from './styles'
+import { Code } from '../../components/Code'
+import { useState, SyntheticEvent } from 'react'
 import { Link } from 'react-router-dom'
 
 export function Explore() {
@@ -33,7 +34,9 @@ export function Explore() {
                         <TabPanel value="1">Item One</TabPanel>
                         <TabPanel value="2">Item Two</TabPanel>
                         <TabPanel value="3">Item Three</TabPanel>
-                        <TabPanel value="4">Item Four</TabPanel>
+                        <TabPanel value="4">
+                            <Code />
+                        </TabPanel>
                     </TabContext>
                 </Box>
             </Container>

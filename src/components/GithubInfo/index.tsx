@@ -1,5 +1,3 @@
-import { useState, SyntheticEvent } from 'react'
-import { useLocalStorage } from '../../utils/useLocalStorage'
 import {
     InfoScreen,
     ChangeButton,
@@ -18,6 +16,9 @@ import Snackbar from '@mui/material/Snackbar'
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined'
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined'
 import { Weather } from '../Weather'
+import { useLocalStorage } from '../../utils/useLocalStorage'
+import { useState, SyntheticEvent } from 'react'
+
 const axios = require('axios').default
 
 const style = {
