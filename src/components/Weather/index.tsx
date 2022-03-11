@@ -38,8 +38,10 @@ export function Weather() {
 
             if (response.status === 200) {
                 setWeather({
-                    location: response.data.results['0'].location,
-                    now: response.data.results['0'].now
+                    name: response.data.results['0'].location.name,
+                    code: response.data.results['0'].now.code,
+                    temperature: response.data.results['0'].now.temperature,
+                    text: response.data.results['0'].now.text
                 })
 
                 setExist(false)
@@ -90,13 +92,11 @@ export function Weather() {
             <WeatherCard>
                 <Header>
                     <Desc>
-                        <Location onClick={handleOpen}>
-                            {weather.location.name}
-                        </Location>{' '}
-                        {weather.now.text} {weather.now.temperature}°C
+                        <Location onClick={handleOpen}>{weather.name}</Location>{' '}
+                        {weather.text} {weather.temperature}°C
                     </Desc>
                     <Icon
-                        src={giveWeatherIcon(parseInt(weather.now.code))}
+                        src={giveWeatherIcon(parseInt(weather.code))}
                         alt="icon"
                     />
                 </Header>

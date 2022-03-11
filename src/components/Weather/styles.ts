@@ -6,7 +6,7 @@ export const WeatherCard = styled.div`
     border-radius: 10px;
     margin-top: 0.5rem;
     padding: 1rem;
-    width: 95%;
+    width: 100%;
 `
 
 export const Header = styled.div`
