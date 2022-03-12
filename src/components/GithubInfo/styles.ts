@@ -71,6 +71,7 @@ export const ChangeButton = styled.button`
 export const Image = styled.img`
     display: block;
     width: 60%;
+    height: auto;
     border-radius: 50%;
     border: 1px solid #dbddde;
 `

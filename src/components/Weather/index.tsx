@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import { useLocalStorage } from '../../utils/useLocalStorage'
 import { giveWeatherIcon } from '../../utils/WeatherImg'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const axios = require('axios').default
 
@@ -31,28 +31,31 @@ export function Weather() {
 
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
-    const getWeatherInfo = async (location: string) => {
-        const url = `https://api.seniverse.com/v3/weather/now.json?key=SkyWErkPwye-1C6wv&location=${location}&language=zh-Hans&unit=c`
 
-        try {
-            const response = await axios.get(url)
+    useEffect(() => {
+        const getWeatherInfo = async (location: string) => {
+            const url = `https://api.seniverse.com/v3/weather/now.json?key=SkyWErkPwye-1C6wv&location=${location}&language=zh-Hans&unit=c`
 
-            if (response.status === 200) {
-                setWeather({
-                    name: response.data.results['0'].location.name,
-                    code: response.data.results['0'].now.code,
-                    temperature: response.data.results['0'].now.temperature,
-                    text: response.data.results['0'].now.text
-                })
+            try {
+                const response = await axios.get(url)
 
-                setExist(false)
+                if (response.status === 200) {
+                    setWeather({
+                        name: response.data.results['0'].location.name,
+                        code: response.data.results['0'].now.code,
+                        temperature: response.data.results['0'].now.temperature,
+                        text: response.data.results['0'].now.text
+                    })
+
+                    setExist(false)
+                }
+            } catch (error) {
+                console.error(error)
             }
-        } catch (error) {
-            console.error(error)
         }
-    }
 
-    if (exist) getWeatherInfo(location)
+        if (exist) getWeatherInfo(location)
+    })
 
     return (
         <>

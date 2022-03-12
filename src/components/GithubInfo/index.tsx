@@ -13,11 +13,12 @@ import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import Snackbar from '@mui/material/Snackbar'
+import Skeleton from '@mui/material/Skeleton'
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined'
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined'
 import { Weather } from '../Weather'
 import { useLocalStorage } from '../../utils/useLocalStorage'
-import { useState, SyntheticEvent } from 'react'
+import { useState, useEffect, SyntheticEvent } from 'react'
 
 const axios = require('axios').default
 
@@ -55,43 +56,46 @@ export function GithubInfo() {
 
         setSnackbar(false)
     }
-    const getGithubInfo = async (username: string) => {
-        const url = `https://api.github.com/users/${username}`
 
-        try {
-            const response = await axios.get(url)
+    useEffect(() => {
+        const getGithubInfo = async (username: string) => {
+            const url = `https://api.github.com/users/${username}`
 
-            if (response.status === 200) {
-                setInfo({
-                    avatar_url: response.data.avatar_url,
-                    blog: response.data.blog,
-                    events_url: response.data.events_url,
-                    followers: response.data.followers,
-                    followers_url: response.data.followers_url,
-                    following: response.data.following,
-                    following_url: response.data.following_url,
-                    html_url: response.data.html_url,
-                    location: response.data.location,
-                    login: response.data.login,
-                    organizations_url: response.data.organizations_url,
-                    public_gists: response.data.public_gists,
-                    public_repos: response.data.public_repos,
-                    received_events_url: response.data.received_events_url,
-                    repos_url: response.data.repos_url,
-                    starred_url: response.data.starred_url,
-                    subscriptions_url: response.data.subscriptions_url,
-                    url: response.data.url
-                })
-                setExist(false)
-                setReady(true)
+            try {
+                const response = await axios.get(url)
+
+                if (response.status === 200) {
+                    setInfo({
+                        avatar_url: response.data.avatar_url,
+                        blog: response.data.blog,
+                        events_url: response.data.events_url,
+                        followers: response.data.followers,
+                        followers_url: response.data.followers_url,
+                        following: response.data.following,
+                        following_url: response.data.following_url,
+                        html_url: response.data.html_url,
+                        location: response.data.location,
+                        login: response.data.login,
+                        organizations_url: response.data.organizations_url,
+                        public_gists: response.data.public_gists,
+                        public_repos: response.data.public_repos,
+                        received_events_url: response.data.received_events_url,
+                        repos_url: response.data.repos_url,
+                        starred_url: response.data.starred_url,
+                        subscriptions_url: response.data.subscriptions_url,
+                        url: response.data.url
+                    })
+                    setExist(false)
+                    setReady(true)
+                }
+            } catch (error) {
+                setReady(false)
+                console.error(error)
             }
-        } catch (error) {
-            setReady(false)
-            console.error(error)
         }
-    }
 
-    if (exist) getGithubInfo(name)
+        if (exist) getGithubInfo(name)
+    })
 
     return (
         <>
@@ -140,32 +144,41 @@ export function GithubInfo() {
                 </Box>
             </Modal>
             <InfoScreen>
-                <Image src={info.avatar_url} alt="avatar"></Image>
-                <AlignRight>
-                    <UserName>{info.login}</UserName>
-                    {info.location && (
-                        <Location>
-                            <FmdGoodOutlinedIcon
-                                sx={{
-                                    fontSize: '21px',
-                                    marginRight: '6px'
-                                }}
-                            />
-                            {info.location}
-                        </Location>
-                    )}
-                    {info.blog && (
-                        <Blog>
-                            <BookOutlinedIcon
-                                sx={{
-                                    fontSize: '21px',
-                                    marginRight: '6px'
-                                }}
-                            />
-                            {info.blog}
-                        </Blog>
-                    )}
-                </AlignRight>
+                {info.avatar_url ? (
+                    <Image src={info.avatar_url} alt="avatar"></Image>
+                ) : (
+                    <Skeleton variant="circular" width={200} height={200} />
+                )}
+
+                {info.login ? (
+                    <AlignRight>
+                        <UserName>{info.login}</UserName>
+                        {info.location && (
+                            <Location>
+                                <FmdGoodOutlinedIcon
+                                    sx={{
+                                        fontSize: '21px',
+                                        marginRight: '6px'
+                                    }}
+                                />
+                                {info.location}
+                            </Location>
+                        )}
+                        {info.blog && (
+                            <Blog>
+                                <BookOutlinedIcon
+                                    sx={{
+                                        fontSize: '21px',
+                                        marginRight: '6px'
+                                    }}
+                                />
+                                {info.blog}
+                            </Blog>
+                        )}
+                    </AlignRight>
+                ) : (
+                    <Skeleton variant="rectangular" width={200} height={220} />
+                )}
                 <Weather />
             </InfoScreen>
             <RFooter>
