@@ -6,8 +6,7 @@ import Button from '@mui/material/Button'
 import { useLocalStorage } from '../../utils/useLocalStorage'
 import { giveWeatherIcon } from '../../utils/WeatherImg'
 import { useState, useEffect } from 'react'
-
-const axios = require('axios').default
+import axios from 'axios'
 
 const style = {
     margin: 0,

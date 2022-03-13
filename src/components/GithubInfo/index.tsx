@@ -19,8 +19,7 @@ import BookOutlinedIcon from '@mui/icons-material/BookOutlined'
 import { Weather } from '../Weather'
 import { useLocalStorage } from '../../utils/useLocalStorage'
 import { useState, useEffect, SyntheticEvent } from 'react'
-
-const axios = require('axios').default
+import axios from 'axios'
 
 const style = {
     margin: 0,
