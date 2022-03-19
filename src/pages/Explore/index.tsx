@@ -5,11 +5,12 @@ import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
 import TabPanel from '@mui/lab/TabPanel'
 import { CodeBlock } from '../../components/CodeBlock'
-import { useState, SyntheticEvent } from 'react'
+import { useLocalStorage } from '../../utils/useLocalStorage'
+import { SyntheticEvent } from 'react'
 import { Link } from 'react-router-dom'
 
 export function Explore() {
-    const [value, setValue] = useState('1')
+    const [value, setValue] = useLocalStorage('curTab', '1')
 
     const handleChange = (event: SyntheticEvent, newValue: string) => {
         setValue(newValue)
