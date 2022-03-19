@@ -1,6 +1,6 @@
 import { Container, GoToCode } from './styles'
 
-export function Code() {
+export function CodeBlock() {
     return (
         <Container>
             <GoToCode href="https://leetcode-cn.com/" target="_blank">
