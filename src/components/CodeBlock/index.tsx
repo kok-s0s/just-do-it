@@ -9,26 +9,26 @@ import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
+import Chip from '@mui/material/Chip'
 import { useLocalStorage } from '../../utils/useLocalStorage'
-import { useState, useEffect, SyntheticEvent } from 'react'
-import { getDifficulty, getTopicType } from '../../api/leetcode'
+import { useEffect, SyntheticEvent } from 'react'
+import { getTopicType } from '../../api/leetcode'
 
 interface Question {
     topic: string
     description: string
     link: string
+    difficulty: string
 }
 
-interface Difficulty {
-    chineseCharacter: string
+interface TopicType {
+    name: string
     questions: Array<Question>
 }
 
 export function CodeBlock() {
-    const [difficulty, setDifficulty] = useLocalStorage('difficulty', [])
-    const [degree, setDegree] = useLocalStorage('degree', [])
-    const [topictype, setTopicType] = useState([])
-
+    const [topictype, setTopicType] = useLocalStorage('topictype', [])
+    const [typeQ, setTypeQ] = useLocalStorage('typeQ', [])
     const [value, setValue] = useLocalStorage('curDifficultyTab', '0')
 
     const handleChange = (event: SyntheticEvent, newValue: number) => {
@@ -37,26 +37,15 @@ export function CodeBlock() {
 
     useEffect(() => {
         const getData = async () => {
-            getDifficulty()
-                .then(function (response) {
-                    if (response.status === 200) {
-                        setDifficulty(response.data)
-
-                        const TempData: Array<any> = []
-                        response.data.forEach((item: Difficulty) => {
-                            TempData.push(item.questions)
-                        })
-                        setDegree(TempData)
-                    }
-                })
-                .catch(function (error) {
-                    console.log(error)
-                })
-
             getTopicType()
                 .then(function (response) {
                     if (response.status === 200) {
                         setTopicType(response.data)
+                        const TempData: Array<any> = []
+                        response.data.forEach((item: TopicType) => {
+                            TempData.push(item.questions)
+                        })
+                        setTypeQ(TempData)
                     }
                 })
                 .catch(function (error) {
@@ -79,46 +68,85 @@ export function CodeBlock() {
             <TabContext value={value}>
                 <Box sx={{ width: '100%', typography: 'body1' }}>
                     <Tabs value={value} onChange={handleChange} centered>
-                        {difficulty.map((item: Difficulty, index: number) => (
+                        {topictype.map((item: TopicType, index: number) => (
                             <Tab
-                                label={item.chineseCharacter}
+                                label={item.name}
                                 value={index.toString()}
                                 key={index}
                             />
                         ))}
                     </Tabs>
 
-                    {degree.map((item: Array<Question>, index: number) => (
+                    {typeQ.map((item: Array<Question>, index: number) => (
                         <TabPanel key={index} value={index.toString()}>
                             <Questions>
                                 {item.map((que: Question) => (
                                     <Card
                                         key={`${que.topic} + ${que.link}`}
                                         sx={{
-                                            minWidth: 240,
+                                            minWidth: 250,
                                             marginLeft: '0.5rem',
                                             marginRight: '0.5rem'
                                         }}
+                                        color="#fffffe"
+                                        variant="outlined"
                                     >
                                         <CardContent>
                                             <Typography
-                                                sx={{ fontSize: 16 }}
-                                                color="text.secondary"
+                                                sx={{
+                                                    fontSize: 18,
+                                                    fontWeight: 500
+                                                }}
+                                                color="#272343"
                                                 gutterBottom
                                             >
                                                 {que.topic}
                                             </Typography>
                                             <Typography
-                                                variant="h5"
-                                                component="div"
-                                            ></Typography>
-                                            <Typography variant="body2">
+                                                variant="body2"
+                                                color="#2d334a"
+                                                sx={{
+                                                    fontSize: 16,
+                                                    letterSpacing: 1,
+                                                    lineHeight: 1.5
+                                                }}
+                                            >
                                                 {que.description}
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
+                                            {que.difficulty === '简单' ? (
+                                                <Chip
+                                                    label="简单"
+                                                    size="small"
+                                                    sx={{
+                                                        marginLeft: '0.3rem'
+                                                    }}
+                                                />
+                                            ) : que.difficulty === '中等' ? (
+                                                <Chip
+                                                    label="中等"
+                                                    size="small"
+                                                    sx={{
+                                                        marginLeft: '0.3rem'
+                                                    }}
+                                                />
+                                            ) : (
+                                                <Chip
+                                                    label="困难"
+                                                    size="small"
+                                                    sx={{
+                                                        marginLeft: '0.3rem'
+                                                    }}
+                                                />
+                                            )}
                                             <a href={que.link} target="_blank">
-                                                <Button size="small">
+                                                <Button
+                                                    size="small"
+                                                    sx={{
+                                                        marginLeft: '4.5rem'
+                                                    }}
+                                                >
                                                     Code Now 🖥
                                                 </Button>
                                             </a>

@@ -5,7 +5,7 @@ export const Container = styled.div``
 export const Questions = styled.div`
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     scrollbar-width: none;
@@ -28,9 +28,9 @@ export const GoToCode = styled.a`
     text-decoration: none;
     &:hover,
     &:focus {
-        color: #3874cb;
+        color: #d8efef;
     }
     &:active {
-        color: #cfdef2;
+        color: #d8efef;
     }
 `
