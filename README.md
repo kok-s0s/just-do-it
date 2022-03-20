@@ -134,6 +134,24 @@ git-commit->[add Todo Function](https://github.com/kok-s0s/just-do-it/commit/739
 
 </details>
 
+### 项目打包
+
+<details><summary>Details</summary>
+
+<br />
+
+项目直接执行 `yarn release` 生成打包后的文件
+
+其中 mac 的很难搞，有个安全问题导致的报错，就算下载相关的功能包进行打包，在 mac 中打开会出现 `已损坏，无法打开。 您应该将它移到废纸篓。` 这个问题。
+
+`electron-forge` [官方](https://www.electronforge.io/config/makers/dmg)也建议最好在 mac 直接编译生成应用程序来使用即可；
+
+> dmg 中的背景图片要设置为 658 × 489 -> [原因](https://github.com/electron-userland/electron-installer-dmg/issues/23)
+
+git-commit->[dmg set up](https://github.com/kok-s0s/just-do-it/commit/5f20b1a27f8b6c95d5a94e927d3ad9085c1c651c)
+
+</details>
+
 ## 项目 Bug
 
 [子文件-->Bugs](./Bugs.md)
