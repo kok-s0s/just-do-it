@@ -33,6 +33,7 @@ export const Challenge = styled.div`
     line-height: 120px;
     letter-spacing: 2px;
     margin-right: 1rem;
+    cursor: pointer;
 `
 
 export const GoToCode = styled.a`
