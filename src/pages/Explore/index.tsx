@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
 import TabPanel from '@mui/lab/TabPanel'
+import { Books } from '../../components/Books'
 import { CodeBlock } from '../../components/CodeBlock'
 import { useLocalStorage } from '../../utils/useLocalStorage'
 import { SyntheticEvent } from 'react'
@@ -33,7 +34,9 @@ export function Explore() {
                             </TabList>
                         </Box>
                         <TabPanel value="1">Item One</TabPanel>
-                        <TabPanel value="2">Item Two</TabPanel>
+                        <TabPanel value="2">
+                            <Books />
+                        </TabPanel>
                         <TabPanel value="3">Item Three</TabPanel>
                         <TabPanel value="4">
                             <CodeBlock />
