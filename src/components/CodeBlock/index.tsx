@@ -1,4 +1,4 @@
-import { Container, Questions, GoToCode } from './styles'
+import { Questions, GoToCode, Challenge, Random } from './styles'
 import TabContext from '@mui/lab/TabContext'
 import Box from '@mui/material/Box'
 import Tabs from '@mui/material/Tabs'
@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import { useLocalStorage } from '../../utils/useLocalStorage'
 import { useEffect, SyntheticEvent } from 'react'
-import { getTopicType } from '../../api/leetcode'
+import { getTopicType, getRandomQuestions } from '../../api/leetcode'
 
 interface Question {
     topic: string
@@ -29,6 +29,7 @@ interface TopicType {
 export function CodeBlock() {
     const [topictype, setTopicType] = useLocalStorage('topictype', [])
     const [typeQ, setTypeQ] = useLocalStorage('typeQ', [])
+    const [randomQ, setRandomQ] = useLocalStorage('randomQ', [])
     const [value, setValue] = useLocalStorage('curDifficultyTab', '0')
 
     const handleChange = (event: SyntheticEvent, newValue: number) => {
@@ -51,13 +52,23 @@ export function CodeBlock() {
                 .catch(function (error) {
                     console.log(error)
                 })
+
+            getRandomQuestions()
+                .then(function (response) {
+                    if (response.status === 200) {
+                        setRandomQ(response.data)
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error)
+                })
         }
 
         getData()
     }, [])
 
     return (
-        <Container>
+        <>
             <GoToCode
                 href="https://leetcode-cn.com/problemset/all/"
                 target="_blank"
@@ -158,6 +169,75 @@ export function CodeBlock() {
                     ))}
                 </Box>
             </TabContext>
-        </Container>
+
+            <Random>
+                <Challenge>Try</Challenge>
+                <Questions>
+                    {randomQ.map((que: Question) => (
+                        <Card
+                            key={`${que.topic} + ${que.link} - ${que.difficulty}`}
+                            sx={{
+                                minWidth: 250,
+                                marginLeft: '0.5rem',
+                                marginRight: '0.5rem',
+                                height: 120
+                            }}
+                            color="#fffffe"
+                            variant="outlined"
+                        >
+                            <CardContent>
+                                <Typography
+                                    sx={{
+                                        fontSize: 18,
+                                        fontWeight: 500
+                                    }}
+                                    color="#272343"
+                                    gutterBottom
+                                >
+                                    {que.topic}
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                {que.difficulty === '简单' ? (
+                                    <Chip
+                                        label="简单"
+                                        size="small"
+                                        sx={{
+                                            marginLeft: '0.3rem'
+                                        }}
+                                    />
+                                ) : que.difficulty === '中等' ? (
+                                    <Chip
+                                        label="中等"
+                                        size="small"
+                                        sx={{
+                                            marginLeft: '0.3rem'
+                                        }}
+                                    />
+                                ) : (
+                                    <Chip
+                                        label="困难"
+                                        size="small"
+                                        sx={{
+                                            marginLeft: '0.3rem'
+                                        }}
+                                    />
+                                )}
+                                <a href={que.link} target="_blank">
+                                    <Button
+                                        size="small"
+                                        sx={{
+                                            marginLeft: '4.5rem'
+                                        }}
+                                    >
+                                        Code Now 🖥
+                                    </Button>
+                                </a>
+                            </CardActions>
+                        </Card>
+                    ))}
+                </Questions>
+            </Random>
+        </>
     )
 }

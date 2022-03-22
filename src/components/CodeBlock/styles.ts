@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-export const Container = styled.div``
-
 export const Questions = styled.div`
     display: flex;
     flex-direction: row;
@@ -13,6 +11,28 @@ export const Questions = styled.div`
     &::-webkit-scrollbar {
         display: none;
     }
+`
+
+export const Random = styled.div`
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    left: 3rem;
+    bottom: 8rem;
+`
+
+export const Challenge = styled.div`
+    border: border;
+    border-radius: 10px;
+    width: 130px;
+    height: 120px;
+    background-color: #99bdd4;
+    color: #f0f7f8;
+    font-size: 40px;
+    line-height: 120px;
+    letter-spacing: 2px;
+    margin-right: 1rem;
 `
 
 export const GoToCode = styled.a`
