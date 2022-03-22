@@ -1,7 +1,7 @@
 import { PlanScreen } from './styles'
 import Stack from '@mui/material/Stack'
 import { TodoListView } from '../TodoListView'
-import { db } from '../../dexie/db'
+import { db } from '../../db/db'
 import { useLiveQuery } from 'dexie-react-hooks'
 
 export function TodoLists() {

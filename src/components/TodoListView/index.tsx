@@ -8,10 +8,10 @@ import {
     Content
 } from './styles'
 import AddIcon from '@mui/icons-material/Add'
-import { TodoList } from '../../dexie/TodoList'
+import { TodoList } from '../../db/TodoList'
 import { TodoItemView } from '../TodoItemView'
 import { AddTodoItem } from '../AddTodoItem'
-import { db } from '../../dexie/db'
+import { db } from '../../db/db'
 import { useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 

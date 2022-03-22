@@ -1,7 +1,7 @@
 import { Button } from './styles'
 import Drawer from '@mui/material/Drawer'
 import { AbandonedList } from '../AbandonedList'
-import { db } from '../../dexie/db'
+import { db } from '../../db/db'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useState } from 'react'
 
