@@ -11,3 +11,7 @@ export const getDifficulty = () => {
 export const getTopicType = () => {
     return instance.get('/leetcode/topictype')
 }
+
+export const getRandomQuestions = () => {
+    return instance.get('/leetcode/randomquestions')
+}
