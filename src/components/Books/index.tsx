@@ -96,7 +96,7 @@ export function Books() {
                                             component="img"
                                             height="400"
                                             image={book.image}
-                                            alt="green iguana"
+                                            alt={book.name}
                                         />
                                         <CardContent>
                                             <Typography
