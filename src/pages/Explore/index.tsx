@@ -4,8 +4,11 @@ import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
 import TabPanel from '@mui/lab/TabPanel'
+import { Technology } from '../../components/Technology'
 import { Books } from '../../components/Books'
 import { CodeBlock } from '../../components/CodeBlock'
+import { PracticalProject } from '../../components/PracticalProject'
+import { FreeStyle } from '../../components/FreeStyle'
 import { useLocalStorage } from '../../utils/useLocalStorage'
 import { SyntheticEvent } from 'react'
 import { Link } from 'react-router-dom'
@@ -31,15 +34,23 @@ export function Explore() {
                                 <Tab label="书籍推荐" value="2" />
                                 <Tab label="项目推荐" value="3" />
                                 <Tab label="码无止境" value="4" />
+                                <Tab label="自由发挥" value="5" />
                             </TabList>
                         </Box>
-                        <TabPanel value="1">Item One</TabPanel>
+                        <TabPanel value="1">
+                            <Technology />
+                        </TabPanel>
                         <TabPanel value="2">
                             <Books />
                         </TabPanel>
-                        <TabPanel value="3">Item Three</TabPanel>
+                        <TabPanel value="3">
+                            <PracticalProject />
+                        </TabPanel>
                         <TabPanel value="4">
                             <CodeBlock />
+                        </TabPanel>
+                        <TabPanel value="5">
+                            <FreeStyle />
                         </TabPanel>
                     </TabContext>
                 </Box>
