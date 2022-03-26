@@ -41,3 +41,9 @@ export const CodeBlock = () => {
 2. 箭头函数不支持 this 无法做相关 bind 的操作；
 
 箭头函数也可以用来写组件，但是在我这个项目我更倾向于使用 function 关键词表示组件的意思，箭头函数更多用于表示一个功能函数。
+
+### 同步问题
+
+实践得出，用 React Hooks 定义的变量，在接口调用阶段，即使我对它进行了赋值，无法在接口中对它做任何操作，仍是默认它为空; 记录下，这是个思维误区，以为对某个变量赋值就能立即对它做处理；
+
+git-commit->[fix -- get the data right](https://github.com/kok-s0s/just-do-it/commit/546dc3d5480cc2edaa6d1865c05863a66223bf29)
