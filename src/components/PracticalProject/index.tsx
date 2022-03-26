@@ -84,7 +84,7 @@ export function PracticalProject() {
 
                 setPjdetails([])
 
-                projects.forEach((project: Project) => {
+                res.data.forEach((project: Project) => {
                     const [user, repo] = getUserAndRepo(project)
 
                     getRepoInfo(user, repo).catch(function (error) {
