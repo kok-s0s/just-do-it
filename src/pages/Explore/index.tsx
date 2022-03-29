@@ -8,7 +8,6 @@ import { Technology } from '../../components/Technology'
 import { Books } from '../../components/Books'
 import { CodeBlock } from '../../components/CodeBlock'
 import { PracticalProject } from '../../components/PracticalProject'
-import { FreeStyle } from '../../components/FreeStyle'
 import { useLocalStorage } from '../../utils/useLocalStorage'
 import { SyntheticEvent } from 'react'
 import { Link } from 'react-router-dom'
@@ -34,7 +33,6 @@ export function Explore() {
                                 <Tab label="书籍推荐" value="2" />
                                 <Tab label="项目推荐" value="3" />
                                 <Tab label="码无止境" value="4" />
-                                <Tab label="自由发挥" value="5" />
                             </TabList>
                         </Box>
                         <TabPanel value="1">
@@ -48,9 +46,6 @@ export function Explore() {
                         </TabPanel>
                         <TabPanel value="4">
                             <CodeBlock />
-                        </TabPanel>
-                        <TabPanel value="5">
-                            <FreeStyle />
                         </TabPanel>
                     </TabContext>
                 </Box>
