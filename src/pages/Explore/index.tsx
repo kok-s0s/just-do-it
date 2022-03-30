@@ -8,7 +8,7 @@ import { Technology } from '../../components/Technology'
 import { Books } from '../../components/Books'
 import { CodeBlock } from '../../components/CodeBlock'
 import { PracticalProject } from '../../components/PracticalProject'
-import { useLocalStorage } from '../../utils/useLocalStorage'
+import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { SyntheticEvent } from 'react'
 import { Link } from 'react-router-dom'
 

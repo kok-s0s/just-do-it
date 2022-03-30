@@ -1,6 +1,6 @@
 import { Icon, Link, WebSites } from './styles'
 import Tooltip from '@mui/material/Tooltip'
-import { useLocalStorage } from '../../utils/useLocalStorage'
+import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { useEffect } from 'react'
 import { getWebSites } from '../../api/websites'
 

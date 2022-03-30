@@ -8,7 +8,7 @@ import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
-import { useLocalStorage } from '../../utils/useLocalStorage'
+import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { SyntheticEvent, useEffect } from 'react'
 import { getBooks } from '../../api/books'
 
