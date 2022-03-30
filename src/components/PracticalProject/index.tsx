@@ -100,75 +100,73 @@ export function PracticalProject() {
     }, [])
 
     return (
-        <>
-            <Projects>
-                {projects.map((project: Project, index: number) => {
-                    return (
-                        <Card
-                            key={index}
-                            color="#fffffe"
-                            variant="outlined"
-                            sx={{
-                                maxWidth: '85%',
-                                maxHeight: '700px',
-                                minHeight: '600px',
-                                margin: '1rem 0'
-                            }}
-                        >
-                            <CardContent>
-                                <Typography
-                                    sx={{
-                                        fontSize: 24,
-                                        fontWeight: 500,
-                                        lineHeight: '24px',
-                                        marginBottom: '1.5rem'
-                                    }}
-                                    color="#272343"
-                                    gutterBottom
-                                >
-                                    {project.name}
+        <Projects>
+            {projects.map((project: Project, index: number) => {
+                return (
+                    <Card
+                        key={index}
+                        color="#fffffe"
+                        variant="outlined"
+                        sx={{
+                            maxWidth: '85%',
+                            maxHeight: '700px',
+                            minHeight: '600px',
+                            margin: '1rem 0'
+                        }}
+                    >
+                        <CardContent>
+                            <Typography
+                                sx={{
+                                    fontSize: 24,
+                                    fontWeight: 500,
+                                    lineHeight: '24px',
+                                    marginBottom: '1.5rem'
+                                }}
+                                color="#272343"
+                                gutterBottom
+                            >
+                                {project.name}
 
-                                    <Link href={project.link} target="_blank">
-                                        <LocalFireDepartmentOutlinedIcon
-                                            sx={{
-                                                fontSize: 24,
-                                                margin: '0 0.3rem',
-                                                color: '#8bb7b9'
-                                            }}
-                                        />
-                                        {getForksCount(project.name)}
-                                        <StarRoundedIcon
-                                            sx={{
-                                                fontSize: 24,
-                                                margin: '0 0.3rem',
-                                                color: '#8bb7b9'
-                                            }}
-                                        />
-                                        {getStargazersCount(project.name)}
-                                    </Link>
-                                </Typography>
-                                <Typography
-                                    variant="body2"
-                                    color="#2d334a"
-                                    sx={{
-                                        fontSize: 16,
-                                        letterSpacing: 1,
-                                        lineHeight: 1.5
-                                    }}
-                                >
-                                    {project.description}
-                                </Typography>
-                            </CardContent>
-                            <CardMedia
-                                component="img"
-                                height="500"
-                                image={project.image}
-                                alt={project.name}
-                            />
-                        </Card>
-                    )
-                })}
-            </Projects>
-        </>
+                                <Link href={project.link} target="_blank">
+                                    <LocalFireDepartmentOutlinedIcon
+                                        sx={{
+                                            fontSize: 24,
+                                            margin: '0 0.3rem',
+                                            color: '#8bb7b9'
+                                        }}
+                                    />
+                                    {getForksCount(project.name)}
+                                    <StarRoundedIcon
+                                        sx={{
+                                            fontSize: 24,
+                                            margin: '0 0.3rem',
+                                            color: '#8bb7b9'
+                                        }}
+                                    />
+                                    {getStargazersCount(project.name)}
+                                </Link>
+                            </Typography>
+                            <Typography
+                                variant="body2"
+                                color="#2d334a"
+                                sx={{
+                                    fontSize: 16,
+                                    letterSpacing: 1,
+                                    lineHeight: 1.5
+                                }}
+                            >
+                                {project.description}
+                            </Typography>
+                        </CardContent>
+                        <CardMedia
+                            component="img"
+                            height="500"
+                            image={project.image}
+                            alt={project.name}
+                        />
+                    </Card>
+                )
+            })}
+        </Projects>
     )
 }

@@ -40,15 +40,15 @@ export const FlexBox = styled.div`
 `
 
 export const Confirm = styled(BClick)`
-    background-color: #2da44e;
-    color: #ffffff;
     border-color: #99c49e;
     margin-right: 0.2rem;
+    background-color: #2da44e;
+    color: #ffffff;
 `
 
 export const Cancel = styled(BClick)`
-    background-color: #f6f8fa;
-    color: #24292f;
     border-color: #e3e6ea;
     margin-left: 0.2rem;
+    background-color: #f6f8fa;
+    color: #24292f;
 `

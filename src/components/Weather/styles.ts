@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
 export const WeatherCard = styled.div`
-    opacity: 0.5;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem;
     background-color: #dceeef;
     border-radius: 10px;
-    margin-top: 0.5rem;
-    padding: 1rem;
-    width: 100%;
+    opacity: 0.5;
 `
 
 export const Header = styled.div`
@@ -16,10 +16,10 @@ export const Header = styled.div`
 `
 
 export const Desc = styled.span`
+    margin-right: 0.8rem;
     font-size: 28px;
     letter-spacing: 1px;
     color: #6f6f6f;
-    margin-right: 0.8rem;
 `
 
 export const Icon = styled.img`

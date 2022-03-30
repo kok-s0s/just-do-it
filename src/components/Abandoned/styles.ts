@@ -19,7 +19,6 @@ export const Button = styled.button`
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-
     &:active {
         box-shadow: 0px 0px 0px 0px;
         top: 5px;

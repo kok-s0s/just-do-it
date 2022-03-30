@@ -9,13 +9,13 @@ export const Back = styled.button`
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
-    border-radius: 50%;
+    border: none;
     padding: 15px;
     background-color: #69a9c9;
+    font-size: 1rem;
     color: white;
     cursor: pointer;
-    border: none;
-    font-size: 1rem;
+    border-radius: 50%;
     &:hover,
     &:focus {
         color: #3874cb;
@@ -29,7 +29,7 @@ export const BText = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
     width: 32px;
     height: 32px;
+    box-sizing: border-box;
 `
