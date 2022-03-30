@@ -15,10 +15,10 @@ export const Projects = styled.div`
 `
 
 export const Link = styled.a`
-    float: right;
     display: flex;
     justify-content: center;
     align-content: center;
+    float: right;
     color: #8bb7b9;
     &:focus,
     &:active {

@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const PlanItem = styled.div`
     position: relative;
-    background-color: #f6f8fa;
+    width: 20.6vw;
     height: 78vh;
     max-height: 78vh;
-    width: 20.6vw;
+    background-color: #f6f8fa;
     border-radius: 5px;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
@@ -27,19 +27,19 @@ export const Combination = styled.div`
 `
 
 export const Count = styled.span`
+    display: inline-block;
     position: absolute;
     top: 0.8rem;
     left: 1rem;
     border: none;
+    padding: 0px 6px;
     background-color: #afb8c1;
-    border-radius: 24px;
-    color: #24292f;
-    display: inline-block;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    padding: 0px 6px;
     text-align: center;
+    color: #24292f;
+    border-radius: 24px;
 `
 
 export const ListTitle = styled.span`

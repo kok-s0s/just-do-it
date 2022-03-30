@@ -21,7 +21,6 @@ export const ButtonWow = styled.button`
         -webkit-user-select: none;
         touch-action: manipulation;
     }
-
     &:after {
         --slice-0: inset(50% 50% 50% 50%);
         --slice-1: inset(80% -6px 0 0);
@@ -47,12 +46,10 @@ export const ButtonWow = styled.button`
         text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
         clip-path: var(--slice-0);
     }
-
     &:hover:after {
         animation: 1s glitch;
         animation-timing-function: steps(2, end);
     }
-
     @keyframes glitch {
         0% {
             clip-path: var(--slice-1);

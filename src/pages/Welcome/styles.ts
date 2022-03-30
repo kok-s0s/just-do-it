@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    height: 100vh;
-    padding: 25px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-color: #d8efef;
 `
 
@@ -24,8 +23,8 @@ export const Desc = styled.div`
 
 export const Text = styled.p`
     color: #094067;
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 1.125rem;
+    line-height: 2rem;
     font-weight: 500;
 `
 
@@ -47,7 +46,6 @@ export const Button = styled.button`
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-
     &:active {
         box-shadow: 0px 0px 0px 0px;
         top: 5px;
@@ -59,11 +57,11 @@ export const FDBK = styled.a`
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
-    border-radius: 50%;
     padding: 15px;
     background-color: #69a9c9;
     color: white;
     text-decoration: none;
+    border-radius: 50%;
     &:hover,
     &:focus {
         color: #3874cb;

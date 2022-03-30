@@ -17,12 +17,12 @@ import { Link } from 'react-router-dom'
 
 const paperStyle = {
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'column',
-    borderRadius: '50px',
     height: '100%',
-    backgroundColor: '#fffffe'
+    backgroundColor: '#fffffe',
+    borderRadius: '50px'
 }
 
 const iconStyle = {
@@ -34,56 +34,54 @@ const iconStyle = {
 
 export function HomePage() {
     return (
-        <>
-            <Container>
-                <Grid container spacing={3}>
-                    <Grid item xs>
-                        <BClickLeft>
-                            <Paper sx={paperStyle} elevation={3}>
-                                <BTitle>滴、打卡！</BTitle>
-                                <PunchClockRoundedIcon sx={iconStyle} />
-                                <Link to="/punch">
-                                    <Button>Go! Go! Go!</Button>
-                                </Link>
-                            </Paper>
-                        </BClickLeft>
-                    </Grid>
-                    <Grid
-                        item
-                        xs={2}
-                        sx={{
-                            display: 'flex',
-                            alignItems: 'center'
-                        }}
-                    >
-                        <Image>
-                            <ArrowCircleUpRoundedIcon
-                                sx={{
-                                    fontSize: 180,
-                                    width: '100%',
-                                    color: '#8bb7b9'
-                                }}
-                            />
-                        </Image>
-                    </Grid>
-                    <Grid item xs>
-                        <BClickRight>
-                            <Paper sx={paperStyle} elevation={3}>
-                                <BTitle>知识分享专区</BTitle>
-                                <TravelExploreRoundedIcon sx={iconStyle} />
-                                <Link to="/explore">
-                                    <Button>Go! Go! Go!</Button>
-                                </Link>
-                            </Paper>
-                        </BClickRight>
-                    </Grid>
+        <Container>
+            <Grid container spacing={3}>
+                <Grid item xs>
+                    <BClickLeft>
+                        <Paper sx={paperStyle} elevation={3}>
+                            <BTitle>滴、打卡！</BTitle>
+                            <PunchClockRoundedIcon sx={iconStyle} />
+                            <Link to="/punch">
+                                <Button>Go! Go! Go!</Button>
+                            </Link>
+                        </Paper>
+                    </BClickLeft>
                 </Grid>
-            </Container>
+                <Grid
+                    item
+                    xs={2}
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center'
+                    }}
+                >
+                    <Image>
+                        <ArrowCircleUpRoundedIcon
+                            sx={{
+                                fontSize: 180,
+                                width: '100%',
+                                color: '#8bb7b9'
+                            }}
+                        />
+                    </Image>
+                </Grid>
+                <Grid item xs>
+                    <BClickRight>
+                        <Paper sx={paperStyle} elevation={3}>
+                            <BTitle>知识分享专区</BTitle>
+                            <TravelExploreRoundedIcon sx={iconStyle} />
+                            <Link to="/explore">
+                                <Button>Go! Go! Go!</Button>
+                            </Link>
+                        </Paper>
+                    </BClickRight>
+                </Grid>
+            </Grid>
             <Link to="/">
                 <Back>
                     <BText>返回</BText>
                 </Back>
             </Link>
-        </>
+        </Container>
     )
 }

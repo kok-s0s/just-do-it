@@ -29,22 +29,20 @@ export function Technology() {
     }, [])
 
     return (
-        <>
-            <WebSites>
-                {webSites.map((webSite: WebSite, index: number) => {
-                    return (
-                        <Tooltip
-                            title={webSite.description}
-                            placement="top"
-                            key={index}
-                        >
-                            <Link href={webSite.link} target="_blank">
-                                <Icon src={webSite.image}></Icon>
-                            </Link>
-                        </Tooltip>
-                    )
-                })}
-            </WebSites>
-        </>
+        <WebSites>
+            {webSites.map((webSite: WebSite, index: number) => {
+                return (
+                    <Tooltip
+                        title={webSite.description}
+                        placement="top"
+                        key={index}
+                    >
+                        <Link href={webSite.link} target="_blank">
+                            <Icon src={webSite.image}></Icon>
+                        </Link>
+                    </Tooltip>
+                )
+            })}
+        </WebSites>
     )
 }

@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 export const ShowItem = styled.div`
     position: relative;
+    min-height: 8vh;
     border: 1px solid #e3e6ea;
-    border-radius: 5px;
-    background-color: #fffffe;
     margin: 0.6rem 0.5rem;
     padding: 0.3rem;
-    min-height: 8vh;
+    background-color: #fffffe;
+    border-radius: 5px;
 `
 
 export const More = styled.span`
@@ -17,16 +17,16 @@ export const More = styled.span`
 
 export const Note = styled.p`
     margin: 0.2rem 2rem 1.5rem 2rem;
-    word-wrap: break-word;
     font-size: 14px;
+    word-wrap: break-word;
 `
 
 export const Time = styled.div`
     position: absolute;
-    bottom: 0.2rem;
     left: 2rem;
-    color: #57606a;
+    bottom: 0.2rem;
     font-family: -apple-system;
     font-size: 12.6px;
     line-height: 18.9px;
+    color: #57606a;
 `

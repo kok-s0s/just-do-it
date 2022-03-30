@@ -14,10 +14,10 @@ export const Image = styled.div`
 `
 
 export const Container = styled.div`
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     background-color: #d8efef;
 `
 
@@ -71,12 +71,10 @@ export const Button = styled.button`
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
         transform: translate3d(0, 2px, 0);
     }
-
     &:focus {
         box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
     }
@@ -86,13 +84,13 @@ export const Back = styled.button`
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
-    border-radius: 50%;
+    border: none;
     padding: 15px;
     background-color: #69a9c9;
+    font-size: 1rem;
     color: white;
     cursor: pointer;
-    border: none;
-    font-size: 1rem;
+    border-radius: 50%;
     &:hover,
     &:focus {
         color: #3874cb;
@@ -106,7 +104,7 @@ export const BText = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
     width: 32px;
     height: 32px;
+    box-sizing: border-box;
 `
