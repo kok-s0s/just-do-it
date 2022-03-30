@@ -17,7 +17,7 @@ import Skeleton from '@mui/material/Skeleton'
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined'
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined'
 import { Weather } from '../Weather'
-import { useLocalStorage } from '../../utils/useLocalStorage'
+import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { useState, useEffect, SyntheticEvent } from 'react'
 import axios from 'axios'
 
@@ -93,7 +93,11 @@ export function GithubInfo() {
             }
         }
 
-        if (exist) getGithubInfo(name)
+        if (exist) {
+            setTimeout(() => {
+                getGithubInfo(name)
+            }, 3000)
+        }
     })
 
     return (
@@ -144,7 +148,7 @@ export function GithubInfo() {
             </Modal>
             <InfoScreen>
                 {info.avatar_url ? (
-                    <Image src={info.avatar_url} alt="avatar"></Image>
+                    <Image src={info.avatar_url} alt="avatar" />
                 ) : (
                     <Skeleton variant="circular" width={200} height={200} />
                 )}
