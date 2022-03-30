@@ -1,22 +1,22 @@
 import styled from 'styled-components'
 
 export const InfoScreen = styled.div`
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fffffe;
+    position: relative;
     height: 85vh;
     margin-right: 1.1rem;
     padding: 1.1rem 2rem 2rem 2rem;
+    background-color: #fffffe;
     border-radius: 10px;
 `
 
 export const RFooter = styled.div`
-    height: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 12vh;
 `
 
 export const ChangeButton = styled.button`
@@ -52,16 +52,13 @@ export const ChangeButton = styled.button`
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
         transform: translate3d(0, 2px, 0);
     }
-
     &:focus {
         box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
     }
-
     &:after {
         content: '';
         width: 45px;
@@ -72,34 +69,34 @@ export const Image = styled.img`
     display: block;
     width: 60%;
     height: auto;
-    border-radius: 50%;
     border: 1px solid #dbddde;
+    border-radius: 50%;
 `
 
 export const AlignRight = styled.div`
-    text-align: left;
-    margin-top: 0.7rem;
     width: 88%;
+    margin-top: 0.7rem;
+    text-align: left;
 `
 
 export const FontStyle = styled.div`
+    margin-bottom: 0.7rem;
     font-size: 21px;
     letter-spacing: 1px;
     color: #7a7f86;
-    margin-bottom: 0.7rem;
 `
 
 export const UserName = styled(FontStyle)`
-    font-size: 22px;
     margin-bottom: 1rem;
+    font-size: 22px;
 `
 
 export const Location = styled(FontStyle)`
-    line-height: 22px;
     margin-left: -1rem;
+    line-height: 22px;
 `
 
 export const Blog = styled(FontStyle)`
-    line-height: 22px;
     margin-left: -1rem;
+    line-height: 22px;
 `

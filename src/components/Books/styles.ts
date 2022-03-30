@@ -14,8 +14,8 @@ export const ShowBook = styled.div`
 `
 
 export const ClassDescription = styled.div`
-    color: #565f68;
-    text-align: center;
-    font-size: 20px;
     margin-bottom: 1.5rem;
+    font-size: 20px;
+    text-align: center;
+    color: #565f68;
 `

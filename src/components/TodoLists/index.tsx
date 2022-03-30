@@ -10,27 +10,25 @@ export function TodoLists() {
     if (!lists) return null
 
     return (
-        <>
-            <PlanScreen>
-                <Stack
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="stretch"
-                    spacing={2}
-                    sx={{
-                        margin: 0,
-                        padding: 0
-                    }}
-                >
-                    {lists.map((list, index) =>
-                        index < 3 ? (
-                            <TodoListView key={list.id} todoList={list} />
-                        ) : (
-                            ''
-                        )
-                    )}
-                </Stack>
-            </PlanScreen>
-        </>
+        <PlanScreen>
+            <Stack
+                direction="row"
+                justifyContent="center"
+                alignItems="stretch"
+                spacing={2}
+                sx={{
+                    margin: 0,
+                    padding: 0
+                }}
+            >
+                {lists.map((list, index) =>
+                    index < 3 ? (
+                        <TodoListView key={list.id} todoList={list} />
+                    ) : (
+                        ''
+                    )
+                )}
+            </Stack>
+        </PlanScreen>
     )
 }

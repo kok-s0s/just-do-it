@@ -16,24 +16,22 @@ export function AbandonedItem({ item }: Props) {
         : ''
 
     return (
-        <>
-            <Card>
-                <DeleteOutlineRoundedIcon
-                    fontSize="small"
-                    sx={{
-                        color: '#595F69',
-                        position: 'absolute',
-                        top: '0.6rem',
-                        right: '0.6rem',
-                        cursor: 'pointer'
-                    }}
-                    onClick={() => {
-                        if (item.id) db.todoItems.delete(item.id)
-                    }}
-                ></DeleteOutlineRoundedIcon>
-                <Note>{item.title}</Note>
-                <Time>{date}</Time>
-            </Card>
-        </>
+        <Card>
+            <DeleteOutlineRoundedIcon
+                fontSize="small"
+                sx={{
+                    color: '#595F69',
+                    position: 'absolute',
+                    top: '0.6rem',
+                    right: '0.6rem',
+                    cursor: 'pointer'
+                }}
+                onClick={() => {
+                    if (item.id) db.todoItems.delete(item.id)
+                }}
+            ></DeleteOutlineRoundedIcon>
+            <Note>{item.title}</Note>
+            <Time>{date}</Time>
+        </Card>
     )
 }
