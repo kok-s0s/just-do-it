@@ -93,7 +93,11 @@ export function GithubInfo() {
             }
         }
 
-        if (exist) getGithubInfo(name)
+        if (exist) {
+            setTimeout(() => {
+                getGithubInfo(name)
+            }, 3000)
+        }
     })
 
     return (
@@ -144,7 +148,7 @@ export function GithubInfo() {
             </Modal>
             <InfoScreen>
                 {info.avatar_url ? (
-                    <Image src={info.avatar_url} alt="avatar"></Image>
+                    <Image src={info.avatar_url} alt="avatar" />
                 ) : (
                     <Skeleton variant="circular" width={200} height={200} />
                 )}
