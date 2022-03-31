@@ -1,8 +1,12 @@
-## 项目基本使用命令
-
-<details><summary>Details</summary>
+<details><summary>"碟中谍" 😼</summary>
 
 <br />
+
+<ul>
+
+<details><summary>项目基本使用命令</summary>
+
+<div style="margin: 1rem">
 
 * 安装依赖
 
@@ -22,19 +26,19 @@ yarn start
 yarn package
 ```
 
+</div>
+
 </details>
 
-## 项目历程
+<span>项目历程</span>
 
-### 初始化以及图标修改
+<ul>
 
-<details><summary>Details</summary>
+<details><summary>初始化以及图标修改</summary>
 
-<br />
+<div style="margin: 1rem">
 
 执行 `yarn` 安装依赖时 electron 安装失败，出现 404，需要更换 electron 安装相关路径信息，这是因为淘宝镜像的资源路径和官方的资源路径不同，官方的比淘宝的多了个 `v` 。
-
-<br />
 
 ```bash
 yarn config set electron_mirror http://npm.taobao.org/mirrors/electron/
@@ -42,55 +46,51 @@ yarn config set electron_mirror http://npm.taobao.org/mirrors/electron/
 yarn config set electron_custom_dir v13.1.2
 ```
 
-<br />
-
 图标修改 --> 在项目的 `assets` 文件夹中添加 logo 文件，更改 `package.json` 和 `main.ts` 中有关 icon 的信息，更换为 logo 文件，执行打包命令即可，会生成对应的软件包。
+
+</div>
 
 </details>
 
-### 开发者工具扩展
+<details><summary>开发者工具扩展</summary>
 
-<details><summary>Details</summary>
-
-<br />
+<div style="margin: 1rem">
 
 在开发，在 `main.ts` 文件中添加这段代码即可；
-
-<br >
 
 ```js
   mainWindow.webContents.openDevTools()
 ```
 
+</div>
+
 </details>
 
-### UI 组件库
+<details><summary>UI 组件库</summary>
 
-<details><summary>Details</summary>
-
-<br />
+<div style="margin: 1rem">
 
 目前使用的是 [MUI](https://mui.com/)
 
+</div>
+
 </details>
 
-### 静态资源
+<details><summary>静态资源</summary>
 
-<details><summary>Details</summary>
-
-<br />
+<div style="margin: 1rem">
 
 所有静态资源存放在 `assets` 文件夹中
 
 注意引入写法 git-commit->[add Welcome Page](https://github.com/kok-s0s/just-do-it/commit/aac846155d157bc9d5d95c1f76be6644db269602)
 
+</div>
+
 </details>
 
-### 路由配置
+<details><summary>路由配置</summary>
 
-<details><summary>Details</summary>
-
-<br />
+<div style="margin: 1rem">
 
 引入 `react router v6`
 
@@ -98,25 +98,25 @@ yarn config set electron_custom_dir v13.1.2
 
 git-commit->[add React Router v6 && make a test file](https://github.com/kok-s0s/just-do-it/commit/d0ce34bf0f9adffd23b82ed49dfa06530ad6129e)
 
+</div>
+
 </details>
 
-### Dexie.js
+<details><summary>Dexie.js</summary>
 
-<details><summary>Details</summary>
-
-<br />
+<div style="margin: 1rem">
 
 用于在本地存储长期数据
 
 git-commit->[add Todo Function](https://github.com/kok-s0s/just-do-it/commit/b6b2c0f5e02684aa63076e919b46553dede4798f)
 
+</div>
+
 </details>
 
-### 规范引用
+<details><summary>规范引用</summary>
 
-<details><summary>Details</summary>
-
-<br />
+<div style="margin: 1rem">
 
 便于维护代码
 
@@ -132,13 +132,13 @@ git-commit->[add Todo Function](https://github.com/kok-s0s/just-do-it/commit/b6b
 
 git-commit->[add Todo Function](https://github.com/kok-s0s/just-do-it/commit/739e011a705f12b05a8f6ff325742cfc16704461)
 
+</div>
+
 </details>
 
-### 项目打包
+<details><summary>项目打包</summary>
 
-<details><summary>Details</summary>
-
-<br />
+<div style="margin: 1rem">
 
 项目直接执行 `yarn release` 生成打包后的文件
 
@@ -150,8 +150,28 @@ git-commit->[add Todo Function](https://github.com/kok-s0s/just-do-it/commit/739
 
 git-commit->[dmg set up](https://github.com/kok-s0s/just-do-it/commit/5f20b1a27f8b6c95d5a94e927d3ad9085c1c651c)
 
+</div>
+
 </details>
 
-## 项目 Bug
+<details><summary>CSS 书写顺序</summary>
+
+<div style="margin: 1rem">
+
+正确的 CSS 书写顺序能够减少浏览器回流（reflow），提高浏览器渲染dom的性能 🌟
+
+[HOW TO ORGANIZE CSS @ 9ELEMENTS](https://9elements.com/css-rule-order/)
+
+</div>
+
+</details>
+
+</ul>
+
+<span>项目 Bug<span>
 
 [子文件-->Bugs](./Bugs.md)
+
+</ul>
+
+</details>
