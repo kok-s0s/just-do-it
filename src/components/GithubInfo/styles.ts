@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const InfoScreen = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     height: 85vh;
     margin-right: 1.1rem;
     padding: 1.1rem 2rem 2rem 2rem;
