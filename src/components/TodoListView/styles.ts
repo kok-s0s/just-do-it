@@ -27,8 +27,8 @@ export const Combination = styled.div`
 `
 
 export const Count = styled.span`
-    display: inline-block;
     position: absolute;
+    display: inline-block;
     top: 0.8rem;
     left: 1rem;
     border: none;

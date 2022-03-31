@@ -9,11 +9,11 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const style = {
-    margin: 0,
-    padding: 0,
     position: 'absolute' as 'absolute',
     top: '50%',
     left: '50%',
+    margin: 0,
+    padding: 0,
     transform: 'translate(-50%, -50%)',
     width: 400,
     bgcolor: 'background.paper',
