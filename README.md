@@ -122,19 +122,17 @@ git-commit->[add Todo Function](https://github.com/kok-s0s/just-do-it/commit/b6b
 
 <ul>
 
-便于维护代码
+便于维护代码 git-commit->[add Todo Function](https://github.com/kok-s0s/just-do-it/commit/739e011a705f12b05a8f6ff325742cfc16704461)
 
 规则：
 
-1. `styles.ts` 样式最优先引入
-2. 其次引入 `mui` 的组件
-3. 引入 `components` 中的组件
-4. 有用到数据库的就在此引入
-5. 再引入 `utils` 中的自定义的工具函数
-6. 引入 `yarn add` 下载的包里的方法
-7. `axios` 需要放在最后的引入位置 
-
-git-commit->[add Todo Function](https://github.com/kok-s0s/just-do-it/commit/739e011a705f12b05a8f6ff325742cfc16704461)
+* `styles.ts` 样式最优先引入
+* 其次引入 `mui` 的组件
+* 引入 `components` 中的组件
+* 有用到数据库的就在此引入
+* 再引入 `utils` 中的自定义的工具函数
+* 引入 `yarn add` 下载的包里的方法
+* `axios` 需要放在最后的引入位置 
 
 </ul>
 
