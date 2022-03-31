@@ -6,27 +6,15 @@
 
 <details><summary>项目基本使用命令</summary>
 
-<br />
+---
 
 <ul>
 
-* 安装依赖
+* 安装依赖 `yarn`
 
-```bash
-yarn
-```
+* 项目运行 `yarn start`
 
-* 项目运行
-
-```bash
-yarn start
-```
-
-* 项目打包
-
-```bash
-yarn package
-```
+* 项目打包 `yarn package`
 
 </ul>
 
