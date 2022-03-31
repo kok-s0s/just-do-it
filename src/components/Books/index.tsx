@@ -8,7 +8,7 @@ import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
-import { useLocalStorage } from '../../utils/useLocalStorage'
+import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { SyntheticEvent, useEffect } from 'react'
 import { getBooks } from '../../api/books'
 
@@ -59,85 +59,83 @@ export function Books() {
     }, [])
 
     return (
-        <>
-            <TabContext value={value}>
-                <Box sx={{ width: '100%', typography: 'body1' }}>
-                    <Tabs value={value} onChange={handleChange} centered>
-                        {bookClassification.map(
-                            (item: BookClassification, index: number) => (
-                                <Tab
-                                    label={item.name}
-                                    value={index.toString()}
-                                    key={index}
-                                />
-                            )
-                        )}
-                    </Tabs>
+        <TabContext value={value}>
+            <Box sx={{ width: '100%', typography: 'body1' }}>
+                <Tabs value={value} onChange={handleChange} centered>
+                    {bookClassification.map(
+                        (item: BookClassification, index: number) => (
+                            <Tab
+                                label={item.name}
+                                value={index.toString()}
+                                key={index}
+                            />
+                        )
+                    )}
+                </Tabs>
 
-                    {books.map((item: Array<Book>, index: number) => (
-                        <TabPanel key={index} value={index.toString()}>
-                            <ClassDescription>
-                                {bookClassification[index].description}
-                            </ClassDescription>
+                {books.map((item: Array<Book>, index: number) => (
+                    <TabPanel key={index} value={index.toString()}>
+                        <ClassDescription>
+                            {bookClassification[index].description}
+                        </ClassDescription>
 
-                            <ShowBook>
-                                {item.map((book: Book) => (
-                                    <Card
-                                        key={`${book.name} + ${book.author}`}
-                                        sx={{
-                                            minWidth: 350,
-                                            marginLeft: '0.5rem',
-                                            marginRight: '0.5rem'
-                                        }}
-                                        color="#fffffe"
-                                        variant="outlined"
-                                    >
-                                        <CardMedia
-                                            component="img"
-                                            height="400"
-                                            image={book.image}
-                                            alt={book.name}
-                                        />
-                                        <CardContent>
-                                            <Typography
-                                                sx={{
-                                                    fontSize: 18,
-                                                    fontWeight: 500
-                                                }}
-                                                color="#272343"
-                                                gutterBottom
-                                            >
-                                                {book.name}
-                                            </Typography>
-                                            <Typography
-                                                sx={{
-                                                    fontSize: 14,
-                                                    fontWeight: 300
-                                                }}
-                                                color="#272343"
-                                                gutterBottom
-                                            >
-                                                {book.author}
-                                            </Typography>
-                                            <Typography
-                                                variant="body2"
-                                                color="#2d334a"
-                                                sx={{
-                                                    fontSize: 16,
-                                                    letterSpacing: 1,
-                                                    lineHeight: 1.5
-                                                }}
-                                            >
-                                                {book.bookDesc}
-                                            </Typography>
-                                        </CardContent>
-                                    </Card>
-                                ))}
-                            </ShowBook>
-                        </TabPanel>
-                    ))}
-                </Box>
-            </TabContext>
-        </>
+                        <ShowBook>
+                            {item.map((book: Book) => (
+                                <Card
+                                    key={`${book.name} + ${book.author}`}
+                                    sx={{
+                                        minWidth: 350,
+                                        marginLeft: '0.5rem',
+                                        marginRight: '0.5rem'
+                                    }}
+                                    color="#fffffe"
+                                    variant="outlined"
+                                >
+                                    <CardMedia
+                                        component="img"
+                                        height="400"
+                                        image={book.image}
+                                        alt={book.name}
+                                    />
+                                    <CardContent>
+                                        <Typography
+                                            sx={{
+                                                fontSize: 18,
+                                                fontWeight: 500
+                                            }}
+                                            color="#272343"
+                                            gutterBottom
+                                        >
+                                            {book.name}
+                                        </Typography>
+                                        <Typography
+                                            sx={{
+                                                fontSize: 14,
+                                                fontWeight: 300
+                                            }}
+                                            color="#272343"
+                                            gutterBottom
+                                        >
+                                            {book.author}
+                                        </Typography>
+                                        <Typography
+                                            variant="body2"
+                                            color="#2d334a"
+                                            sx={{
+                                                fontSize: 16,
+                                                letterSpacing: 1,
+                                                lineHeight: 1.5
+                                            }}
+                                        >
+                                            {book.bookDesc}
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </ShowBook>
+                    </TabPanel>
+                ))}
+            </Box>
+        </TabContext>
     )
 }
