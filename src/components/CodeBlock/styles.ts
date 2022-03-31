@@ -14,9 +14,9 @@ export const Questions = styled.div`
 `
 
 export const Random = styled.div`
+    position: fixed;
     display: flex;
     flex-direction: row;
-    position: fixed;
     left: 3rem;
     bottom: 8rem;
     text-align: center;

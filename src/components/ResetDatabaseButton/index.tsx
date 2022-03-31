@@ -7,11 +7,11 @@ import { resetDatabase } from '../../db/db'
 import { useState } from 'react'
 
 const style = {
-    margin: 0,
-    padding: 0,
     position: 'absolute' as 'absolute',
     top: '50%',
     left: '50%',
+    margin: 0,
+    padding: 0,
     transform: 'translate(-50%, -50%)',
     width: 400,
     bgcolor: 'background.paper',

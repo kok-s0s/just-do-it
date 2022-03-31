@@ -50,10 +50,10 @@ export function TodoItemView({ item }: Props) {
             <EventNoteOutlinedIcon
                 fontSize="small"
                 sx={{
-                    color: '#595F69',
                     position: 'absolute',
                     marginTop: '0.2rem',
-                    marginLeft: '0.2rem'
+                    marginLeft: '0.2rem',
+                    color: '#595F69'
                 }}
             />
             <More
