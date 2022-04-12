@@ -1,6 +1,7 @@
-import { ArtBoard } from './styles'
+import { AppMinimap, ArtBoard } from './styles'
 import { Graph } from '@antv/x6'
 import { Component } from 'react'
+import { SimpleNodeView } from './view'
 
 const data = {
     nodes: [
@@ -57,6 +58,8 @@ const data = {
 export default class MySelf extends Component {
     // @ts-ignore
     private container: HTMLDivElement
+    // @ts-ignore
+    private minimapContainer: HTMLDivElement
 
     componentDidMount() {
         const graph = new Graph({
@@ -70,6 +73,25 @@ export default class MySelf extends Component {
             mousewheel: {
                 enabled: true,
                 modifiers: ['ctrl', 'meta']
+            },
+            minimap: {
+                enabled: true,
+                container: this.minimapContainer,
+                width: 240,
+                height: 200,
+                graphOptions: {
+                    async: true,
+                    getCellView(cell) {
+                        if (cell.isNode()) {
+                            return SimpleNodeView
+                        }
+                    },
+                    createCellView(cell) {
+                        if (cell.isEdge()) {
+                            return null
+                        }
+                    }
+                }
             }
         })
 
@@ -85,7 +107,16 @@ export default class MySelf extends Component {
         this.container = container
     }
 
+    refMiniMapContainer = (container: HTMLDivElement) => {
+        this.minimapContainer = container
+    }
+
     render() {
-        return <ArtBoard ref={this.refContainer} />
+        return (
+            <>
+                <ArtBoard ref={this.refContainer} />
+                <AppMinimap ref={this.refMiniMapContainer} />
+            </>
+        )
     }
 }
