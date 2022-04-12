@@ -17,7 +17,10 @@ export const More = styled.span`
 
 export const Note = styled.p`
     margin: 0.2rem 2rem 1.5rem 2rem;
-    font-size: 14px;
+    font-size: 0.9rem;
+    letter-spacing: 0.08rem;
+    line-height: 150%;
+    white-space: pre-line;
     word-wrap: break-word;
 `
 
@@ -29,4 +32,24 @@ export const Time = styled.div`
     font-size: 12.6px;
     line-height: 18.9px;
     color: #57606a;
+`
+
+export const Input = styled.textarea`
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color: #e3e6ea;
+    font-family: -apple-system;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 8px 12px;
+    &:focus {
+        outline: none !important;
+        border-color: #719ece;
+        box-shadow: 0 0 10px #719ece;
+    }
 `
