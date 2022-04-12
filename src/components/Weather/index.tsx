@@ -1,4 +1,4 @@
-import { WeatherCard, Header, Desc, Icon, Location } from './styles'
+import { WeatherCard, Desc, Icon, Location } from './styles'
 import Modal from '@mui/material/Modal'
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
@@ -91,16 +91,14 @@ export function Weather() {
                 </Box>
             </Modal>
             <WeatherCard>
-                <Header>
-                    <Desc>
-                        <Location onClick={handleOpen}>{weather.name}</Location>{' '}
-                        {weather.text} {weather.temperature}°C
-                    </Desc>
-                    <Icon
-                        src={giveWeatherIcon(parseInt(weather.code))}
-                        alt="icon"
-                    />
-                </Header>
+                <Desc>
+                    <Location onClick={handleOpen}>{weather.name}</Location>{' '}
+                    {weather.text} {weather.temperature}°C
+                </Desc>
+                <Icon
+                    src={giveWeatherIcon(parseInt(weather.code))}
+                    alt="icon"
+                />
             </WeatherCard>
         </>
     )

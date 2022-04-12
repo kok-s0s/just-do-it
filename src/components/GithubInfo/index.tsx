@@ -17,6 +17,7 @@ import Skeleton from '@mui/material/Skeleton'
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined'
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined'
 import { Weather } from '../Weather'
+import { Time } from '../Time'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { useState, useEffect, SyntheticEvent } from 'react'
 import axios from 'axios'
@@ -183,6 +184,7 @@ export function GithubInfo() {
                     <Skeleton variant="rectangular" width={200} height={220} />
                 )}
                 <Weather />
+                <Time />
             </InfoScreen>
             <RFooter>
                 <ChangeButton onClick={handleOpen}>更换用户</ChangeButton>
