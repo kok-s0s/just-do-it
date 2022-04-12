@@ -51,6 +51,7 @@ export function TodoItemView({ item }: Props) {
     const reviseNote = (curItem: TodoItem, title: string) => {
         const copyItem: TodoItem = curItem
         copyItem.title = title
+        copyItem.time = new Date()
         curItem.id && db.todoItems.delete(curItem.id)
         db.todoItems.add(copyItem)
     }
