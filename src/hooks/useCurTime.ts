@@ -12,13 +12,14 @@ export const useCurTime = () => {
         }
     }, [])
 
-    const hour = curTime.getHours()
-    const minute = curTime.getMinutes()
-    let seconds = curTime.getSeconds().toString()
-
-    if (parseInt(seconds) < 10) {
-        seconds = '0' + seconds
+    const handleStr = (numStr: string) => {
+        if (parseInt(numStr) < 10) return '0' + numStr
+        else return numStr
     }
+
+    const hour = handleStr(curTime.getHours().toString())
+    const minute = handleStr(curTime.getMinutes().toString())
+    const seconds = handleStr(curTime.getSeconds().toString())
 
     return [hour, minute, seconds]
 }
