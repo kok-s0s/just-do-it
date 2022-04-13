@@ -7,8 +7,8 @@ const data = {
     nodes: [
         {
             id: 'node1',
-            x: 40,
-            y: 40,
+            x: 0,
+            y: 10,
             width: 100,
             height: 40,
             attrs: {
@@ -18,7 +18,7 @@ const data = {
                     strokeDasharray: '10,2'
                 },
                 label: {
-                    text: 'Hello',
+                    text: '技术栈',
                     fill: '#333',
                     fontSize: 13
                 }
@@ -26,8 +26,8 @@ const data = {
         },
         {
             id: 'node2',
-            x: 180,
-            y: 240,
+            x: 240,
+            y: 10,
             width: 100,
             height: 40,
             attrs: {
@@ -38,7 +38,73 @@ const data = {
                     ry: 16
                 },
                 label: {
-                    text: 'World',
+                    text: 'Front-End',
+                    fill: '#333',
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                    fontVariant: 'small-caps'
+                }
+            }
+        },
+        {
+            id: 'node3',
+            x: 260,
+            y: 80,
+            width: 100,
+            height: 40,
+            attrs: {
+                body: {
+                    fill: '#F39C12',
+                    stroke: '#000',
+                    rx: 16,
+                    ry: 16
+                },
+                label: {
+                    text: 'Back-End',
+                    fill: '#333',
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                    fontVariant: 'small-caps'
+                }
+            }
+        },
+        {
+            id: 'node4',
+            x: 240,
+            y: 150,
+            width: 100,
+            height: 40,
+            attrs: {
+                body: {
+                    fill: '#F39C12',
+                    stroke: '#000',
+                    rx: 16,
+                    ry: 16
+                },
+                label: {
+                    text: 'OS',
+                    fill: '#333',
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                    fontVariant: 'small-caps'
+                }
+            }
+        },
+        {
+            id: 'node5',
+            x: 200,
+            y: 220,
+            width: 100,
+            height: 40,
+            attrs: {
+                body: {
+                    fill: '#F39C12',
+                    stroke: '#000',
+                    rx: 16,
+                    ry: 16
+                },
+                label: {
+                    text: 'Python',
                     fill: '#333',
                     fontSize: 18,
                     fontWeight: 'bold',
@@ -51,6 +117,18 @@ const data = {
         {
             source: 'node1',
             target: 'node2'
+        },
+        {
+            source: 'node1',
+            target: 'node3'
+        },
+        {
+            source: 'node1',
+            target: 'node4'
+        },
+        {
+            source: 'node1',
+            target: 'node5'
         }
     ]
 }
