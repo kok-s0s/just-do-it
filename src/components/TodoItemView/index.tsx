@@ -108,7 +108,8 @@ export function TodoItemView({ item }: Props) {
                     >
                         <MoreHorizIcon
                             sx={{
-                                color: '#595F69'
+                                color: '#595F69',
+                                cursor: 'pointer'
                             }}
                         />
                     </More>

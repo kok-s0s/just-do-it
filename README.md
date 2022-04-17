@@ -122,7 +122,7 @@ git-commit->[add Todo Function](https://github.com/kok-s0s/just-do-it/commit/b6b
 
 <ul>
 
-便于维护代码 git-commit->[add Todo Function](https://github.com/kok-s0s/just-do-it/commit/739e011a705f12b05a8f6ff325742cfc16704461)
+便于维护代码 git-commit->[canonical reference](https://github.com/kok-s0s/just-do-it/commit/739e011a705f12b05a8f6ff325742cfc16704461)
 
 规则：
 

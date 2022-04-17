@@ -6,8 +6,11 @@ import TabList from '@mui/lab/TabList'
 import TabPanel from '@mui/lab/TabPanel'
 import { Technology } from '../../components/Technology'
 import { Books } from '../../components/Books'
-import { CodeBlock } from '../../components/CodeBlock'
 import { PracticalProject } from '../../components/PracticalProject'
+import { CodeBlock } from '../../components/CodeBlock'
+import { FreeStyle } from '../../components/FreeStyle'
+// import { LearnReact } from '../../components/LearnReact'
+// import { FileElectron } from '../../components/FileElectron'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { SyntheticEvent } from 'react'
 import { Link } from 'react-router-dom'
@@ -32,6 +35,9 @@ export function Explore() {
                             <Tab label="书籍推荐" value="2" />
                             <Tab label="项目推荐" value="3" />
                             <Tab label="码无止境" value="4" />
+                            <Tab label="自由发挥" value="5" />
+                            {/* <Tab label="LearnReact" value="6" /> */}
+                            {/* <Tab label="FileElectron" value="7" /> */}
                         </TabList>
                     </Box>
                     <TabPanel value="1">
@@ -46,6 +52,15 @@ export function Explore() {
                     <TabPanel value="4">
                         <CodeBlock />
                     </TabPanel>
+                    <TabPanel value="5">
+                        <FreeStyle />
+                    </TabPanel>
+                    {/* <TabPanel value="6">
+                        <LearnReact />
+                    </TabPanel>
+                    <TabPanel value="7">
+                        <FileElectron />
+                    </TabPanel> */}
                 </TabContext>
             </Box>
             <Link to="/home">
