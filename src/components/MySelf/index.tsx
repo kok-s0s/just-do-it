@@ -2,6 +2,7 @@ import { AppMinimap, ArtBoard } from './styles'
 import { Graph } from '@antv/x6'
 import { Component } from 'react'
 import { SimpleNodeView } from './view'
+import Button from '@mui/material/Button'
 
 const data = {
     nodes: [
@@ -194,6 +195,16 @@ export default class MySelf extends Component {
             <>
                 <ArtBoard ref={this.refContainer} />
                 <AppMinimap ref={this.refMiniMapContainer} />
+                <Button
+                    sx={{
+                        fontSize: '1.3rem',
+                        position: 'fixed',
+                        right: '2rem',
+                        bottom: '28rem'
+                    }}
+                >
+                    编辑模式
+                </Button>
             </>
         )
     }
