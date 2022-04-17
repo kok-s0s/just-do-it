@@ -1,8 +1,8 @@
 {
     "name": "just-do-it",
-    "author": "苏佳彬 20182132025",
-    "version": "1.1.1",
-    "description": "毕业设计",
+    "author": "kok-s0s",
+    "version": "1.2.0",
+    "description": "just-for-fun",
     "main": "./.webpack/main/index.js",
     "scripts": {
         "start": "electron-forge start",
@@ -97,22 +97,19 @@
                         "mainConfig": "./webpack/main.webpack.js",
                         "renderer": {
                             "config": "./webpack/renderer.webpack.js",
-                            "entryPoints": [
-                                {
-                                    "html": "./public/index.html",
-                                    "js": "./src/index.tsx",
-                                    "name": "main_window",
-                                    "preload": {
-                                        "js": "./electron/bridge.ts"
-                                    }
+                            "entryPoints": [{
+                                "html": "./public/index.html",
+                                "js": "./src/index.tsx",
+                                "name": "main_window",
+                                "preload": {
+                                    "js": "./electron/bridge.ts"
                                 }
-                            ]
+                            }]
                         }
                     }
                 ]
             ],
-            "makers": [
-                {
+            "makers": [{
                     "name": "@electron-forge/maker-squirrel",
                     "config": {
                         "name": "just-do-it"
