@@ -47,3 +47,9 @@ export const CodeBlock = () => {
 实践得出，用 React Hooks 定义的变量，在接口调用阶段，即使我对它进行了赋值，无法在接口中对它做任何操作，仍是默认它为空; 记录下，这是个思维误区，以为对某个变量赋值就能立即对它做处理；
 
 git-commit->[fix -- get the data right](https://github.com/kok-s0s/just-do-it/commit/546dc3d5480cc2edaa6d1865c05863a66223bf29)
+
+### node-gyp 报错
+
+遇到 gyp ERR! 错误
+
+项目通过指令 `yarn add node-gyp` 重新安装 `node-gyp` 解决掉报错信息；
