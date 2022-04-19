@@ -15,8 +15,6 @@
     "keywords": [],
     "license": "MIT",
     "dependencies": {
-        "@antv/x6": "^1.31.0",
-        "@antv/x6-react-shape": "^1.6.0",
         "@emotion/react": "^11.8.1",
         "@emotion/styled": "^11.8.1",
         "@fontsource/roboto": "^4.5.3",
