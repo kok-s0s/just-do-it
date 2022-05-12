@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Projects = styled.div`
+export const ProjectList = styled.div`
     display: flex;
     flex-direction: column;
     max-height: 85vh;

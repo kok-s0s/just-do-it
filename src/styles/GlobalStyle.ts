@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     user-select: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px; 
+    background-color: #d8efef;
   }
 
   a {

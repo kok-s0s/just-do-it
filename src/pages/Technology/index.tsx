@@ -5,12 +5,10 @@ import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
-import Button from '@mui/material/Button'
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { getArticles, getWebSites } from '../../api/websites'
-import Fish from '../../../assets/images/fish.jpeg'
+import Basic from '../../layouts/Basic'
 import {
   Articles,
   Icon,
@@ -53,7 +51,7 @@ export function Technology() {
   }, [])
 
   return (
-    <>
+    <Basic href="/explore">
       <TextH>
         <p>技术论坛</p>
         <ArchiveOutlinedIcon
@@ -120,6 +118,6 @@ export function Technology() {
           </List>
         </Articles>
       </MessageBox>
-    </>
+    </Basic>
   )
 }

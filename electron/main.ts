@@ -12,7 +12,7 @@ function createWindow() {
     height: 800,
     minWidth: 1300,
     minHeight: 800,
-    frame: false, 
+    frame: false,
     backgroundColor: '#191622',
     webPreferences: {
       nodeIntegration: false,
@@ -23,7 +23,7 @@ function createWindow() {
 
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
 
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   mainWindow.maximize()
 

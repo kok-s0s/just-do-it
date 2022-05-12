@@ -13,6 +13,7 @@ import type { SyntheticEvent } from 'react'
 import { useEffect, useState } from 'react'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { getRandomQuestions, getTopicType } from '../../api/leetcode'
+import Basic from '../../layouts/Basic'
 import { Challenge, GoToCode, Questions, Random } from './styles'
 
 interface Question {
@@ -63,7 +64,7 @@ export function CodeBlock() {
   }, [])
 
   return (
-    <>
+    <Basic href="/explore">
       <GoToCode
         href="https://leetcode-cn.com/problemset/all/"
         target="_blank"
@@ -246,6 +247,6 @@ export function CodeBlock() {
             )
           : null}
       </Random>
-    </>
+    </Basic>
   )
 }

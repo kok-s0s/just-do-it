@@ -74,7 +74,7 @@ export function HomePage() {
             </Paper>
           </BClickRight>
         </Grid>
-      </Grid> 
+      </Grid>
     </Container>
   )
 }

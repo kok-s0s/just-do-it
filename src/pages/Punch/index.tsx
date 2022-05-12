@@ -1,15 +1,15 @@
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
-import { Link } from 'react-router-dom'
+import Basic from '../../layouts/Basic'
 import { TodoLists } from '../../components/TodoLists'
 import { Abandoned } from '../../components/Abandoned'
 import { ResetDatabaseButton } from '../../components/ResetDatabaseButton'
 import { GithubInfo } from '../../components/GithubInfo'
-import { BText, Back, Container, LFooter } from './styles'
+import { LFooter } from './styles'
 
 export function Punch() {
   return (
-    <Container>
+    <Basic href="/">
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container
@@ -32,11 +32,6 @@ export function Punch() {
           </Grid>
         </Grid>
       </Box>
-      <Link to="/">
-        <Back>
-          <BText>返回</BText>
-        </Back>
-      </Link>
-    </Container>
+    </Basic>
   )
 }
