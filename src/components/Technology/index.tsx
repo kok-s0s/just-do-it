@@ -14,10 +14,8 @@ import Fish from '../../../assets/images/fish.jpeg'
 import {
   Articles,
   Icon,
-  IconForArtice,
   LinkWeb,
   MessageBox,
-  PunchButton,
   TextH,
   WebSites,
 } from './styles'
@@ -57,7 +55,7 @@ export function Technology() {
   return (
     <>
       <TextH>
-        <p>发布前沿技术的信息网站汇总</p>
+        <p>技术论坛</p>
         <ArchiveOutlinedIcon
           sx={{ fontSize: 30, marginLeft: '0.5rem' }}
         />
@@ -80,7 +78,7 @@ export function Technology() {
       </WebSites>
 
       <TextH>
-        <p>文章推荐</p>
+        <p>待读文章</p>
         <ArchiveOutlinedIcon
           sx={{ fontSize: 30, marginLeft: '0.5rem' }}
         />
@@ -121,15 +119,6 @@ export function Technology() {
             })}
           </List>
         </Articles>
-
-        <PunchButton>
-          <IconForArtice src={Fish} alt="fish" />
-          <Link to="/punch">
-            <Button sx={{ fontSize: 30, margin: '1rem 0 0 1rem' }}>
-              阅读打卡
-            </Button>
-          </Link>
-        </PunchButton>
       </MessageBox>
     </>
   )

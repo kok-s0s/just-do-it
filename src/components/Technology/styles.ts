@@ -51,15 +51,3 @@ export const Articles = styled.div`
         display: none;
     }
 `
-
-export const IconForArtice = styled.img`
-    width: 300px;
-    height: 300px;
-    margin-right: 1rem;
-    border-radius: 6px;
-`
-
-export const PunchButton = styled.div`
-    display: flex;
-    flex-direction: column;
-`

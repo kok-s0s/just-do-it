@@ -28,17 +28,17 @@ export function Explore() {
               onChange={handleChange}
               aria-label="lab API tabs example"
             >
-              <Tab label="技术前沿" value="1" />
-              <Tab label="书籍推荐" value="2" />
-              <Tab label="项目推荐" value="3" />
+              <Tab label="图书记录" value="1" />
+              <Tab label="信息浏览" value="2" />
+              <Tab label="实战项目" value="3" />
               <Tab label="码无止境" value="4" />
             </TabList>
           </Box>
           <TabPanel value="1">
-            <Technology />
+            <Books />  
           </TabPanel>
           <TabPanel value="2">
-            <Books />
+            <Technology />  
           </TabPanel>
           <TabPanel value="3">
             <PracticalProject />
