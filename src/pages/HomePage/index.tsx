@@ -7,11 +7,9 @@ import { Link } from 'react-router-dom'
 import {
   BClickLeft,
   BClickRight,
-  BText,
   BTitle,
   Button,
   Container,
-  FDBK,
   Image,
 } from './styles'
 
@@ -76,13 +74,7 @@ export function HomePage() {
             </Paper>
           </BClickRight>
         </Grid>
-      </Grid>
-      <FDBK
-        href="https://github.com/kok-s0s/just-do-it/issues"
-        target="_blank"
-      >
-        <BText>反馈</BText>
-      </FDBK>
+      </Grid> 
     </Container>
   )
 }

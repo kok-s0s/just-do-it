@@ -81,30 +81,3 @@ export const Button = styled.button`
         box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
     }
 `
-
-export const FDBK = styled.a`
-    position: fixed;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    padding: 15px;
-    background-color: #69a9c9;
-    color: white;
-    text-decoration: none;
-    border-radius: 50%;
-    &:hover,
-    &:focus {
-        color: #3874cb;
-    }
-    &:active {
-        color: #cfdef2;
-    }
-`
-
-export const BText = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    width: 32px;
-    height: 32px;
-`
