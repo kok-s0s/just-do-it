@@ -4,10 +4,10 @@ import axios from 'axios'
 const proURL = 'http://106.52.175.59:27017/'
 
 const instance = axios.create({
-    baseURL: proURL,
-    headers: {
-        'Content-Type': 'application/json'
-    }
+  baseURL: proURL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
 })
 
 export default instance

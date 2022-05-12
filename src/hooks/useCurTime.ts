@@ -1,25 +1,26 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export const useCurTime = () => {
-    const [curTime, setCurTime] = useState(new Date())
+  const [curTime, setCurTime] = useState(new Date())
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurTime(new Date())
-        }, 1000)
-        return () => {
-            clearInterval(timer)
-        }
-    }, [])
-
-    const handleStr = (numStr: string) => {
-        if (parseInt(numStr) < 10) return '0' + numStr
-        else return numStr
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurTime(new Date())
+    }, 1000)
+    return () => {
+      clearInterval(timer)
     }
+  }, [])
 
-    const hour = handleStr(curTime.getHours().toString())
-    const minute = handleStr(curTime.getMinutes().toString())
-    const seconds = handleStr(curTime.getSeconds().toString())
+  const handleStr = (numStr: string) => {
+    if (parseInt(numStr) < 10)
+      return `0${numStr}`
+    else return numStr
+  }
 
-    return [hour, minute, seconds]
+  const hour = handleStr(curTime.getHours().toString())
+  const minute = handleStr(curTime.getMinutes().toString())
+  const seconds = handleStr(curTime.getSeconds().toString())
+
+  return [hour, minute, seconds]
 }

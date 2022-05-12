@@ -1,12 +1,12 @@
-import { TimeCard } from './styles'
 import { useCurTime } from '../../hooks/useCurTime'
+import { TimeCard } from './styles'
 
 export function Time() {
-    const [hour, minute, seconds] = useCurTime()
+  const [hour, minute, seconds] = useCurTime()
 
-    return (
-        <TimeCard>
-            {hour}:{minute}:{seconds}
-        </TimeCard>
-    )
+  return (
+    <TimeCard>
+      {hour}:{minute}:{seconds}
+    </TimeCard>
+  )
 }
