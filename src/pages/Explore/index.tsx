@@ -32,9 +32,6 @@ export function Explore() {
                             <Tab label="书籍推荐" value="2" />
                             <Tab label="项目推荐" value="3" />
                             <Tab label="码无止境" value="4" />
-                            <Tab label="自由发挥" value="5" />
-                            {/* <Tab label="LearnReact" value="6" /> */}
-                            {/* <Tab label="FileElectron" value="7" /> */}
                         </TabList>
                     </Box>
                     <TabPanel value="1">
