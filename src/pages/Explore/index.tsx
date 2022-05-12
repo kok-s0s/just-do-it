@@ -48,7 +48,7 @@ export function Explore() {
           </TabPanel>
         </TabContext>
       </Box>
-      <Link to="/home">
+      <Link to="/">
         <Back>
           <BText>返回</BText>
         </Back>

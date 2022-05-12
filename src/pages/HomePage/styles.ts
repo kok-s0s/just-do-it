@@ -35,8 +35,10 @@ export const BClickRight = styled(BClickSame)`
 `
 
 export const BTitle = styled.div`
+    font-family: "Gill Sans", sans-serif;
     font-size: 2.3rem;
     font-weight: 500;
+    letter-spacing: 2px;
     color: #272343;
 `
 
@@ -80,16 +82,14 @@ export const Button = styled.button`
     }
 `
 
-export const Back = styled.button`
+export const FDBK = styled.a`
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
-    border: none;
     padding: 15px;
     background-color: #69a9c9;
-    font-size: 1rem;
     color: white;
-    cursor: pointer;
+    text-decoration: none;
     border-radius: 50%;
     &:hover,
     &:focus {
@@ -104,7 +104,7 @@ export const BText = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
     width: 32px;
     height: 32px;
-    box-sizing: border-box;
 `

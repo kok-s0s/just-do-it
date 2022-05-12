@@ -4,3 +4,4 @@ packages
 .webpack
 out
 .DS_Store
+local-readme.md

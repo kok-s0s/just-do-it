@@ -9,9 +9,9 @@ import {
   BClickRight,
   BText,
   BTitle,
-  Back,
   Button,
   Container,
+  FDBK,
   Image,
 } from './styles'
 
@@ -39,7 +39,7 @@ export function HomePage() {
         <Grid item xs>
           <BClickLeft>
             <Paper sx={paperStyle} elevation={3}>
-              <BTitle>滴、打卡！</BTitle>
+              <BTitle>Try To Do</BTitle>
               <PunchClockRoundedIcon sx={iconStyle} />
               <Link to="/punch">
                 <Button>Go! Go! Go!</Button>
@@ -68,7 +68,7 @@ export function HomePage() {
         <Grid item xs>
           <BClickRight>
             <Paper sx={paperStyle} elevation={3}>
-              <BTitle>知识分享专区</BTitle>
+              <BTitle>Try To Know</BTitle>
               <TravelExploreRoundedIcon sx={iconStyle} />
               <Link to="/explore">
                 <Button>Go! Go! Go!</Button>
@@ -77,11 +77,12 @@ export function HomePage() {
           </BClickRight>
         </Grid>
       </Grid>
-      <Link to="/">
-        <Back>
-          <BText>返回</BText>
-        </Back>
-      </Link>
+      <FDBK
+        href="https://github.com/kok-s0s/just-do-it/issues"
+        target="_blank"
+      >
+        <BText>反馈</BText>
+      </FDBK>
     </Container>
   )
 }

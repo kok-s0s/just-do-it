@@ -32,7 +32,7 @@ export function Punch() {
           </Grid>
         </Grid>
       </Box>
-      <Link to="/home">
+      <Link to="/">
         <Back>
           <BText>返回</BText>
         </Back>
