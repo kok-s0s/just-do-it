@@ -8,9 +8,6 @@ import { Technology } from '../../components/Technology'
 import { Books } from '../../components/Books'
 import { PracticalProject } from '../../components/PracticalProject'
 import { CodeBlock } from '../../components/CodeBlock'
-import { FreeStyle } from '../../components/FreeStyle'
-// import { LearnReact } from '../../components/LearnReact'
-// import { FileElectron } from '../../components/FileElectron'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { SyntheticEvent } from 'react'
 import { Link } from 'react-router-dom'
@@ -52,15 +49,6 @@ export function Explore() {
                     <TabPanel value="4">
                         <CodeBlock />
                     </TabPanel>
-                    <TabPanel value="5">
-                        <FreeStyle />
-                    </TabPanel>
-                    {/* <TabPanel value="6">
-                        <LearnReact />
-                    </TabPanel>
-                    <TabPanel value="7">
-                        <FileElectron />
-                    </TabPanel> */}
                 </TabContext>
             </Box>
             <Link to="/home">
