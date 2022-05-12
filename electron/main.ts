@@ -5,11 +5,6 @@ let mainWindow: BrowserWindow | null
 declare const MAIN_WINDOW_WEBPACK_ENTRY: string
 declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
 
-// const assetsPath =
-//   process.env.NODE_ENV === 'production'
-//     ? process.resourcesPath
-//     : app.getAppPath()
-
 function createWindow() {
   mainWindow = new BrowserWindow({
     icon: 'assets/do-it.icns',
@@ -17,8 +12,7 @@ function createWindow() {
     height: 800,
     minWidth: 1300,
     minHeight: 800,
-    // maxWidth: 1400,
-    // maxHeight: 820,
+    frame: false, 
     backgroundColor: '#191622',
     webPreferences: {
       nodeIntegration: false,
@@ -29,7 +23,9 @@ function createWindow() {
 
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
 
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
+
+  mainWindow.maximize()
 
   mainWindow.on('closed', () => {
     mainWindow = null
