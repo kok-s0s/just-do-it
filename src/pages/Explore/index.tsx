@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Basic from '../../layouts/Basic'
-import { Box, Card, Container, Content, Idx, Mes, Next, Title } from './styles'
+import { Boss, Box, Card, Container, Content, Game, Idx, Mes, Next, Title } from './styles'
 
 const DataList = [
   {
@@ -28,24 +28,29 @@ const DataList = [
 export function Explore() {
   return (
     <Basic href="/">
-      <Container>
-        {DataList.map((item, index) => {
-          return (
-            <Card key={index}>
-              <Box>
-                <Content>
-                  <Idx>{`0${index + 1}`}</Idx>
-                  <Title>{item.title}</Title>
-                  <Mes>{item.mes}</Mes>
-                  <Link to={item.href}>
-                    <Next>Read More</Next>
-                  </Link>
-                </Content>
-              </Box>
-            </Card>
-          )
-        })}
-      </Container>
+      <Boss>
+        <Container>
+          {DataList.map((item, index) => {
+            return (
+              <Card key={index}>
+                <Box>
+                  <Content>
+                    <Idx>{`0${index + 1}`}</Idx>
+                    <Title>{item.title}</Title>
+                    <Mes>{item.mes}</Mes>
+                    <Link to={item.href}>
+                      <Next>Read More</Next>
+                    </Link>
+                  </Content>
+                </Box>
+              </Card>
+            )
+          })}
+        </Container>
+        <Game>
+
+        </Game>
+      </Boss>
     </Basic>
   )
 }

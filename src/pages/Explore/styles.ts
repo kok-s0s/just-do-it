@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+export const Boss = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+`
+
 export const Container = styled.div`
     display: flex;
     background: #232427;
@@ -101,4 +107,8 @@ export const Next = styled.a`
       background: #fff;
       color: #000;
     }
+`
+
+export const Game = styled.div`
+    flex: 1;
 `
