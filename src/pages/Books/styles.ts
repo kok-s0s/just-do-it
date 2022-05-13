@@ -15,7 +15,8 @@ export const ShowBook = styled.div`
 
 export const ClassDescription = styled.div`
     margin-bottom: 1.5rem;
-    font-size: 20px;
+    font-family: STSong;
+    font-size: 1.3rem;
     text-align: center;
     letter-spacing: 2px;
     color: #565f68;

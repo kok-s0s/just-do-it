@@ -69,6 +69,11 @@ export function Books() {
                 label={item.name}
                 value={index.toString()}
                 key={index}
+                sx={{
+                  fontFamily: 'STSong',
+                  fontSize: '1.2rem',
+                  letterSpacing: '2px'
+                }}
               />
               ),
             )}
