@@ -5,3 +5,4 @@ webpack/*.js
 .webpack
 out
 README.md
+local-readme.md
