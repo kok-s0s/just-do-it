@@ -4,6 +4,7 @@ import TravelExploreRoundedIcon from '@mui/icons-material/TravelExploreRounded'
 import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper'
 import { Link } from 'react-router-dom'
+import { Plum } from '../../components/Plum'
 import {
   BClickLeft,
   BClickRight,
@@ -32,20 +33,22 @@ const iconStyle = {
 
 export function HomePage() {
   return (
-    <Container>
-      <Grid container spacing={3}>
-        <Grid item xs>
-          <BClickLeft>
-            <Paper sx={paperStyle} elevation={3}>
-              <BTitle>Try To Do</BTitle>
-              <PunchClockRoundedIcon sx={iconStyle} />
-              <Link to="/punch">
-                <Button>Go! Go! Go!</Button>
-              </Link>
-            </Paper>
-          </BClickLeft>
-        </Grid>
-        <Grid
+    <>
+      <Plum />
+      <Container>
+        <Grid container spacing={3} sx={{ zIndex: 20 }}>
+          <Grid item xs>
+            <BClickLeft>
+              <Paper sx={paperStyle} elevation={3}>
+                <BTitle>Try To Do</BTitle>
+                <PunchClockRoundedIcon sx={iconStyle} />
+                <Link to="/punch">
+                  <Button>Go! Go! Go!</Button>
+                </Link>
+              </Paper>
+            </BClickLeft>
+          </Grid>
+          <Grid
           item
           xs={2}
           sx={{
@@ -53,28 +56,30 @@ export function HomePage() {
             alignItems: 'center',
           }}
         >
-          <Image>
-            <ArrowCircleUpRoundedIcon
+            <Image>
+              <ArrowCircleUpRoundedIcon
               sx={{
                 fontSize: 180,
                 width: '100%',
                 color: '#8bb7b9',
+                zIndex: -1,
               }}
             />
-          </Image>
+            </Image>
+          </Grid>
+          <Grid item xs>
+            <BClickRight>
+              <Paper sx={paperStyle} elevation={3}>
+                <BTitle>Try To Know</BTitle>
+                <TravelExploreRoundedIcon sx={iconStyle} />
+                <Link to="/explore">
+                  <Button>Go! Go! Go!</Button>
+                </Link>
+              </Paper>
+            </BClickRight>
+          </Grid>
         </Grid>
-        <Grid item xs>
-          <BClickRight>
-            <Paper sx={paperStyle} elevation={3}>
-              <BTitle>Try To Know</BTitle>
-              <TravelExploreRoundedIcon sx={iconStyle} />
-              <Link to="/explore">
-                <Button>Go! Go! Go!</Button>
-              </Link>
-            </Paper>
-          </BClickRight>
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </>
   )
 }

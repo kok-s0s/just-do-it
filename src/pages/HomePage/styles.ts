@@ -17,12 +17,11 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; 
+    height: 100vh;
 `
 
 export const BClickSame = styled.div`
     height: 70vh;
-    background-color: #d8efef;
 `
 
 export const BClickLeft = styled(BClickSame)`
