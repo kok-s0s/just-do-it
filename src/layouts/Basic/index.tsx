@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { BText, Back } from './styles'
+import BackIcon from '../../../assets/images/back.svg'
+import { Icon } from './styles'
 
 interface BasicProps {
   children: React.ReactNode
@@ -11,9 +12,10 @@ const Basic: React.FC<BasicProps> = (props) => {
     <>
       {props.children}
       <Link to={props.href}>
-        <Back>
-          <BText>返回</BText>
-        </Back>
+        <Icon
+          src={BackIcon}
+          alt="icon"
+        />
       </Link>
     </>
   )

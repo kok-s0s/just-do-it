@@ -17,5 +17,6 @@ export const ClassDescription = styled.div`
     margin-bottom: 1.5rem;
     font-size: 20px;
     text-align: center;
+    letter-spacing: 2px;
     color: #565f68;
 `
