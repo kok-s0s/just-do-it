@@ -1,4 +1,3 @@
-import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined'
 import ArticleIcon from '@mui/icons-material/Article'
 import Tooltip from '@mui/material/Tooltip'
 import List from '@mui/material/List'
@@ -10,11 +9,8 @@ import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { getArticles, getWebSites } from '../../api/websites'
 import Basic from '../../layouts/Basic'
 import {
-  Articles,
   Icon,
   LinkWeb,
-  MessageBox,
-  TextH,
   WebSites,
 } from './styles'
 
@@ -52,13 +48,6 @@ export function Technology() {
 
   return (
     <Basic href="/explore">
-      <TextH>
-        <p>技术论坛</p>
-        <ArchiveOutlinedIcon
-          sx={{ fontSize: 30, marginLeft: '0.5rem' }}
-        />
-      </TextH>
-
       <WebSites>
         {webSites.map((webSite: WebSite, index: number) => {
           return (
@@ -75,49 +64,36 @@ export function Technology() {
         })}
       </WebSites>
 
-      <TextH>
-        <p>待读文章</p>
-        <ArchiveOutlinedIcon
-          sx={{ fontSize: 30, marginLeft: '0.5rem' }}
-        />
-      </TextH>
-
-      <MessageBox>
-        <Articles>
-          <List sx={{ flex: 1 }}>
-            {articles.map((article: Article, index: number) => {
-              return (
-                <LinkWeb key={index} href={article.link} target="_blank">
-                  <ListItem
+      <List sx={{ margin: '1rem', overflowY: 'scroll', scrollbarWidth: 'none' }}>
+        {articles.map((article: Article, index: number) => {
+          return (
+            <LinkWeb key={index} href={article.link} target="_blank">
+              <ListItem
                     sx={{
                       backgroundColor: '#FFFFFF',
-                      borderRadius: '10px',
-                      marginBottom: '0.7rem',
                     }}
                     disablePadding
                   >
-                    <ListItemButton
+                <ListItemButton
                       sx={{
                         backgroundColor: '#FFFFFF',
-                        borderRadius: '10px',
                       }}
                     >
-                      <ArticleIcon
+                  <ArticleIcon
                         sx={{
                           marginRight: '1rem',
                         }}
                       />
-                      <ListItemText
+                  <ListItemText
                         primary={article.title}
                       />
-                    </ListItemButton>
-                  </ListItem>
-                </LinkWeb>
-              )
-            })}
-          </List>
-        </Articles>
-      </MessageBox>
+                </ListItemButton>
+              </ListItem>
+            </LinkWeb>
+          )
+        })}
+      </List>
+
     </Basic>
   )
 }
