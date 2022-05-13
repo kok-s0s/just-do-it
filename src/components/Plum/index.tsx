@@ -12,13 +12,13 @@ interface Branch {
   theta: number
 }
 
-function draw(ctx: any) {  
+function draw(ctx: any) {
   let pendingTasks: Function[] = []
-  
+
   function step(b: Branch, depth = 0) {
     const end = getEndPoint(b)
     drawBranch(b)
-  
+
     if (depth < 4 || Math.random() < 0.5) {
       pendingTasks.push(() => step({
         start: end,
@@ -34,7 +34,7 @@ function draw(ctx: any) {
       }, depth + 1))
     }
   }
-  
+
   function frame() {
     const tasks: Function[] = []
     pendingTasks = pendingTasks.filter((i) => {
@@ -46,7 +46,7 @@ function draw(ctx: any) {
     })
     tasks.forEach(fn => fn())
   }
-  
+
   let framesCount = 0
   function startFrame() {
     requestAnimationFrame(() => {
@@ -56,30 +56,30 @@ function draw(ctx: any) {
       startFrame()
     })
   }
-  
+
   startFrame()
-  
+
   function lineTo(p1: Point, p2: Point) {
     ctx.beginPath()
     ctx.moveTo(p1.x, p1.y)
     ctx.lineTo(p2.x, p2.y)
     ctx.stroke()
   }
-  
+
   function getEndPoint(b: Branch): Point {
     return {
       x: b.start.x + b.length * Math.cos(b.theta),
       y: b.start.y + b.length * Math.sin(b.theta),
     }
   }
-  
+
   function drawBranch(b: Branch) {
     lineTo(b.start, getEndPoint(b))
   }
-  
+
   function init() {
     ctx.strokeStyle = '#fffffe'
-  
+
     step({
       start: { x: 0, y: Math.random() * window.innerHeight },
       length: 5,
@@ -96,7 +96,7 @@ function draw(ctx: any) {
       start: { x: window.innerWidth, y: Math.random() * window.innerHeight },
       length: 5,
       theta: Math.PI / 4,
-    }) 
+    })
 
     step({
       start: { x: Math.random() * window.innerWidth, y: window.innerHeight },
@@ -105,17 +105,17 @@ function draw(ctx: any) {
     })
   }
 
-  init() 
+  init()
 }
 
 export function Plum() {
   const canvasRef = useRef(null as HTMLCanvasElement | null)
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext('2d');
+    const canvas = canvasRef.current
+    const ctx = canvas?.getContext('2d')
     draw(ctx)
-  });
+  })
 
   return (
     <Artboard>
