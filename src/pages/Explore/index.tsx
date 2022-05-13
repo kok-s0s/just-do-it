@@ -31,7 +31,7 @@ export function Explore() {
       <Container>
         {DataList.map((item, index) => {
           return (
-            <Card>
+            <Card key={index}>
               <Box>
                 <Content>
                   <Idx>{`0${index + 1}`}</Idx>
