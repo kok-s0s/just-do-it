@@ -12,10 +12,6 @@ const options = [
   { name: 'AgeFans', link: 'https://www.agemys.com/update' },
 ]
 
-/**
- * @todo Make an Anime Website
- * @body Shows the anime I've watched and its introduction page
- */
 export function Animes() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
