@@ -72,7 +72,7 @@ export function Books() {
                 sx={{
                   fontFamily: 'STSong',
                   fontSize: '1.2rem',
-                  letterSpacing: '2px'
+                  letterSpacing: '2px',
                 }}
               />
               ),
