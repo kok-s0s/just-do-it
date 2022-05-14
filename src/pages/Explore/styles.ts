@@ -111,4 +111,9 @@ export const Next = styled.a`
 
 export const Game = styled.div`
     flex: 1;
+    padding: 2rem;
+`
+
+export const GameNext = styled(Next)`
+    
 `

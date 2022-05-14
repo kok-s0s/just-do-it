@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Basic from '../../layouts/Basic'
-import { Boss, Box, Card, Container, Content, Game, Idx, Mes, Next, Title } from './styles'
+import { Boss, Box, Card, Container, Content, Game, GameNext, Idx, Mes, Next, Title } from './styles'
 
 const DataList = [
   {
@@ -48,7 +48,9 @@ export function Explore() {
           })}
         </Container>
         <Game>
-
+          <Link to="/animes">
+            <GameNext>Animes</GameNext>
+          </Link>
         </Game>
       </Boss>
     </Basic>

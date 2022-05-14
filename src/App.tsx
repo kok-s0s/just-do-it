@@ -7,6 +7,7 @@ import { Books } from './pages/Books'
 import { Technology } from './pages/Technology'
 import { Projects } from './pages/Projects'
 import { CodeBlock } from './pages/CodeBlock'
+import { Animes } from './pages/Animes'
 
 export function App() {
   return (
@@ -21,6 +22,7 @@ export function App() {
           <Route path="technology" element={<Technology />} />
           <Route path="projects" element={<Projects />} />
           <Route path="codeblock" element={<CodeBlock />} />
+          <Route path="animes" element={<Animes />} />
         </Routes>
       </HashRouter>
     </>
