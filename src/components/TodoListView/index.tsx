@@ -46,9 +46,6 @@ export function TodoListView({ todoList }: Props) {
             <AddIcon />
           </AddItem>
         </Combination>
-      </Header>
-
-      <Content>
         {hidden
           ? (
             <AddTodoItem
@@ -60,7 +57,9 @@ export function TodoListView({ todoList }: Props) {
           : (
               ''
             )}
+      </Header>
 
+      <Content>
         {items.map(item => (
           <TodoItemView key={item.id} item={item} />
         ))}

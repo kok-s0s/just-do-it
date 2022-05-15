@@ -22,6 +22,7 @@ export const Note = styled.p`
     line-height: 150%;
     white-space: pre-line;
     word-wrap: break-word;
+    opacity: 0.6;
 `
 
 export const Time = styled.div`

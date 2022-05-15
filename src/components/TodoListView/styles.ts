@@ -17,44 +17,50 @@ export const PlanItem = styled.div`
 `
 
 export const Header = styled.div`
-    position: absolute;
+    position: sticky;
     top: 0;
     width: 100%;
+    z-index: 100;
+    background-color: #f6f8fa;
 `
 
 export const Combination = styled.div`
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.2rem;
 `
 
 export const Count = styled.span`
-    position: absolute;
-    display: inline-block;
-    top: 0.8rem;
-    left: 1rem;
+    flex: 0 0 auto;
+    margin: 0.6rem 0 0 0.6rem;
     border: none;
-    padding: 0px 6px;
+    width: 1.4rem;
+    height: 1.4rem;
     background-color: #afb8c1;
     font-size: 12px;
     font-weight: 500;
-    line-height: 18px;
+    line-height: 1.4rem;
     text-align: center;
     color: #24292f;
-    border-radius: 24px;
+    border-radius: 50%;
 `
 
 export const ListTitle = styled.span`
-    position: absolute;
-    top: 0.65rem;
-    left: 3rem;
+    flex: 1 1 auto;
+    margin: 0.6rem 0 0 1rem;
+    opacity: 0.7;
 `
 
 export const AddItem = styled.span`
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    flex: 0;
+    margin: 0.5rem 0.5rem 0 0;
     cursor: pointer;
 `
 
 export const Content = styled.div`
-    margin-top: 5vh;
+    > * {
+        &:first-child {
+            margin-top: 0.2rem;
+        }
+    }
 `
