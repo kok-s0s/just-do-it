@@ -103,9 +103,9 @@ export const Next = styled.a`
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
     &:hover {
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-      background: #fff;
-      color: #000;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        background: #fff;
+        color: #000;
     }
 `
 
@@ -115,5 +115,5 @@ export const Game = styled.div`
 `
 
 export const GameNext = styled(Next)`
-    
+    margin: 1rem;
 `

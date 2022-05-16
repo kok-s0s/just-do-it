@@ -51,6 +51,10 @@ export function Explore() {
           <Link to="/animes">
             <GameNext>Animes</GameNext>
           </Link>
+
+          <Link to="/bookmark">
+            <GameNext>BookMark</GameNext>
+          </Link>
         </Game>
       </Boss>
     </Basic>
