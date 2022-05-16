@@ -119,7 +119,7 @@ export function Plum() {
 
   return (
     <Artboard>
-      <canvas ref={canvasRef} width="2000" height="2000" scale-50 origin-top-left onClick={(e) => {
+      <canvas ref={canvasRef} width="2000" height="2000" scale-50 origin-top-left onClick={() => {
         const canvas = canvasRef.current
         const ctx = canvas?.getContext('2d')
         draw(ctx)
