@@ -15,31 +15,36 @@ export const Card = styled.div`
     margin: 0.5rem;
 `
 
-export const Title = styled(motion.div)`
+export const Header = styled(motion.div)`
     position: relative;
-    font-family: "Gill Sans", sans-serif;
+`
+
+export const Title = styled(motion.div)`
+    font-family: 'Macondo', cursive;
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 3px;
     margin: 0 0 0.8rem 0;
     text-align: center;
     opacity: 0.6;
+    cursor: pointer;
 `
 
-export const Icon = styled.div`
+export const Icon = styled(motion.div)`
     position: absolute;
     right: 0.2rem;
     top: 0.3rem;
+    font-size: 1.3rem;
     cursor: pointer;
     opacity: 0.6;
 `
 
 export const Border = styled(motion.ul)`
-    border: 4mm ridge rgba(255, 255, 255, 0.5);
+    border: 2.5mm ridge rgba(255, 255, 255, 0.5);
     text-align: center;
     position: relative;
-    height: 78vh;
-    max-height: 200px;
+    height: 185px;
+    max-height: 185px;
     border-radius: 5px;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
@@ -53,7 +58,7 @@ export const Border = styled(motion.ul)`
 export const Option = styled(motion.a)`
     margin: 0.5rem;
     text-align: center;
-    font-family: "Gill Sans", sans-serif;
+    font-family: 'Macondo','Noto Serif SC';
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 2px;
