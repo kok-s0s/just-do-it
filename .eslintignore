@@ -6,3 +6,5 @@ webpack/*.js
 out
 README.md
 local-readme.md
+electron
+@types
