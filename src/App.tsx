@@ -9,6 +9,7 @@ import { Projects } from './pages/Projects'
 import { CodeBlock } from './pages/CodeBlock'
 import { Animes } from './pages/Animes'
 import { BookMark } from './pages/BookMark'
+import { Markdown } from './pages/Markdonw'
 
 export function App() {
   return (
@@ -25,6 +26,7 @@ export function App() {
           <Route path="codeblock" element={<CodeBlock />} />
           <Route path="animes" element={<Animes />} />
           <Route path="bookmark" element={<BookMark />} />
+          <Route path="markdown" element={<Markdown />} />
         </Routes>
       </HashRouter>
     </>
