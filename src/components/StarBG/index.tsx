@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Layer, Stage, Star, Text } from 'react-konva'
+import { Layer, Stage, Star } from 'react-konva'
 
 function generateShapes() {
   return [...Array(20)].map((_, i) => ({
@@ -27,7 +27,7 @@ const StarBG = () => {
       }),
     )
   }
-  const handleDragEnd = (e: any) => {
+  const handleDragEnd = () => {
     setStars(
       stars.map((star) => {
         return {
