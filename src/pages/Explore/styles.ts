@@ -1,25 +1,27 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-export const Boss = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-`
-
 export const Container = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    row-gap: 2rem;
+    column-gap: 2rem;
+    width: 95vw;
+    height: 100vh;
+    padding: 1.8rem;
     background: #232427;
+    @media (max-width: 1280px) {
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    }
 `
 
 export const Card = styled.div`
     position: relative;
-    width: 320px;
     height: 360px;
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
       inset -5px -5px 15px rgba(255, 255, 255, 0.1),
       5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    margin: 30px;
     transition: 0.5s;
 `
 
@@ -109,11 +111,17 @@ export const Next = styled.a`
     }
 `
 
-export const Game = styled.div`
-    flex: 1;
-    padding: 2rem;
+export const SideBar = styled.div`
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    width: 5vw;
+    padding: 1rem 0.2rem;
 `
 
-export const GameNext = styled(Next)`
-    margin: 1rem;
+export const Back = styled(motion.div)`
+    font-size: 3rem;
+    color: black;
 `
