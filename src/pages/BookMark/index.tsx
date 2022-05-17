@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { SortableContainer, SortableElement, SortableHandle, arrayMove } from 'react-sortable-hoc'
+import TravelExploreIcon from '@mui/icons-material/TravelExplore'
 import Basic from '../../layouts/Basic'
-import { getBookmarkCategory } from '../../api/bookmark'
+import { getBookmarkCategory, getBookmarkList } from '../../api/bookmark'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
-import { Border, Card, Header, Icon, Manage, Option, Title } from './styles'
+import { Answer, Border, Card, False, Header, HighLight, Icon, Manage, Option, Search, SearchHeader, SearchInput, Title } from './styles'
 
 interface Bookmark {
   name: string
@@ -76,21 +77,41 @@ export function BookMark() {
     'bookmarkCategory',
     [],
   )
-
+  const [bookmarkList, setBookmarkList] = useLocalStorage(
+    'bookmarkList',
+    [],
+  )
+  const [query, setQueryText] = useState('')
+  const [matchArray, setMatchArray] = useState([])
   const onSortEnd = ({ oldIndex, newIndex }: { oldIndex: number; newIndex: number }) => {
     setBookmarkCategory(arrayMove(bookmarkCategory, oldIndex, newIndex))
+  }
+  const findMatches = (wordToMatch: string | RegExp) => {
+    return bookmarkList.filter((bookmark: Bookmark) => {
+      const regex = new RegExp(wordToMatch, 'i')
+      return bookmark.name.match(regex)
+    })
   }
 
   useEffect(() => {
     const getData = async () => {
-      const res = await getBookmarkCategory()
+      const resList = await getBookmarkList()
 
-      if (res.status === 200 && res.data.length > bookmarkCategory.length)
-        setBookmarkCategory(res.data)
+      if (resList.status === 200)
+        setBookmarkList(resList.data)
+
+      const resCategory = await getBookmarkCategory()
+
+      if (resCategory.status === 200)
+        setBookmarkCategory(resCategory.data)
     }
 
     getData()
   }, [])
+
+  useEffect(() => {
+    setMatchArray(findMatches(query))
+  }, [query])
 
   return (
     <Basic href="/explore">
@@ -101,6 +122,46 @@ export function BookMark() {
         items={bookmarkCategory}
         onSortEnd={onSortEnd}
       />
+      <Search>
+        <SearchHeader>
+          <TravelExploreIcon sx={{
+            fontSize: 36,
+            color: 'rgba(0, 0, 0, 0.5)',
+          }}/>
+          <SearchInput type="text" value={query} placeholder="Query" onChange={ev => setQueryText(ev.target.value)} />
+        </SearchHeader>
+        {(query !== '' && matchArray.length > 0)
+          ? (
+            <Answer>
+              {matchArray.map((bookmark: Bookmark) => {
+                const regex = new RegExp(query, 'gi')
+
+                return (
+                  <li key={bookmark.name}>
+                    <Option href={bookmark.link} target="_blank">
+                      {bookmark.name.split(' ').map((part, i) => {
+                        return regex.test(part)
+                          ? (
+                            <HighLight key={i}>{part}</HighLight>
+                            )
+                          : (
+                            <span key={i}>{part}</span>
+                            )
+                      })}
+                    </Option>
+                  </li>
+                )
+              })}
+            </Answer>
+            )
+          : (query !== '' && matchArray.length === 0)
+              ? (
+                <False>
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><g fill="currentColor"><path d="M30 25.14V12.5a1.5 1.5 0 1 0-3 0V23h-2V9.5a1.5 1.5 0 1 0-3 0V23h-2V12.5a1.5 1.5 0 1 0-3 0V25h-2v-8.5a1.5 1.5 0 1 0-3 0v13.238a10.263 10.263 0 0 0 19.324 4.818l5.906-11.107a1.812 1.812 0 0 0-3.184-1.731l-2.172 3.909c-.5.902-1.874.546-1.874-.486Z"/><path fillRule="evenodd" d="M24 4c11.046 0 20 8.954 20 20s-8.954 20-20 20S4 35.046 4 24S12.954 4 24 4Zm18.095 20c0-9.994-8.101-18.095-18.095-18.095c-9.994 0-18.095 8.101-18.095 18.095c0 9.994 8.101 18.095 18.095 18.095c9.994 0 18.095-8.101 18.095-18.095Z" clipRule="evenodd"/></g></svg>
+                </False>
+                )
+              : '' }
+      </Search>
     </Basic>
   )
 }
