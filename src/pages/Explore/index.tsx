@@ -37,7 +37,7 @@ const DataList = [
 
 export function Explore() {
   return (
-    <ControlPanel>
+    <ControlPanel href="/">
       <Container>
         {DataList.map((item, index) => {
           return (
