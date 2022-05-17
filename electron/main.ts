@@ -1,3 +1,4 @@
+const electron = require('electron')
 import { BrowserWindow, app, ipcMain } from 'electron'
 
 let mainWindow: BrowserWindow | null
@@ -6,11 +7,13 @@ declare const MAIN_WINDOW_WEBPACK_ENTRY: string
 declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
 
 function createWindow() {
+  const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+
   mainWindow = new BrowserWindow({
     icon: 'assets/do-it.icns',
-    width: 1300,
-    height: 800,
-    minWidth: 1300,
+    width,
+    height,
+    minWidth: 1280,
     minHeight: 800,
     frame: false,
     backgroundColor: '#191622',
@@ -24,8 +27,6 @@ function createWindow() {
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
 
   mainWindow.webContents.openDevTools()
-
-  mainWindow.maximize()
 
   mainWindow.on('closed', () => {
     mainWindow = null
