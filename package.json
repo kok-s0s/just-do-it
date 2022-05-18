@@ -10,7 +10,8 @@
         "start": "electron-forge start",
         "package": "electron-forge package",
         "make": "electron-forge make",
-        "release": "GITHUB_TOKEN=$just_do_it_GITHUB_TOKEN electron-forge publish",
+        "release": "electron-forge publish",
+        "publish": "GITHUB_TOKEN=$just_do_it_GITHUB_TOKEN electron-forge publish",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "test": "jest"
