@@ -14,11 +14,6 @@ const DataList = [
     href: '/bookmark',
   },
   {
-    title: 'Projects',
-    mes: '实战项目',
-    href: '/projects',
-  },
-  {
     title: 'CodeBlock',
     mes: '码无止境',
     href: '/codeblock',

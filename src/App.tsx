@@ -5,7 +5,6 @@ import { Punch } from './pages/Punch'
 import { Explore } from './pages/Explore'
 import { Books } from './pages/Books'
 import { Technology } from './pages/Technology'
-import { Projects } from './pages/Projects'
 import { CodeBlock } from './pages/CodeBlock'
 import { Animes } from './pages/Animes'
 import { BookMark } from './pages/BookMark'
@@ -22,7 +21,6 @@ export function App() {
           <Route path="explore" element={<Explore />} />
           <Route path="books" element={<Books />} />
           <Route path="technology" element={<Technology />} />
-          <Route path="projects" element={<Projects />} />
           <Route path="codeblock" element={<CodeBlock />} />
           <Route path="animes" element={<Animes />} />
           <Route path="bookmark" element={<BookMark />} />
