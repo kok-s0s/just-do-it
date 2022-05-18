@@ -96,14 +96,12 @@ export function BookMark() {
   useEffect(() => {
     const getData = async () => {
       const resList = await getBookmarkList()
-
-      if (resList.status === 200)
-        setBookmarkList(resList.data)
-
       const resCategory = await getBookmarkCategory()
 
-      if (resCategory.status === 200)
+      if (resList.status === 200 && resCategory.status === 200 && resList.data.length > bookmarkList.length) {
+        setBookmarkList(resList.data)
         setBookmarkCategory(resCategory.data)
+      }
     }
 
     getData()
