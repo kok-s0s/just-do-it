@@ -1,6 +1,6 @@
 {
     "name": "just-do-it",
-    "version": "1.2.0",
+    "version": "1.2.2",
     "description": "just-for-fun",
     "keywords": [],
     "license": "MIT",
@@ -10,7 +10,7 @@
         "start": "electron-forge start",
         "package": "electron-forge package",
         "make": "electron-forge make",
-        "release": "electron-forge publish",
+        "release": "GITHUB_TOKEN=$just_do_it_GITHUB_TOKEN electron-forge publish",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "test": "jest"
@@ -49,6 +49,7 @@
         "@electron-forge/maker-squirrel": "6.0.0-beta.57",
         "@electron-forge/maker-zip": "6.0.0-beta.57",
         "@electron-forge/plugin-webpack": "6.0.0-beta.57",
+        "@electron-forge/publisher-github": "^6.0.0-beta.63",
         "@marshallofsound/webpack-asset-relocator-loader": "0.5.0",
         "@testing-library/jest-dom": "5.14.1",
         "@testing-library/react": "11.2.7",
@@ -126,6 +127,18 @@
                     "config": {
                         "background": "assets/dmg-bg.png",
                         "format": "ULFO"
+                    }
+                }
+            ],
+            "publishers": [
+                {
+                    "name": "@electron-forge/publisher-github",
+                    "config": {
+                        "repository": {
+                            "owner": "kok-s0s",
+                            "name": "just-do-it"
+                        },
+                        "prerelease": true
                     }
                 }
             ]
