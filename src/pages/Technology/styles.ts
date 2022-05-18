@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const WebSites = styled.div`
     display: flex;
     max-height: 85vh;
-    margin: 2rem;
+    margin: 1.5rem;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     scrollbar-width: none;
@@ -22,6 +22,12 @@ export const Icon = styled.img`
     width: 64px;
     height: 64px;
     margin-right: 1rem;
+`
+
+export const MesBorder = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
 `
 
 export const Articles = styled.div`

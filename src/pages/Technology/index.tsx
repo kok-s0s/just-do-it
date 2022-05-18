@@ -8,11 +8,8 @@ import { useEffect } from 'react'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { getArticles, getWebSites } from '../../api/websites'
 import Basic from '../../layouts/Basic'
-import {
-  Icon,
-  LinkWeb,
-  WebSites,
-} from './styles'
+import { Projects } from '../../components/Projects'
+import { Icon, LinkWeb, MesBorder, WebSites } from './styles'
 
 interface WebSite {
   name: string
@@ -64,36 +61,40 @@ export function Technology() {
         })}
       </WebSites>
 
-      <List sx={{ margin: '1rem', overflowY: 'scroll', scrollbarWidth: 'none' }}>
-        {articles.map((article: Article, index: number) => {
-          return (
-            <LinkWeb key={index} href={article.link} target="_blank">
-              <ListItem
+      <MesBorder>
+        <Projects />
+
+        <List sx={{ margin: '1rem', overflowY: 'scroll', scrollbarWidth: 'none' }}>
+          {articles.map((article: Article, index: number) => {
+            return (
+              <LinkWeb key={index} href={article.link} target="_blank">
+                <ListItem
                     sx={{
                       backgroundColor: '#FFFFFF',
                     }}
                     disablePadding
                   >
-                <ListItemButton
+                  <ListItemButton
                       sx={{
                         backgroundColor: '#FFFFFF',
                       }}
                     >
-                  <ArticleIcon
+                    <ArticleIcon
                         sx={{
                           marginRight: '1rem',
                         }}
                       />
-                  <ListItemText
+                    <ListItemText
                         primary={article.title}
                       />
-                </ListItemButton>
-              </ListItem>
-            </LinkWeb>
-          )
-        })}
-      </List>
+                  </ListItemButton>
+                </ListItem>
+              </LinkWeb>
+            )
+          })}
+        </List>
 
+      </MesBorder>
     </Basic>
   )
 }
