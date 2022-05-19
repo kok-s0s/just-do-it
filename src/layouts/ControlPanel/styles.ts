@@ -37,17 +37,3 @@ export const Icon = styled(motion.div)`
     color: black;
     opacity: 0.7;
 `
-
-interface QuoteProps {
-  family: string
-  size: string
-}
-
-export const Quote = styled.div<QuoteProps>`
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-family: ${props => props.family};
-    font-size: ${props => props.size};
-    letter-spacing: 0.5rem;
-    opacity: 0.45;
-`
