@@ -7,7 +7,7 @@ import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { getProjects } from '../../api/practicalproject'
 import { ProjectList } from './styles'
 
-interface Project {
+interface ProjectProps {
   name: string
   description: string
   link: string
@@ -15,7 +15,7 @@ interface Project {
 }
 
 export function Projects() {
-  const [projects, setProjects] = useLocalStorage('projects', [])
+  const [projects, setProjects] = useLocalStorage<Array<ProjectProps>>('projects', [] as Array<ProjectProps>)
 
   useEffect(() => {
     const getData = async () => {
@@ -30,7 +30,7 @@ export function Projects() {
 
   return (
     <ProjectList>
-      {projects.map((project: Project, index: number) => {
+      {projects.map((project: ProjectProps, index: number) => {
         return (
           <Card
               key={index}

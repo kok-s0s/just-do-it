@@ -23,6 +23,27 @@ import {
   UserName,
 } from './styles'
 
+interface InfoProps {
+  avatar_url: string
+  blog: string
+  events_url: string
+  followers: string
+  followers_url: string
+  following: string
+  following_url: string
+  html_url: string
+  location: string
+  login: string
+  organizations_url: string
+  public_gists: string
+  public_repos: string
+  received_events_url: string
+  repos_url: string
+  starred_url: string
+  subscriptions_url: string
+  url: string
+}
+
 const style = {
   position: 'absolute' as const,
   top: '50%',
@@ -39,7 +60,7 @@ const style = {
 
 export function GithubInfo() {
   const [name, setName] = useLocalStorage('name', 'kok-s0s')
-  const [info, setInfo] = useLocalStorage('info', {})
+  const [info, setInfo] = useLocalStorage<InfoProps>('info', {} as InfoProps)
   const [open, setOpen] = useState(false)
   const [exist, setExist] = useState(true)
   const [ready, setReady] = useState(false)

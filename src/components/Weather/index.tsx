@@ -8,6 +8,13 @@ import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { giveWeatherIcon } from '../../utils/WeatherImg'
 import { Desc, Icon, Location, WeatherCard } from './styles'
 
+interface WeatherProps {
+  name: string
+  code: string
+  temperature: string
+  text: string
+}
+
 const style = {
   position: 'absolute' as const,
   top: '50%',
@@ -24,7 +31,7 @@ const style = {
 
 export function Weather() {
   const [location, setLocation] = useLocalStorage('location', '广州')
-  const [weather, setWeather] = useLocalStorage('weather', {})
+  const [weather, setWeather] = useLocalStorage<WeatherProps>('weather', {} as WeatherProps)
   const [exist, setExist] = useState(true)
   const [open, setOpen] = useState(false)
 

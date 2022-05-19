@@ -25,20 +25,20 @@ interface Book {
 
 interface BookClassification {
   name: string
-  classDesc: string
+  description: string
   books: Array<Book>
 }
 
 export function Books() {
-  const [bookClassification, setBookClassification] = useLocalStorage(
+  const [bookClassification, setBookClassification] = useLocalStorage<Array<BookClassification>>(
     'bookClassification',
     [],
   )
-  const [books, setBooks] = useLocalStorage('books', [])
-  const [value, setValue] = useLocalStorage('curClassificationTab', '0')
+  const [books, setBooks] = useLocalStorage<Array<Array<Book>>>('books', [])
+  const [value, setValue] = useLocalStorage<string>('curClassificationTab', '0')
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
-    setValue(newValue)
+    setValue(newValue.toString())
   }
 
   useEffect(() => {

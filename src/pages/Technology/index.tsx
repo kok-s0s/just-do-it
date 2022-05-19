@@ -24,8 +24,8 @@ interface Article {
 }
 
 export function Technology() {
-  const [webSites, setWebSites] = useLocalStorage('websites', [])
-  const [articles, setArticles] = useLocalStorage('articles', [])
+  const [webSites, setWebSites] = useLocalStorage<Array<WebSite>>('websites', [])
+  const [articles, setArticles] = useLocalStorage<Array<Article>>('articles', [])
 
   useEffect(() => {
     const getData = async () => {
@@ -93,7 +93,6 @@ export function Technology() {
             )
           })}
         </List>
-
       </MesBorder>
     </Basic>
   )

@@ -30,13 +30,13 @@ interface TopicType {
 
 export function CodeBlock() {
   const [topictype, setTopicType] = useLocalStorage('topictype', [])
-  const [typeQ, setTypeQ] = useLocalStorage('typeQ', [])
+  const [typeQ, setTypeQ] = useLocalStorage<Array<Array<Question>>>('typeQ', [])
   const [randomQ, setRandomQ] = useLocalStorage('randomQ', [])
-  const [value, setValue] = useLocalStorage('curDifficultyTab', '0')
+  const [value, setValue] = useLocalStorage<string>('curDifficultyTab', '0')
   const [visible, setVisible] = useState(false)
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
-    setValue(newValue)
+    setValue(newValue.toString())
   }
 
   useEffect(() => {
