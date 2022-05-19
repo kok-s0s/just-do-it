@@ -109,6 +109,7 @@ export const SearchInput = styled.input`
 
 export const Answer = styled(Border)`
     height: auto;
+    max-width: 300px;
     max-height: 600px;
     margin-right: 0.5rem;
     border: 4mm ridge rgba(255, 255, 255, 0.5);

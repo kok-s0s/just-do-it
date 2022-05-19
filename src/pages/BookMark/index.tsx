@@ -140,10 +140,10 @@ export function BookMark() {
                       {bookmark.name.split(' ').map((part, i) => {
                         return regex.test(part)
                           ? (
-                            <HighLight key={i}>{part}</HighLight>
+                            <HighLight key={i}>{i !== 0 ? ' ' : ''}{part}</HighLight>
                             )
                           : (
-                            <span key={i}>{part}</span>
+                            <span key={i}>{i !== 0 ? ' ' : ''}{part}</span>
                             )
                       })}
                     </Option>
