@@ -5,7 +5,7 @@ export const WeatherCard = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem 1rem;
     margin-top: 0.5rem;
     background-color: #edf6f7;
     border-radius: 10px;
@@ -20,7 +20,7 @@ export const Desc = styled.span`
 
 export const Icon = styled.img`
     display: inline-block;
-    width: 90px;
+    width: 80px;
 `
 
 export const Location = styled.span`
