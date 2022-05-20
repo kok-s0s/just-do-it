@@ -6,7 +6,7 @@ let mainWindow: BrowserWindow | null
 declare const MAIN_WINDOW_WEBPACK_ENTRY: string
 declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
 
-function createWindow() {
+async function createWindow() {
   const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
 
   mainWindow = new BrowserWindow({
@@ -16,7 +16,8 @@ function createWindow() {
     minWidth: 1280,
     minHeight: 800,
     frame: false,
-    backgroundColor: '#191622',
+    show:false,
+    backgroundColor: '#d8efef',
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -24,13 +25,15 @@ function createWindow() {
     },
   })
 
-  mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
+  await mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
 
   mainWindow.webContents.openDevTools()
 
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+
+  mainWindow.show()
 }
 
 async function registerListeners() {

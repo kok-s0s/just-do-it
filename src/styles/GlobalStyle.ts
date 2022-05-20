@@ -10,11 +10,15 @@ export const GlobalStyle = createGlobalStyle`
   body {
     user-select: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px; 
-    background-color: #d8efef;
+    font-size: 16px;
+    -webkit-app-region: drag;
   }
 
   a {
     text-decoration: none
+  }
+
+  button {
+    -webkit-app-region: no-drag;
   }
 `
