@@ -116,7 +116,7 @@ export const Answer = styled(Border)`
 `
 
 export const HighLight = styled.span`
-    background-color: #a1e868;
+    background-color: #ffef0ade;
 `
 
 export const False = styled(motion.div)`
