@@ -26,7 +26,7 @@ function draw(ctx: any) {
         theta: b.theta - 0.2 * Math.random(),
       }, depth + 1))
     }
-    if (depth < 4 || Math.random() < 0.5) {
+    if (depth < 4 || Math.random() > 0.5) {
       pendingTasks.push(() => step({
         start: end,
         length: b.length + (Math.random() * 2 - 1),
@@ -51,7 +51,7 @@ function draw(ctx: any) {
   function startFrame() {
     requestAnimationFrame(() => {
       framesCount += 1
-      if (framesCount % 3 === 0)
+      if (framesCount % 4 === 0)
         frame()
       startFrame()
     })
@@ -78,7 +78,8 @@ function draw(ctx: any) {
   }
 
   function init() {
-    ctx.strokeStyle = '#fffffe'
+    ctx.lineWidth = 0.5;
+    ctx.strokeStyle = '#fffffbc0'
 
     step({
       start: { x: 0, y: Math.random() * window.innerHeight },
