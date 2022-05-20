@@ -78,7 +78,7 @@ function draw(ctx: any) {
   }
 
   function init() {
-    ctx.lineWidth = 0.5;
+    ctx.lineWidth = 0.5
     ctx.strokeStyle = '#fffffbc0'
 
     step({
