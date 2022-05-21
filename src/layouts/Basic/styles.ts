@@ -7,5 +7,5 @@ export const Icon = styled(motion.div)`
     bottom: 0.7rem;
     font-size: 4.2rem;
     color: black;
-    opacity: 0.4;
+    color: rgba(80, 80, 80, 0.4);
 `

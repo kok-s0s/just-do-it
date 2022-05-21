@@ -33,7 +33,6 @@ export const BClickRight = styled(BClickSame)`
 `
 
 export const BTitle = styled.div`
-    font-family: "Gill Sans", sans-serif;
     font-size: 2.3rem;
     font-weight: 500;
     letter-spacing: 2px;
@@ -53,11 +52,11 @@ export const Button = styled.button`
     border-width: 2px;
     box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
     box-sizing: border-box;
-    color: #272343;
+    color: rgba(80, 80, 80);
     cursor: pointer;
     display: inline-block;
-    font-family: Neucha, sans-serif;
-    font-size: 1.3rem;
+    font-family: 'Macondo','Noto Serif SC';
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 23px;
     outline: none;

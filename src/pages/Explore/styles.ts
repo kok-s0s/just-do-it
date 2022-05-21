@@ -88,7 +88,6 @@ export const Mes = styled.p`
 `
 
 export const Next = styled.a`
-    font-family: "Gill Sans", sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -98,8 +97,8 @@ export const Next = styled.a`
     background: black;
     border-radius: 5px;
     text-decoration: none;
+    color: rgba(80, 80, 80);
     background-color: #bae8e8;
-    color: #272343;
     margin-top: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: 0.5s;

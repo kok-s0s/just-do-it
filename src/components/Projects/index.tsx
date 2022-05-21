@@ -54,7 +54,7 @@ export function Projects() {
                     fontSize: 24,
                     fontWeight: 500,
                     letterSpacing: '0.1rem',
-                    opacity: '0.8',
+                    color: 'rgba(80, 80, 80)',
                   }}
                   gutterBottom
                 >
@@ -65,7 +65,7 @@ export function Projects() {
                     fontSize: '1.1rem',
                     fontFamily: '\'Gill Sans\', \'Noto Serif SC\'',
                     letterSpacing: '0.3rem',
-                    opacity: '0.7',
+                    color: 'rgba(80, 80, 80, 0.8)',
                   }}
                 >
                 {project.description}

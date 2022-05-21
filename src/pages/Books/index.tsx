@@ -70,8 +70,8 @@ export function Books() {
                 value={index.toString()}
                 key={index}
                 sx={{
-                  fontFamily: 'STSong',
-                  fontSize: '1.2rem',
+                  fontFamily: 'Noto Serif SC',
+                  fontSize: '1.5rem',
                   letterSpacing: '2px',
                 }}
               />

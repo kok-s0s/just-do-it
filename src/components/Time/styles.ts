@@ -7,7 +7,7 @@ export const TimeCard = styled.div`
     width: 100%;
     padding: 1rem;
     margin-top: 1rem;
-    color: #b7b7b7;
+    color: rgba(80, 80, 80, 0.5);
     background-color: #edf6f7;
     font-size: 5rem;
     border-radius: 10px;

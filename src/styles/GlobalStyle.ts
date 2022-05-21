@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     user-select: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Macondo','Noto Serif SC';
     font-size: 16px;
     -webkit-app-region: drag;
   }
@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none
   }
 
-  button {
+  input, textarea, button{
     -webkit-app-region: no-drag;
   }
 `

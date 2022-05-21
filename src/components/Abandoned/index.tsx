@@ -12,7 +12,7 @@ export function Abandoned() {
 
   return (
     <>
-      <Button onClick={() => setState(!state)}>永久废弃项</Button>
+      <Button onClick={() => setState(!state)}>Permanently obsolete</Button>
 
       <Drawer
         anchor={'right'}

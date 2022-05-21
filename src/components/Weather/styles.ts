@@ -14,8 +14,9 @@ export const WeatherCard = styled.div`
 export const Desc = styled.span`
     margin-right: 0.8rem;
     font-size: 28px;
+    font-weight: 600;
     letter-spacing: 1px;
-    color: #b7b7b7;
+    color: rgba(80, 80, 80, 0.5);
 `
 
 export const Icon = styled.img`

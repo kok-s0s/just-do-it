@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const Input = styled.textarea`
     min-width: 100%;
     max-width: 100%;
-    font-size: 1.1rem;
     letter-spacing: 1px;
     border-radius: 6px;
     border-style: solid;

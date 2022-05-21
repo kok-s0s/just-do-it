@@ -11,8 +11,12 @@ export const Card = styled.div`
 `
 
 export const Note = styled.p`
-    margin: 0.5rem 0.5rem 1.5rem 0.5rem;
+    margin: 0.5rem 2rem 1.5rem 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+    letter-spacing: 0.08rem;
+    line-height: 150%;
+    white-space: pre-line;
     word-wrap: break-word;
 `
 

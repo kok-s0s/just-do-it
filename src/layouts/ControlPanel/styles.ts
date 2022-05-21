@@ -34,6 +34,5 @@ export const Image = styled.img`
 export const Icon = styled(motion.div)`
     display: flex;
     font-size: 3rem;
-    color: black;
-    opacity: 0.7;
+    color: rgba(80, 80, 80);
 `

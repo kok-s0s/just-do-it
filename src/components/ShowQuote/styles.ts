@@ -11,5 +11,5 @@ export const Quote = styled.div<QuoteProps>`
     font-family: ${props => props.family};
     font-size: ${props => props.size};
     letter-spacing: 0.5rem;
-    opacity: 0.45;
+    color: rgba(80, 80, 80, 0.7);
 `

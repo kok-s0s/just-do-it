@@ -4,9 +4,9 @@ export const Button = styled.button`
     flex-grow: 1;
     margin: 0 1rem 0 2rem;
     height: 10vh;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Macondo','Noto Serif SC';
     font-size: 16px;
-    letter-spacing: 2px;
+    letter-spacing: 10px;
     text-decoration: none;
     text-transform: uppercase;
     color: #000;

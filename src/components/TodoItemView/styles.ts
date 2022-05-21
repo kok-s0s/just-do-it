@@ -17,12 +17,13 @@ export const More = styled.span`
 
 export const Note = styled.p`
     margin: 0.2rem 2rem 1.5rem 2rem;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9rem;
     letter-spacing: 0.08rem;
     line-height: 150%;
     white-space: pre-line;
     word-wrap: break-word;
-    opacity: 0.6;
+    color: rgba(80, 80, 80, 0.8);
 `
 
 export const Time = styled.div`
@@ -32,13 +33,12 @@ export const Time = styled.div`
     font-family: -apple-system;
     font-size: 12.6px;
     line-height: 18.9px;
-    color: #57606a;
+    color: rgba(80, 80, 80, 0.7);
 `
 
 export const Input = styled.textarea`
     min-width: 100%;
     max-width: 100%;
-    font-size: 1.1rem;
     letter-spacing: 1px;
     border-radius: 6px;
     border-style: solid;

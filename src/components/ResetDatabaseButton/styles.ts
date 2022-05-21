@@ -9,7 +9,7 @@ export const ButtonWow = styled.button`
         height: 76px;
         line-height: 78px;
         font-size: 20px;
-        font-family: 'Bebas Neue', sans-serif;
+        font-family: 'Macondo','Noto Serif SC';
         background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
         border: 0;
         color: #fff;

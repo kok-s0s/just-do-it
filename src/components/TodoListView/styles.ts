@@ -37,18 +37,19 @@ export const Count = styled.span`
     width: 1.4rem;
     height: 1.4rem;
     background-color: #afb8c1;
+    font-family: -apple-system;
     font-size: 12px;
     font-weight: 500;
     line-height: 1.4rem;
     text-align: center;
-    color: #24292f;
+    color: rgba(80, 80, 80);
     border-radius: 50%;
 `
 
 export const ListTitle = styled.span`
     flex: 1 1 auto;
     margin: 0.6rem 0 0 1rem;
-    opacity: 0.7;
+    color: rgba(80, 80, 80, 0.9);
 `
 
 export const AddItem = styled.span`

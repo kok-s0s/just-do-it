@@ -10,10 +10,13 @@ const style = {
   position: 'absolute' as const,
   top: '50%',
   left: '50%',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
   margin: 0,
   padding: 0,
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: 650,
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -27,7 +30,7 @@ export function ResetDatabaseButton() {
 
   return (
     <>
-      <ButtonWow onClick={handleOpen}>慎重点击 不然重置</ButtonWow>
+      <ButtonWow onClick={handleOpen}>i&apos;s dangerous ⚠️</ButtonWow>
 
       <Modal
         open={open}
@@ -37,26 +40,37 @@ export function ResetDatabaseButton() {
       >
         <Box sx={style}>
           <Typography
-            id="modal-modal-title"
-            variant="h6"
+            variant="h5"
             component="h2"
-          >
-            你是否确定要重置数据？
-          </Typography>
-          <Button
-            size="large"
             sx={{
-              position: 'absolute',
-              right: '1.2rem',
-              fontSize: '1.75rem',
-              bottom: '1rem',
+              display: 'inline-block',
+              fontFamily: '\'Macondo\',\'Noto Serif SC\'',
+            }}
+          >
+            Are you sure you want to reset the data?
+          </Typography>
+
+          <Button
+            sx={{
+              fontSize: '1.5rem',
             }}
             onClick={() => {
               resetDatabase()
               handleClose()
             }}
           >
-            确定 ✅
+            ✅
+          </Button>
+
+          <Button
+            sx={{
+              fontSize: '1.5rem',
+            }}
+            onClick={() => {
+              handleClose()
+            }}
+          >
+            ❌
           </Button>
         </Box>
       </Modal>

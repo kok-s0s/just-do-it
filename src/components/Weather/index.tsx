@@ -19,6 +19,9 @@ const style = {
   position: 'absolute' as const,
   top: '50%',
   left: '50%',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
   margin: 0,
   padding: 0,
   transform: 'translate(-50%, -50%)',
@@ -75,27 +78,36 @@ export function Weather() {
       >
         <Box sx={style}>
           <TextField
-            id="standard-basic"
             label="输入中文城市"
             variant="standard"
             required
             value={location}
             onChange={e => setLocation(e.target.value)}
           />
+
           <Button
             size="large"
             sx={{
-              position: 'absolute',
-              right: '1.2rem',
-              fontSize: '1.75rem',
-              bottom: '1rem',
+              fontSize: '1.5rem',
+              marginLeft: '3rem',
             }}
             onClick={() => {
               setExist(true)
               handleClose()
             }}
           >
-            确定 ✅
+            ✅
+          </Button>
+
+          <Button
+            sx={{
+              fontSize: '1.3rem',
+            }}
+            onClick={() => {
+              handleClose()
+            }}
+          >
+            ❌
           </Button>
         </Box>
       </Modal>

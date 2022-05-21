@@ -15,8 +15,8 @@ export const ShowBook = styled.div`
 
 export const ClassDescription = styled.div`
     margin-bottom: 1.5rem;
-    font-family: STSong;
-    font-size: 1.3rem;
+    font-family: 'Macondo', 'Noto Serif SC';
+    font-size: 1.4rem;
     text-align: center;
     letter-spacing: 2px;
     color: #565f68;

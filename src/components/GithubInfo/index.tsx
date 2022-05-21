@@ -48,6 +48,9 @@ const style = {
   position: 'absolute' as const,
   top: '50%',
   left: '50%',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
   margin: 0,
   padding: 0,
   transform: 'translate(-50%, -50%)',
@@ -146,20 +149,18 @@ export function GithubInfo() {
       >
         <Box sx={style}>
           <TextField
-            id="standard-basic"
-            label="用户名"
+            label="username"
             variant="standard"
             required
             value={name}
             onChange={e => setName(e.target.value)}
           />
+
           <Button
             size="large"
             sx={{
-              position: 'absolute',
-              right: '1.2rem',
-              fontSize: '1.75rem',
-              bottom: '1rem',
+              fontSize: '1.3rem',
+              marginLeft: '3rem',
             }}
             onClick={() => {
               setExist(true)
@@ -168,7 +169,18 @@ export function GithubInfo() {
               handleClose()
             }}
           >
-            确定 ✅
+            ✅
+          </Button>
+
+          <Button
+            sx={{
+              fontSize: '1.3rem',
+            }}
+            onClick={() => {
+              handleClose()
+            }}
+          >
+            ❌
           </Button>
         </Box>
       </Modal>
@@ -216,7 +228,7 @@ export function GithubInfo() {
         <Time />
       </InfoScreen>
       <RFooter>
-        <ChangeButton onClick={handleOpen}>更换用户</ChangeButton>
+        <ChangeButton onClick={handleOpen}>change user</ChangeButton>
       </RFooter>
     </>
   )

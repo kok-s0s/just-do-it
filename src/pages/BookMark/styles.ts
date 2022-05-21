@@ -20,13 +20,12 @@ export const Header = styled(motion.div)`
 `
 
 export const Title = styled(motion.div)`
-    font-family: 'Macondo', cursive;
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 3px;
     margin: 0 0 0.8rem 0;
     text-align: center;
-    opacity: 0.6;
+    color: rgba(80, 80, 80, 0.6);
     cursor: pointer;
 `
 
@@ -36,7 +35,7 @@ export const Icon = styled(motion.div)`
     top: 0.3rem;
     font-size: 1.3rem;
     cursor: pointer;
-    opacity: 0.6;
+    color: rgba(80, 80, 80, 0.9);
 `
 
 export const Border = styled(motion.ul)`
@@ -58,7 +57,6 @@ export const Border = styled(motion.ul)`
 export const Option = styled(motion.a)`
     margin: 0.5rem;
     text-align: center;
-    font-family: 'Macondo','Noto Serif SC';
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -68,16 +66,14 @@ export const Option = styled(motion.a)`
     background: black;
     border-radius: 5px;
     text-decoration: none;
+    color: rgba(80, 80, 80);
     background-color: #bae8e8;
-    color: #272343;
-    opacity: 0.7;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
     &:hover {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
         background: #fff;
         color: #000;
-        opacity: 1;
     }
 `
 
@@ -122,5 +118,5 @@ export const HighLight = styled.span`
 export const False = styled(motion.div)`
     font-size: 10rem;
     cursor: pointer;
-    opacity: 0.5;
+    color: rgba(80, 80, 80, 0.5);
 `
