@@ -114,7 +114,8 @@ export function Weather() {
       <WeatherCard>
         <Desc>
           <Location onClick={handleOpen}>{weather.name}</Location>{' '}
-          {weather.text} {weather.temperature}°C
+          <div>{weather.text}</div>
+          <div>{weather.temperature}°C</div>
         </Desc>
         <Icon
           src={giveWeatherIcon(parseInt(weather.code))}

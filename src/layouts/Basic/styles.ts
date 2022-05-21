@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 export const Icon = styled(motion.div)`
     position: fixed;
-    right: 1.5rem;
-    bottom: 0.7rem;
-    font-size: 4.2rem;
-    color: black;
+    right: 2.5rem;
+    bottom: 1.2rem;
+    display: flex;
+    font-size: 3rem;
     color: rgba(80, 80, 80, 0.4);
 `

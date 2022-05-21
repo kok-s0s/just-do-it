@@ -1,27 +1,9 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-export const Button = styled.button`
-    flex-grow: 1;
-    margin: 0 1rem 0 2rem;
-    height: 10vh;
-    font-family: 'Macondo','Noto Serif SC';
-    font-size: 16px;
-    letter-spacing: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000;
+export const Icon = styled(motion.div)`
+    display: flex;
+    font-size: 2rem;
+    color: rgba(80, 80, 80, 0.4);
     cursor: pointer;
-    border: 3px solid;
-    padding: 0.25em 0.5em;
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px,
-        4px 4px 0px 0px, 5px 5px 0px 0px;
-    position: relative;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    &:active {
-        box-shadow: 0px 0px 0px 0px;
-        top: 5px;
-        left: 5px;
-    }
 `

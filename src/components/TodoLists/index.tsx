@@ -19,7 +19,8 @@ export function TodoLists() {
         spacing={2}
         sx={{
           margin: 0,
-          padding: 0,
+          padding: '1rem 0',
+          height: '100%',
         }}
       >
         {lists.map((list, index) =>

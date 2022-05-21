@@ -1,37 +1,29 @@
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
-import Basic from '../../layouts/Basic'
 import { TodoLists } from '../../components/TodoLists'
-import { Abandoned } from '../../components/Abandoned'
-import { ResetDatabaseButton } from '../../components/ResetDatabaseButton'
 import { GithubInfo } from '../../components/GithubInfo'
-import { LFooter } from './styles'
 
 export function Punch() {
   return (
-    <Basic href="/">
+    <>
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container
           spacing={2}
           sx={{
             margin: 0,
-            padding: 0,
             width: '100vw',
+            height: '100vh',
           }}
         >
-          <Grid item xs={8}>
+          <Grid item xs={8} sx={{ paddingBottom: '1rem' }}>
             <TodoLists />
-            <LFooter>
-              <ResetDatabaseButton />
-              <Abandoned />
-            </LFooter>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={4} sx={{ paddingRight: '1rem' }}>
             <GithubInfo />
           </Grid>
         </Grid>
       </Box>
-    </Basic>
+    </>
   )
 }
