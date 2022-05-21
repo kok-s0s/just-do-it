@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem'
 import EventNoteOutlinedIcon from '@mui/icons-material/EventNoteOutlined'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
 import type { MouseEvent } from 'react'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '../../db/db'
 import type { TodoItem } from '../../db/TodoItem'
@@ -20,6 +20,7 @@ export function TodoItemView({ item }: Props) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const [hidden, setHidden] = useState(false)
   const [tempTitle, setTempTitle] = useState('')
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null)
   const open = Boolean(anchorEl)
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget)
@@ -57,6 +58,18 @@ export function TodoItemView({ item }: Props) {
     db.todoItems.add(copyItem)
   }
 
+  const textAreaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setTempTitle(event.target.value)
+  }
+
+  useEffect(() => {
+    if (textareaRef && textareaRef.current) {
+      textareaRef.current.style.height = '60px'
+      const scrollHeight = textareaRef.current.scrollHeight
+      textareaRef.current.style.height = `${scrollHeight}px`
+    }
+  }, [tempTitle])
+
   return (
     <ShowItem>
       {hidden
@@ -65,7 +78,8 @@ export function TodoItemView({ item }: Props) {
             <Input
               placeholder="Revise a note"
               value={tempTitle}
-              onChange={ev => setTempTitle(ev.target.value)}
+              ref={textareaRef}
+              onChange={textAreaChange}
             />
             <Grid
               container
@@ -103,7 +117,6 @@ export function TodoItemView({ item }: Props) {
               }}
             />
             <More
-              id="basic-button"
               aria-controls={open ? 'basic-menu' : undefined}
               aria-haspopup="true"
               aria-expanded={open ? 'true' : undefined}
@@ -117,7 +130,6 @@ export function TodoItemView({ item }: Props) {
               />
             </More>
             <Menu
-              id="basic-menu"
               anchorEl={anchorEl}
               open={open}
               onClose={handleClose}

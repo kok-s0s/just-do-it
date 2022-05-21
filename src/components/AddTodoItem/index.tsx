@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box'
 import type { Dispatch, SetStateAction } from 'react'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { db } from '../../db/db'
 import type { TodoList } from '../../db/TodoList'
 import { Cancel, Confirm, FlexBox, Input } from './styles'
@@ -17,6 +17,21 @@ export function AddTodoItem({ todoList, hidden, setHidden }: Props) {
     title: '',
     time: new Date(),
   })
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null)
+  const textAreaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setItem(item => ({
+      ...item,
+      title: event.target.value,
+    }))
+  }
+
+  useEffect(() => {
+    if (textareaRef && textareaRef.current) {
+      textareaRef.current.style.height = '60px'
+      const scrollHeight = textareaRef.current.scrollHeight
+      textareaRef.current.style.height = `${scrollHeight}px`
+    }
+  }, [item])
 
   return (
     <Box
@@ -29,12 +44,8 @@ export function AddTodoItem({ todoList, hidden, setHidden }: Props) {
       <Input
         placeholder="Enter a note"
         value={item.title}
-        onChange={ev =>
-          setItem(item => ({
-            ...item,
-            title: ev.target.value,
-          }))
-        }
+        ref={textareaRef}
+        onChange={textAreaChange}
       />
       <FlexBox>
         <Confirm
@@ -44,10 +55,7 @@ export function AddTodoItem({ todoList, hidden, setHidden }: Props) {
               item.time = curDate
               db.todoItems.add(item)
               setItem({
-                todoListId:
-                                    typeof todoList.id === 'number'
-                                      ? todoList.id
-                                      : 0,
+                todoListId: typeof todoList.id === 'number' ? todoList.id : 0,
                 title: '',
                 time: new Date(),
               })
