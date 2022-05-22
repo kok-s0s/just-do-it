@@ -4,14 +4,14 @@ import styled from 'styled-components'
 export const Manage = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 70%;
-    margin: 1rem 1rem 1rem 0.5rem;
+    max-width: 70vw;
+    margin: 1rem;
     align-items: center;
     justify-items: center;
 `
 
 export const Card = styled.div`
-    width: 300px;
+    width: 285px;
     margin: 0.5rem;
 `
 
@@ -80,8 +80,9 @@ export const Option = styled(motion.a)`
 export const Search = styled(Card)`
     position: fixed;
     top: 2rem;
-    right: 0.5rem;
+    right: 5vw;
     display: flex;
+    width: 300px;
     flex-direction: column;
     align-items: center;
 `
@@ -98,8 +99,10 @@ export const SearchInput = styled.input`
     font-size: 1.2rem;
     border: none;
     outline:none;
-    border-bottom: solid 5px rgba(0, 0, 0, 0.3);
+    border-bottom: solid 5px rgba(0, 0, 0, 0.4);
     background-color: inherit;
+    letter-spacing: 2px;
+    padding-left: 0.5rem;
     border-radius: 4px;
 `
 

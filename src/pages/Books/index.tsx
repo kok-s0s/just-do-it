@@ -11,7 +11,7 @@ import type { SyntheticEvent } from 'react'
 import { useEffect } from 'react'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { getBooks } from '../../api/books'
-import Basic from '../../layouts/Basic'
+import ControlPanel from '../../layouts/ControlPanel'
 import { ClassDescription, ShowBook } from './styles'
 
 interface Book {
@@ -59,9 +59,9 @@ export function Books() {
   }, [])
 
   return (
-    <Basic href="/explore">
+    <ControlPanel href="/explore">
       <TabContext value={value}>
-        <Box sx={{ width: '100%', typography: 'body1' }}>
+        <Box sx={{ width: '95vw', typography: 'body1' }}>
           <Tabs value={value} onChange={handleChange} centered>
             {bookClassification.map(
               (item: BookClassification, index: number) => (
@@ -90,10 +90,16 @@ export function Books() {
                   <Card
                   key={`${book.name} + ${book.author}`}
                   sx={{
-                    minWidth: 350,
-                    maxWidth: 350,
-                    marginLeft: '0.5rem',
-                    marginRight: '0.5rem',
+                    'minWidth': 350,
+                    'maxWidth': 350,
+                    'marginLeft': '0.5rem',
+                    'marginRight': '0.5rem',
+                    '&:first-child': {
+                      marginLeft: 0,
+                    },
+                    '&:last-child': {
+                      marginRight: 0,
+                    },
                   }}
                   color="#fffffe"
                   variant="outlined"
@@ -144,6 +150,6 @@ export function Books() {
           ))}
         </Box>
       </TabContext>
-    </Basic>
+    </ControlPanel>
   )
 }

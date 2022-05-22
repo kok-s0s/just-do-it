@@ -2,7 +2,7 @@ import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import { useState } from 'react'
 import fish from '../../../assets/images/fish.jpeg'
-import Basic from '../../layouts/Basic'
+import ControlPanel from '../../layouts/ControlPanel'
 import { Circle, Href } from './styles'
 
 const options = [
@@ -23,7 +23,7 @@ export function Animes() {
   }
 
   return (
-    <Basic href="/explore">
+    <ControlPanel href="/explore">
       <Circle src={fish} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} aria-label="more" id="long-button" onClick={handleClick} />
 
       <Menu
@@ -34,12 +34,12 @@ export function Animes() {
         open={open}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'center',
-          horizontal: 'left',
+          vertical: 'bottom',
+          horizontal: 'right',
         }}
         transformOrigin={{
           vertical: 'top',
-          horizontal: 'right',
+          horizontal: 'center',
         }}
       >
         {options.map((option, index) => (
@@ -50,6 +50,6 @@ export function Animes() {
           </MenuItem>
         ))}
       </Menu>
-    </Basic>
+    </ControlPanel>
   )
 }

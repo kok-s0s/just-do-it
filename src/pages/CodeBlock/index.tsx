@@ -13,7 +13,7 @@ import type { SyntheticEvent } from 'react'
 import { useEffect, useState } from 'react'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { getRandomQuestions, getTopicType } from '../../api/leetcode'
-import Basic from '../../layouts/Basic'
+import ControlPanel from '../../layouts/ControlPanel'
 import { Challenge, GoToCode, Questions, Random } from './styles'
 
 interface Question {
@@ -64,7 +64,7 @@ export function CodeBlock() {
   }, [])
 
   return (
-    <Basic href="/explore">
+    <ControlPanel href="/explore">
       <GoToCode
         href="https://leetcode-cn.com/problemset/all/"
         target="_blank"
@@ -73,7 +73,7 @@ export function CodeBlock() {
       </GoToCode>
 
       <TabContext value={value}>
-        <Box sx={{ width: '100%', typography: 'body1' }}>
+        <Box sx={{ width: '95vw', typography: 'body1' }}>
           <Tabs value={value} onChange={handleChange} centered>
             {topictype.map((item: TopicType, index: number) => (
               <Tab
@@ -91,10 +91,16 @@ export function CodeBlock() {
                   <Card
                     key={`${que.topic} + ${que.link}`}
                     sx={{
-                      minWidth: 250,
-                      maxWidth: 250,
-                      marginLeft: '0.5rem',
-                      marginRight: '0.5rem',
+                      'minWidth': 250,
+                      'maxWidth': 250,
+                      'marginLeft': '0.5rem',
+                      'marginRight': '0.5rem',
+                      '&:first-child': {
+                        marginLeft: 0,
+                      },
+                      '&:last-child': {
+                        marginRight: 0,
+                      },
                     }}
                     color="#fffffe"
                     variant="outlined"
@@ -248,6 +254,6 @@ export function CodeBlock() {
             )
           : null}
       </Random>
-    </Basic>
+    </ControlPanel>
   )
 }

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { SortableContainer, SortableElement, SortableHandle, arrayMove } from 'react-sortable-hoc'
 import TravelExploreIcon from '@mui/icons-material/TravelExplore'
-import Basic from '../../layouts/Basic'
 import { getBookmarkCategory, getBookmarkList } from '../../api/bookmark'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
+import ControlPanel from '../../layouts/ControlPanel'
 import { Answer, Border, Card, False, Header, HighLight, Icon, Manage, Option, Search, SearchHeader, SearchInput, Title } from './styles'
 
 interface Bookmark {
@@ -112,7 +112,7 @@ export function BookMark() {
   }, [query])
 
   return (
-    <Basic href="/explore">
+    <ControlPanel href="/explore">
       <SortableList
         shouldUseDragHandle={true}
         useDragHandle
@@ -160,6 +160,6 @@ export function BookMark() {
                 )
               : '' }
       </Search>
-    </Basic>
+    </ControlPanel>
   )
 }

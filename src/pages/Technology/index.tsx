@@ -7,8 +7,8 @@ import ListItemText from '@mui/material/ListItemText'
 import { useEffect } from 'react'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { getArticles, getWebSites } from '../../api/websites'
-import Basic from '../../layouts/Basic'
 import { Projects } from '../../components/Projects'
+import ControlPanel from '../../layouts/ControlPanel'
 import { Icon, LinkWeb, MesBorder, WebSites } from './styles'
 
 interface WebSite {
@@ -44,7 +44,7 @@ export function Technology() {
   }, [])
 
   return (
-    <Basic href="/explore">
+    <ControlPanel href="/explore">
       <WebSites>
         {webSites.map((webSite: WebSite, index: number) => {
           return (
@@ -94,6 +94,6 @@ export function Technology() {
           })}
         </List>
       </MesBorder>
-    </Basic>
+    </ControlPanel>
   )
 }
