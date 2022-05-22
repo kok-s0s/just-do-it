@@ -11,14 +11,9 @@ export const GlobalStyle = createGlobalStyle`
     user-select: none;
     font-family: 'Macondo','Noto Serif SC';
     font-size: 16px;
-    -webkit-app-region: drag;
   }
 
   a {
     text-decoration: none
-  }
-
-  input, textarea, button{
-    -webkit-app-region: no-drag;
   }
 `
