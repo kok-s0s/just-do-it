@@ -92,6 +92,7 @@ export function CodeBlock() {
                     key={`${que.topic} + ${que.link}`}
                     sx={{
                       minWidth: 250,
+                      maxWidth: 250,
                       marginLeft: '0.5rem',
                       marginRight: '0.5rem',
                     }}

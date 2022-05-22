@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography'
 import { useEffect } from 'react'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { getProjects } from '../../api/practicalproject'
-import { ProjectList } from './styles'
+import { ProjectLink, ProjectList } from './styles'
 
 interface ProjectProps {
   name: string
@@ -48,7 +48,7 @@ export function Projects() {
                 },
               }}
             >
-            <CardContent sx={{ fontFamily: '\'Gill Sans\', \'Noto Serif SC\'' }}>
+            <CardContent>
               <Typography
                   sx={{
                     fontSize: 24,
@@ -58,7 +58,7 @@ export function Projects() {
                   }}
                   gutterBottom
                 >
-                {project.name}
+                <ProjectLink href={project.link} target="_blank">{project.name}</ProjectLink>
               </Typography>
               <Typography
                   sx={{

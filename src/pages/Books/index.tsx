@@ -91,6 +91,7 @@ export function Books() {
                   key={`${book.name} + ${book.author}`}
                   sx={{
                     minWidth: 350,
+                    maxWidth: 350,
                     marginLeft: '0.5rem',
                     marginRight: '0.5rem',
                   }}
