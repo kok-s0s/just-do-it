@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { ShowQuote } from '../../components/ShowQuote'
+import { Plum } from '../../components/Plum'
 import { Icon, Image, Options, SideBar } from './styles'
 
 interface ControlPanelProps {
@@ -14,6 +15,7 @@ const ControlPanel: React.FC<ControlPanelProps> = (props) => {
 
   return (
     <>
+      <Plum />
       {props.children}
       <SideBar>
         <Options>
