@@ -82,7 +82,7 @@ export const Search = styled(Card)`
     top: 2rem;
     right: 5vw;
     display: flex;
-    width: 300px;
+    width: 270px;
     flex-direction: column;
     align-items: center;
 `
