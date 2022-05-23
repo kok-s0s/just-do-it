@@ -28,6 +28,11 @@ const DataList = [
     mes: 'ACGN',
     href: '/animes',
   },
+  {
+    title: 'Stack',
+    mes: '兵火库',
+    href: '/stack',
+  },
 ]
 
 export function Explore() {
