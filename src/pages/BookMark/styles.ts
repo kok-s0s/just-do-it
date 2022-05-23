@@ -5,7 +5,7 @@ export const Manage = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 70vw;
-    margin: 1rem;
+    padding: 1rem;
     align-items: center;
     justify-items: center;
 `
