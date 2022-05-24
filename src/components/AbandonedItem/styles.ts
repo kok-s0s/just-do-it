@@ -12,6 +12,7 @@ export const Card = styled.div`
 
 export const Note = styled.p`
   margin: 0.5rem 2rem 1.5rem 0.5rem;
+  color: rgba(80, 80, 80, 0.8);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   letter-spacing: 0.08rem;
@@ -27,5 +28,5 @@ export const Time = styled.div`
   font-family: -apple-system;
   font-size: 12.6px;
   line-height: 18.9px;
-  color: #57606a;
+  color: rgba(80, 80, 80, 0.7);
 `

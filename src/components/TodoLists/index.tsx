@@ -14,13 +14,10 @@ export function TodoLists() {
     <PlanScreen>
       <Stack
         direction="row"
-        justifyContent="center"
-        alignItems="stretch"
-        spacing={2}
+        justifyContent="space-between"
         sx={{
-          margin: 0,
-          padding: '0.8rem 0',
-          height: '96.4vh',
+          height: 'calc(100vh - 3rem)',
+          width: '100%',
         }}
       >
         {lists.map((list, index) =>

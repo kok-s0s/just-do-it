@@ -16,7 +16,7 @@ export const More = styled.span`
 `
 
 export const Note = styled.p`
-  margin: 0.2rem 2rem 1.5rem 2rem;
+  margin: 0.2rem 1.5rem 2rem 0.5rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9rem;
   letter-spacing: 0.08rem;
@@ -26,9 +26,9 @@ export const Note = styled.p`
   color: rgba(80, 80, 80, 0.8);
 `
 
-export const Time = styled.div`
+export const Time = styled.p`
   position: absolute;
-  left: 2rem;
+  left: 0.8rem;
   bottom: 0.2rem;
   font-family: -apple-system;
   font-size: 12.6px;

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const PlanItem = styled.div`
   position: relative;
-  width: 20.6vw;
+  width: 21vw;
   background-color: #f6f8fa;
   border-radius: 5px;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */

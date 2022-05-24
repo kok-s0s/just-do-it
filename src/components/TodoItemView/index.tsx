@@ -2,7 +2,6 @@ import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
-import EventNoteOutlinedIcon from '@mui/icons-material/EventNoteOutlined'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
 import type { MouseEvent } from 'react'
 import { useEffect, useRef, useState } from 'react'
@@ -107,15 +106,6 @@ export function TodoItemView({ item }: Props) {
           )
         : (
           <>
-            <EventNoteOutlinedIcon
-              fontSize="small"
-              sx={{
-                position: 'absolute',
-                marginTop: '0.2rem',
-                marginLeft: '0.2rem',
-                color: '#595F69',
-              }}
-            />
             <More
               aria-controls={open ? 'basic-menu' : undefined}
               aria-haspopup="true"
