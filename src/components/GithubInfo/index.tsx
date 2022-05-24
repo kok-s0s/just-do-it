@@ -113,9 +113,8 @@ export function GithubInfo() {
       }
     }
 
-    if (exist || localStorage.getItem('info') === null) {
+    if (exist || localStorage.getItem('info') === null)
       getGithubInfo(name)
-    }
   }, [exist])
 
   return (
