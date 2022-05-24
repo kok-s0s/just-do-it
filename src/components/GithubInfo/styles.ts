@@ -8,16 +8,14 @@ export const InfoScreen = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 93%;
-  padding: 1.1rem 1.5rem 1.5rem 1.5rem;
+  padding: 1.5rem;
   background-color: #fffffe;
   border-radius: 10px;
 `
 
 export const Image = styled.img`
-  display: block;
-  width: 60%;
+  width: 70%;
   height: auto;
-  border: 1px solid #dbddde;
   border-radius: 50%;
 `
 
