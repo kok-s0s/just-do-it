@@ -24,9 +24,9 @@ const DataList = [
     href: '/technology',
   },
   {
-    title: 'Animes',
-    mes: 'ACGN',
-    href: '/animes',
+    title: 'Culture',
+    mes: '2.5',
+    href: '/culture',
   },
   {
     title: 'Stack',

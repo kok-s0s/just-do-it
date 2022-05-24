@@ -8,6 +8,3 @@ export const Circle = styled(motion.img)`
   margin: 2rem;
 `
 
-export const Href = styled.a`
-  color: #000;
-`
