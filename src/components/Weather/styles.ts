@@ -15,10 +15,9 @@ export const Desc = styled.span`
   display: flex;
   justify-content: space-between;
   align-content: center;
-  margin-right: 0.8rem;
-  font-size: 28px;
+  font-size: 1.5rem;
   line-height: 28px;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 1px;
   color: rgba(80, 80, 80, 0.5);
 `
