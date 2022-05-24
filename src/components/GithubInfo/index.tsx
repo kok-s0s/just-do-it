@@ -58,8 +58,8 @@ const style = {
 export function GithubInfo() {
   const [name, setName] = useLocalStorage('name', 'kok-s0s')
   const [info, setInfo] = useLocalStorage<InfoProps>('info', {} as InfoProps)
+  const [exist, setExist] = useLocalStorage('exist', true)
   const [open, setOpen] = useState(false)
-  const [exist, setExist] = useState(true)
   const [ready, setReady] = useState(false)
   const [snackbar, setSnackbar] = useState(false)
 
@@ -113,12 +113,10 @@ export function GithubInfo() {
       }
     }
 
-    if (exist) {
-      setTimeout(() => {
-        getGithubInfo(name)
-      }, 3000)
+    if (exist || localStorage.getItem('info') === null) {
+      getGithubInfo(name)
     }
-  })
+  }, [exist])
 
   return (
     <>
