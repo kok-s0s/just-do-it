@@ -1,4 +1,4 @@
-import ControlPanel from "../../layouts/ControlPanel";
+import ControlPanel from '../../layouts/ControlPanel'
 
 export function Tools() {
   return (

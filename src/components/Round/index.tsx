@@ -1,4 +1,4 @@
-import { BG } from "./styles";
+import { BG } from './styles'
 
 export function Round() {
   return (
