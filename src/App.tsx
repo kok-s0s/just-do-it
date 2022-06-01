@@ -10,6 +10,7 @@ import { Culture } from './pages/Culture'
 import { BookMark } from './pages/BookMark'
 import { Markdown } from './pages/Markdonw'
 import { Stack } from './pages/Stack'
+import { Tools } from './pages/Tools'
 
 export function App() {
   return (
@@ -27,6 +28,7 @@ export function App() {
           <Route path="bookmark" element={<BookMark />} />
           <Route path="markdown" element={<Markdown />} />
           <Route path="stack" element={<Stack />} />
+          <Route path="tools" element={<Tools />} />
         </Routes>
       </HashRouter>
     </>

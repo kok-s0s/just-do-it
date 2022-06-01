@@ -33,6 +33,11 @@ const DataList = [
     mes: '兵火库',
     href: '/stack',
   },
+  {
+    title: 'Tools',
+    mes: '工具箱',
+    href: '/tools',
+  }
 ]
 
 export function Explore() {
