@@ -4,7 +4,6 @@ export const Questions = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-x: scroll;
   &::-webkit-scrollbar {

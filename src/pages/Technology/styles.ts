@@ -4,7 +4,6 @@ export const WebSites = styled.div`
   display: flex;
   max-height: 85vh;
   padding: 1rem;
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
   &::-webkit-scrollbar {
@@ -31,7 +30,6 @@ export const MesBorder = styled.div`
 
 export const Articles = styled.div`
   margin: 1rem;
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
   &::-webkit-scrollbar {

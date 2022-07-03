@@ -5,7 +5,6 @@ export const Content = styled.div`
   width: 30vw;
   padding: 1rem 1rem;
   background-color: #f6f8fa;
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
   &::-webkit-scrollbar {

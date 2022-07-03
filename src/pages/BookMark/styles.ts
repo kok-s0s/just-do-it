@@ -45,7 +45,6 @@ export const Border = styled(motion.ul)`
   height: 185px;
   max-height: 185px;
   border-radius: 5px;
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
   &::-webkit-scrollbar {

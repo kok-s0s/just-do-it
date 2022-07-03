@@ -5,7 +5,6 @@ export const PlanItem = styled.div`
   width: 21vw;
   background-color: #f6f8fa;
   border-radius: 5px;
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
   &::-webkit-scrollbar {
