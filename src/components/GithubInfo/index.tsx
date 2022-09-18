@@ -2,11 +2,9 @@ import Modal from '@mui/material/Modal'
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
-import Snackbar from '@mui/material/Snackbar'
 import Skeleton from '@mui/material/Skeleton'
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined'
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined'
-import type { SyntheticEvent } from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
@@ -14,7 +12,6 @@ import { Weather } from '../Weather'
 import { Time } from '../Time'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { Abandoned } from '../Abandoned'
-import { ResetDatabaseButton } from '../ResetDatabaseButton'
 import { AlignRight, Blog, Footer, Icon, Image, InfoScreen, Location, OtherInfo, UserName } from './styles'
 
 interface InfoProps {
@@ -52,6 +49,8 @@ const style = {
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
+  borderRadius: '1rem',
+  borderStyle: 'none',
   p: 4,
 }
 
@@ -60,20 +59,9 @@ export function GithubInfo() {
   const [info, setInfo] = useLocalStorage<InfoProps>('info', {} as InfoProps)
   const [exist, setExist] = useLocalStorage('exist', true)
   const [open, setOpen] = useState(false)
-  const [ready, setReady] = useState(false)
-  const [snackbar, setSnackbar] = useState(false)
 
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
-  const snackbarClick = () => {
-    setSnackbar(true)
-  }
-  const snackbarClose = (event: SyntheticEvent | Event, reason?: string) => {
-    if (reason === 'clickaway')
-      return
-
-    setSnackbar(false)
-  }
 
   useEffect(() => {
     const getGithubInfo = async (username: string) => {
@@ -104,11 +92,9 @@ export function GithubInfo() {
             url: response.data.url,
           })
           setExist(false)
-          setReady(true)
         }
       }
       catch (error) {
-        setReady(false)
         console.error(error)
       }
     }
@@ -119,19 +105,6 @@ export function GithubInfo() {
 
   return (
     <>
-      {ready === false
-        ? (
-          <Snackbar
-            open={snackbar}
-            autoHideDuration={5000}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-            onClose={snackbarClose}
-            message="超过请求上限 or 用户名不存在 😢"
-          />
-          )
-        : (
-          <></>
-          )}
       <Modal
         open={open}
         onClose={handleClose}
@@ -155,8 +128,6 @@ export function GithubInfo() {
             }}
             onClick={() => {
               setExist(true)
-              if (ready === false)
-                snackbarClick()
               handleClose()
             }}
           >
@@ -221,7 +192,6 @@ export function GithubInfo() {
         </OtherInfo>
       </InfoScreen>
       <Footer>
-        <ResetDatabaseButton />
         <Abandoned />
         <Icon whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} onClick={handleOpen}>
           <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="currentColor" d="M16 8a5 5 0 1 0 5 5a5 5 0 0 0-5-5Zm0 8a3 3 0 1 1 3-3a3.003 3.003 0 0 1-3 3Z"/><path fill="currentColor" d="M16 2a14 14 0 1 0 14 14A14.016 14.016 0 0 0 16 2Zm-6 24.377V25a3.003 3.003 0 0 1 3-3h6a3.003 3.003 0 0 1 3 3v1.377a11.899 11.899 0 0 1-12 0Zm13.992-1.451A5.002 5.002 0 0 0 19 20h-6a5.002 5.002 0 0 0-4.992 4.926a12 12 0 1 1 15.985 0Z"/></svg>

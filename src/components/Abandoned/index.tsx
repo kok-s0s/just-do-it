@@ -1,6 +1,7 @@
 import Drawer from '@mui/material/Drawer'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useState } from 'react'
+import { ResetDatabaseButton } from '../ResetDatabaseButton'
 import { AbandonedList } from '../AbandonedList'
 import { db } from '../../db/db'
 import { Icon } from './styles'
@@ -21,6 +22,7 @@ export function Abandoned() {
         open={state}
         onClose={() => setState(!state)}
       >
+        <ResetDatabaseButton/>
         {lists && lists[3] ? <AbandonedList todoList={lists[3]} /> : ''}
       </Drawer>
     </>

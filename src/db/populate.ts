@@ -19,7 +19,7 @@ export async function populate() {
     },
     {
       title: '永久废弃',
-      subTitle: '测试',
+      subTitle: '已废弃',
       time: new Date(),
     },
   ]
