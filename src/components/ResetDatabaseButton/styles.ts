@@ -1,9 +1,13 @@
-import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-export const Icon = styled(motion.div)`
-  display: flex;
-  font-size: 2rem;
-  color: rgba(80, 80, 80, 0.4);
+export const ResetButton = styled.button`
+  padding: 0.7rem;
+  font-family: 'Macondo','Noto Serif SC';
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: #d4f7f7;
+  border: none;
   cursor: pointer;
 `
