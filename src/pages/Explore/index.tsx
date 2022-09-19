@@ -38,6 +38,11 @@ const DataList = [
     mes: '工具箱',
     href: '/tools',
   },
+  {
+    title: 'Tools',
+    mes: '工具箱',
+    href: '/tools',
+  },
 ]
 
 export function Explore() {
