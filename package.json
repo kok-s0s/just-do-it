@@ -12,8 +12,6 @@
     "make": "electron-forge make",
     "release": "electron-forge publish",
     "publish": "GITHUB_TOKEN=$just_do_it_GITHUB_TOKEN electron-forge publish",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
     "test": "jest"
   },
   "dependencies": {
@@ -35,7 +33,6 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.23.0",
     "@babel/core": "7.14.6",
     "@babel/plugin-transform-runtime": "7.14.5",
     "@babel/preset-env": "7.14.5",
@@ -60,7 +57,6 @@
     "babel-loader": "8.2.2",
     "cross-env": "7.0.3",
     "electron": "13.1.2",
-    "eslint": "^8.15.0",
     "file-loader": "^6.2.0",
     "jest": "27.0.4",
     "npm-run-all": "4.1.5",
