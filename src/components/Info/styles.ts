@@ -7,21 +7,29 @@ export const InfoScreen = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 93%;
-  padding: 1.5rem;
+  height: 100%;
+  width: 300px;
+  padding: 1rem;
   background-color: #fffffe;
   border-radius: 10px;
 `
 
-export const Image = styled.img`
-  width: 70%;
+export const GithubInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`
+
+export const GithubInfoImage = styled.img`
+  width: 80%;
   height: auto;
   border-radius: 50%;
 `
 
-export const AlignRight = styled.div`
-  width: 88%;
-  text-align: left;
+export const GithubInfoText = styled.div`
+  width: 100%;
 `
 
 export const FontStyle = styled.div`
@@ -32,18 +40,24 @@ export const FontStyle = styled.div`
 `
 
 export const UserName = styled(FontStyle)`
-  margin-bottom: 1rem;
+  margin: 0.5rem 0 0.6rem 0.5rem;
   font-size: 22px;
 `
 
 export const Location = styled(FontStyle)`
-  margin-left: -1rem;
-  line-height: 22px;
+  line-height: 20px;
 `
 
 export const Blog = styled(FontStyle)`
-  margin-left: -1rem;
-  line-height: 22px;
+  line-height: 20px;
+`
+
+export const InfoFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 `
 
 export const OtherInfo = styled.div`
@@ -51,14 +65,17 @@ export const OtherInfo = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  & > div:first-child {
+    margin-bottom: 1rem;
+  }
 `
 
-export const Footer = styled.div`
+export const ActionButton = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 7%;
-  padding: 1rem 4rem;
+  width: 100%;
+  padding: 1rem 1rem 0 1rem;
 `
 
 export const Icon = styled(motion.div)`

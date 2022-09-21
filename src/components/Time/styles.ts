@@ -5,11 +5,10 @@ export const TimeCard = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1.5rem 2rem;
-  margin-top: 1rem;
+  padding: 1rem 1rem;
   color: rgba(80, 80, 80, 0.5);
   background-color: #edf6f7;
-  font-size: 4rem;
+  font-size: 2.5rem;
   border-radius: 10px;
 `
 

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const PlanItem = styled.div`
   position: relative;
-  width: 21vw;
+  width: 100%;
   background-color: #f6f8fa;
   border-radius: 5px;
   scrollbar-width: none; /* for Firefox */

@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { giveWeatherIcon } from '../../utils/WeatherImg'
-import { Desc, Icon, Location, WeatherCard } from './styles'
+import { Icon, Location, RightContainer, WeatherCard } from './styles'
 
 interface WeatherProps {
   name: string
@@ -114,15 +114,12 @@ export function Weather() {
         </Box>
       </Modal>
       <WeatherCard>
-        <Desc>
-          <Location onClick={handleOpen}>{weather.name}</Location>{' '}
-          <div>{weather.temperature}°C</div>
-          <div>{weather.text}</div>
-        </Desc>
-        <Icon
-          src={giveWeatherIcon(parseInt(weather.code))}
-          alt="icon"
-        />
+        <Location onClick={handleOpen}>{weather.name}</Location>
+        <div>{weather.text}</div>
+        <RightContainer>
+          <Icon src={giveWeatherIcon(parseInt(weather.code))} alt="icon" />
+        </RightContainer>
+        <div>{weather.temperature}°C</div>
       </WeatherCard>
     </>
   )
