@@ -115,11 +115,11 @@ export function Weather() {
       </Modal>
       <WeatherCard>
         <Location onClick={handleOpen}>{weather.name}</Location>
-        <div>{weather.temperature}°C</div>
         <div>{weather.text}</div>
         <RightContainer>
           <Icon src={giveWeatherIcon(parseInt(weather.code))} alt="icon" />
         </RightContainer>
+        <div>{weather.temperature}°C</div>
       </WeatherCard>
     </>
   )
