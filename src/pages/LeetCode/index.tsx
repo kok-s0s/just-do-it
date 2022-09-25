@@ -28,7 +28,7 @@ interface TopicType {
   questions: Array<Question>
 }
 
-export function CodeBlock() {
+export function LeetCode() {
   const [topictype, setTopicType] = useLocalStorage('topictype', [])
   const [typeQ, setTypeQ] = useLocalStorage<Array<Array<Question>>>('typeQ', [])
   const [randomQ, setRandomQ] = useLocalStorage('randomQ', [])
@@ -138,7 +138,7 @@ export function CodeBlock() {
                               marginLeft: '0.3rem',
                             }}
                           />
-                          )
+                        )
                         : que.difficulty === '中等'
                           ? (
                             <Chip
@@ -148,7 +148,7 @@ export function CodeBlock() {
                                 marginLeft: '0.3rem',
                               }}
                             />
-                            )
+                          )
                           : (
                             <Chip
                               label="困难"
@@ -157,7 +157,7 @@ export function CodeBlock() {
                                 marginLeft: '0.3rem',
                               }}
                             />
-                            )}
+                          )}
                       <a href={que.link} target="_blank" rel="noreferrer">
                         <Button
                           size="small"
@@ -217,7 +217,7 @@ export function CodeBlock() {
                             marginLeft: '0.3rem',
                           }}
                         />
-                        )
+                      )
                       : que.difficulty === '中等'
                         ? (
                           <Chip
@@ -227,7 +227,7 @@ export function CodeBlock() {
                               marginLeft: '0.3rem',
                             }}
                           />
-                          )
+                        )
                         : (
                           <Chip
                             label="困难"
@@ -236,7 +236,7 @@ export function CodeBlock() {
                               marginLeft: '0.3rem',
                             }}
                           />
-                          )}
+                        )}
                     <a href={que.link} target="_blank" rel="noreferrer">
                       <Button
                         size="small"
@@ -251,7 +251,7 @@ export function CodeBlock() {
                 </Card>
               ))}
             </Questions>
-            )
+          )
           : null}
       </Random>
     </ControlPanel>

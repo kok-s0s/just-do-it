@@ -1,47 +1,39 @@
 import { Link } from 'react-router-dom'
 import ControlPanel from '../../layouts/ControlPanel'
-import { Box, Card, Container, Content, Idx, Mes, Next, Title } from './styles'
+import { Box, Card, Container, Content, Idx, Next, Title } from './styles'
 
 const DataList = [
   {
-    title: 'Books',
-    mes: '图书馆',
-    href: '/books',
+    title: 'book',
+    href: '/book',
   },
   {
-    title: 'BookMark',
-    mes: '书签集',
+    title: 'bookmark',
     href: '/bookmark',
   },
   {
-    title: 'CodeBlock',
-    mes: '码无止境',
-    href: '/codeblock',
+    title: 'leetcode',
+    href: '/leetcode',
   },
   {
-    title: 'Technology',
-    mes: '信息浏览',
+    title: 'technology',
     href: '/technology',
   },
   {
-    title: 'Culture',
-    mes: '2.5',
+    title: 'culture',
     href: '/culture',
   },
   {
-    title: 'Stack',
-    mes: '兵火库',
+    title: 'music',
+    href: '/music',
+  },
+  {
+    title: 'stack',
     href: '/stack',
   },
   {
-    title: 'Tools',
-    mes: '工具箱',
-    href: '/tools',
-  },
-  {
-    title: 'Tools',
-    mes: '工具箱',
-    href: '/tools',
+    title: 'tool',
+    href: '/tool',
   },
 ]
 
@@ -56,9 +48,8 @@ export function Explore() {
                 <Content>
                   <Idx>{`0${index + 1}`}</Idx>
                   <Title>{item.title}</Title>
-                  <Mes>{item.mes}</Mes>
                   <Link to={item.href}>
-                    <Next>Read More</Next>
+                    <Next>Let's Go!</Next>
                   </Link>
                 </Content>
               </Box>

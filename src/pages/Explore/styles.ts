@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   row-gap: 2rem;
   column-gap: 2rem;
   width: 95vw;
@@ -10,16 +10,14 @@ export const Container = styled.div`
   padding: 1.8rem;
   background: #232427;
   @media (max-width: 1280px) {
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 `
 
 export const Card = styled.div`
   position: relative;
   height: 360px;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   transition: 0.5s;
 `
@@ -41,7 +39,7 @@ export const Box = styled.div`
     transform: translateY(-30px);
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -56,9 +54,9 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 70%;
-  padding: 20px;
-  margin-top: 70px;
+  width: 100%;
+  height: 100%;
+  padding: 8.5rem 0 3.5rem 0;
 `
 
 export const Idx = styled.h2`
@@ -70,25 +68,14 @@ export const Idx = styled.h2`
 `
 
 export const Title = styled.h3`
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: #fffffe;
   z-index: 1;
   transition: 0.5s;
-  margin-bottom: 15px;
-`
-
-export const Mes = styled.p`
-  font-size: 1.2rem;
-  font-weight: 300;
-  letter-spacing: 4px;
-  color: #fffffe;
-  z-index: 1;
-  transition: 0.5s;
-  text-align: center;
 `
 
 export const Next = styled.a`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
   position: relative;
@@ -99,7 +86,6 @@ export const Next = styled.a`
   text-decoration: none;
   color: rgba(80, 80, 80);
   background-color: #bae8e8;
-  margin-top: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
   &:hover {

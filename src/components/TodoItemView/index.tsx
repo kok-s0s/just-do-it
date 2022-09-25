@@ -103,7 +103,7 @@ export function TodoItemView({ item }: Props) {
               </Grid>
             </Grid>
           </>
-          )
+        )
         : (
           <>
             <More
@@ -203,7 +203,7 @@ export function TodoItemView({ item }: Props) {
             <Note>{item.title}</Note>
             <Time>{date}</Time>
           </>
-          )}
+        )}
     </ShowItem>
   )
 }

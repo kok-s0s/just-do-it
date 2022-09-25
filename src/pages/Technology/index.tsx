@@ -69,24 +69,24 @@ export function Technology() {
             return (
               <LinkWeb key={index} href={article.link} target="_blank">
                 <ListItem
+                  sx={{
+                    backgroundColor: '#FFFFFF',
+                  }}
+                  disablePadding
+                >
+                  <ListItemButton
                     sx={{
                       backgroundColor: '#FFFFFF',
                     }}
-                    disablePadding
                   >
-                  <ListItemButton
-                      sx={{
-                        backgroundColor: '#FFFFFF',
-                      }}
-                    >
                     <ArticleIcon
-                        sx={{
-                          marginRight: '1rem',
-                        }}
-                      />
+                      sx={{
+                        marginRight: '1rem',
+                      }}
+                    />
                     <ListItemText
-                        primary={article.title}
-                      />
+                      primary={article.title}
+                    />
                   </ListItemButton>
                 </ListItem>
               </LinkWeb>
