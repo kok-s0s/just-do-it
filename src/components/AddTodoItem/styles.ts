@@ -15,7 +15,7 @@ export const Input = styled.textarea`
   &:focus {
     outline: none !important;
     border-color: #719ece;
-  box-shadow: 0 0 10px #719ece;
+    box-shadow: 0 0 10px #719ece;
   }
 `
 

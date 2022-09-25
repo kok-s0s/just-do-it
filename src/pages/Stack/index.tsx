@@ -14,7 +14,7 @@ export const Stack = () => {
               <IconsList>
                 {data.tools.map((_tool) => {
                   return (
-                    <IconImg src={giveSkillsIcon(_tool.name)} alt={_tool.name} key={_tool.name}/>
+                    <IconImg src={giveSkillsIcon(_tool.name)} alt={_tool.name} key={_tool.name} />
                   )
                 })}
               </IconsList>
@@ -25,7 +25,7 @@ export const Stack = () => {
               <IconsList>
                 {data.web.map((_web) => {
                   return (
-                    <IconImg src={giveSkillsIcon(_web.name)} alt={_web.name} key={_web.name}/>
+                    <IconImg src={giveSkillsIcon(_web.name)} alt={_web.name} key={_web.name} />
                   )
                 })}
               </IconsList>
@@ -36,7 +36,7 @@ export const Stack = () => {
               <IconsList>
                 {data.Languages.using.map((_language) => {
                   return (
-                    <IconImg src={giveSkillsIcon(_language.name)} alt={_language.name} key={_language.name}/>
+                    <IconImg src={giveSkillsIcon(_language.name)} alt={_language.name} key={_language.name} />
                   )
                 })}
               </IconsList>
@@ -47,7 +47,7 @@ export const Stack = () => {
               <IconsList>
                 {data.Languages.learned.map((_language) => {
                   return (
-                    <IconImg src={giveSkillsIcon(_language.name)} alt={_language.name} key={_language.name}/>
+                    <IconImg src={giveSkillsIcon(_language.name)} alt={_language.name} key={_language.name} />
                   )
                 })}
               </IconsList>
@@ -59,7 +59,7 @@ export const Stack = () => {
               return (
                 <Exhibit key={_equipment.name}>
                   <Etitle>{_equipment.name}</Etitle>
-                  <Eimg src={_equipment.link} alt={_equipment.name}/>
+                  <Eimg src={_equipment.link} alt={_equipment.name} />
                 </Exhibit>
               )
             })}

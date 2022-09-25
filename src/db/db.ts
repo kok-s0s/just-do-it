@@ -29,7 +29,7 @@ db.on('populate', populate)
 
 export function resetDatabase() {
   return db.transaction('rw', db.todoLists, db.todoItems, async () => {
-    await Promise.all(db.tables.map(table => table.clear()))
+    await Promise.all(db.tables.map((table) => table.clear()))
     await populate()
   })
 }

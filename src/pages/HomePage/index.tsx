@@ -49,28 +49,28 @@ export function HomePage() {
             </BClickLeft>
           </Grid>
           <Grid
-          item
-          xs={2}
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
+            item
+            xs={2}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
             <Image>
               <ArrowCircleUpRoundedIcon
-              sx={{
-                fontSize: 180,
-                width: '100%',
-                color: '#8bb7b9',
-                zIndex: -1,
-              }}
-            />
+                sx={{
+                  fontSize: 180,
+                  width: '100%',
+                  color: '#8bb7b9',
+                  zIndex: -1,
+                }}
+              />
             </Image>
           </Grid>
           <Grid item xs>
             <BClickRight>
               <Paper sx={paperStyle} elevation={3}>
-                <BTitle>Try To Know</BTitle>
+                <BTitle>BLOCK</BTitle>
                 <TravelExploreRoundedIcon sx={iconStyle} />
                 <Link to="/explore">
                   <Button>Go! Go! Go!</Button>

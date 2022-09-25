@@ -22,7 +22,7 @@ export function Abandoned() {
         open={state}
         onClose={() => setState(!state)}
       >
-        <ResetDatabaseButton/>
+        <ResetDatabaseButton />
         {lists && lists[3] ? <AbandonedList todoList={lists[3]} /> : ''}
       </Drawer>
     </>

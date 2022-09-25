@@ -13,8 +13,7 @@ export const useCurTime = () => {
   }, [])
 
   const handleStr = (numStr: string) => {
-    if (parseInt(numStr) < 10)
-      return `0${numStr}`
+    if (parseInt(numStr) < 10) return `0${numStr}`
     else return numStr
   }
 

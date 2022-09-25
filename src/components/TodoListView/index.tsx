@@ -53,10 +53,10 @@ export function TodoListView({ todoList }: Props) {
               hidden={hidden}
               setHidden={setHidden}
             />
-            )
+          )
           : (
-              ''
-            )}
+            ''
+          )}
       </Header>
 
       <Content>
