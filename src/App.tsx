@@ -3,7 +3,7 @@ import { GlobalStyle } from './styles/GlobalStyle'
 import { HomePage } from './pages/HomePage'
 import { Punch } from './pages/Punch'
 import { Explore } from './pages/Explore'
-import { Book } from './pages/Book'
+import { Books } from './pages/Books'
 import { BookMark } from './pages/BookMark'
 import { LeetCode } from './pages/LeetCode'
 import { Technology } from './pages/Technology'
@@ -24,7 +24,7 @@ export function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="punch" element={<Punch />} />
           <Route path="explore" element={<Explore />} />
-          <Route path="book" element={<Book />} />
+          <Route path="book" element={<Books />} />
           <Route path="bookmark" element={<BookMark />} />
           <Route path="leetcode" element={<LeetCode />} />
           <Route path="technology" element={<Technology />} />

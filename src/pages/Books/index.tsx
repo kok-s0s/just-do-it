@@ -29,7 +29,7 @@ interface BookClassification {
   books: Array<Book>
 }
 
-export function Book() {
+export function Books() {
   const [bookClassification, setBookClassification] = useLocalStorage<Array<BookClassification>>(
     'bookClassification',
     [],
