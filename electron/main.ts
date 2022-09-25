@@ -7,7 +7,7 @@ declare const MAIN_WINDOW_WEBPACK_ENTRY: string
 declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
 
 async function createWindow() {
-  const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+  const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
 
   mainWindow = new BrowserWindow({
     icon: 'assets/do-it.icns',
@@ -16,7 +16,7 @@ async function createWindow() {
     minWidth: 1280,
     minHeight: 800,
     frame: false,
-    show:false,
+    show: false,
     backgroundColor: '#d8efef',
     webPreferences: {
       nodeIntegration: false,
@@ -27,7 +27,7 @@ async function createWindow() {
 
   await mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
 
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   mainWindow.on('closed', () => {
     mainWindow = null
@@ -38,24 +38,23 @@ async function createWindow() {
 
 async function registerListeners() {
   /**
-     * This comes from bridge integration, check bridge.ts
-     */
+   * This comes from bridge integration, check bridge.ts
+   */
   ipcMain.on('message', (_, message) => {
     console.log(message)
   })
 }
 
-app.on('ready', createWindow)
+app
+  .on('ready', createWindow)
   .whenReady()
   .then(registerListeners)
-  .catch(e => console.error(e))
+  .catch((e) => console.error(e))
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin')
-    app.quit()
+  if (process.platform !== 'darwin') app.quit()
 })
 
 app.on('activate', () => {
-  if (BrowserWindow.getAllWindows().length === 0)
-    createWindow()
+  if (BrowserWindow.getAllWindows().length === 0) createWindow()
 })
