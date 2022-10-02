@@ -83,7 +83,6 @@ const icons = new Map([
 ])
 
 export const giveWeatherIcon = (code: number) => {
-  if (code < 0 || code >= 39)
-    return icons.get(99)
+  if (code < 0 || code >= 39) return icons.get(99)
   else return icons.get(code)
 }

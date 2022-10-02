@@ -1,6 +1,6 @@
 import { BG } from './styles'
 
-export function Round() {
+export default function Round() {
   return (
     <BG></BG>
   )

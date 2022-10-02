@@ -28,7 +28,7 @@ interface TopicType {
   questions: Array<Question>
 }
 
-export function LeetCode() {
+export default function LeetCode() {
   const [topictype, setTopicType] = useLocalStorage('topictype', [])
   const [typeQ, setTypeQ] = useLocalStorage<Array<Array<Question>>>('typeQ', [])
   const [randomQ, setRandomQ] = useLocalStorage('randomQ', [])

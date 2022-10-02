@@ -2,8 +2,8 @@ import AddIcon from '@mui/icons-material/Add'
 import { useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import type { TodoList } from '../../db/TodoList'
-import { TodoItemView } from '../TodoItemView'
-import { AddTodoItem } from '../AddTodoItem'
+import TodoItemView from '../TodoItemView'
+import AddTodoItem from '../AddTodoItem'
 import { db } from '../../db/db'
 import {
   AddItem,
@@ -19,7 +19,7 @@ interface Props {
   todoList: TodoList
 }
 
-export function TodoListView({ todoList }: Props) {
+export default function TodoListView({ todoList }: Props) {
   const items = useLiveQuery(
     () => db.todoItems.where({ todoListId: todoList.id }).toArray(),
     [todoList.id],

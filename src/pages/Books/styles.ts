@@ -19,3 +19,7 @@ export const ClassDescription = styled.div`
   letter-spacing: 2px;
   color: #565f68;
 `
+
+export const Image = styled.img`
+  width: 200px;
+`

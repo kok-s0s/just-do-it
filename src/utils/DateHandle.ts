@@ -16,7 +16,6 @@ export const ordinalNumber = (n: number) => {
   return n + (['st', 'nd', 'rd'][n < 20 ? n - 1 : (n % 10) - 1] || 'th')
 }
 export const appendZero = (n: number) => {
-  if (n < 10)
-    return `0${n}`
+  if (n < 10) return `0${n}`
   else return n
 }

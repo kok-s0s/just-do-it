@@ -14,7 +14,7 @@ interface ProjectProps {
   image: string
 }
 
-export function Projects() {
+export default function Projects() {
   const [projects, setProjects] = useLocalStorage<Array<ProjectProps>>('projects', [] as Array<ProjectProps>)
 
   useEffect(() => {

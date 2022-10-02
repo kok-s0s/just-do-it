@@ -1,6 +1,6 @@
 import ControlPanel from '../../layouts/ControlPanel'
 
-export function Write() {
+export default function Write() {
   return (
     <ControlPanel href="/explore">
       <h1>Write</h1>

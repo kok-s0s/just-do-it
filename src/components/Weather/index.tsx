@@ -34,7 +34,7 @@ const style = {
   p: 4,
 }
 
-export function Weather() {
+export default function Weather() {
   const [location, setLocation] = useLocalStorage('location', '广州')
   const [weather, setWeather] = useLocalStorage<WeatherProps>('weather', {} as WeatherProps)
   const [exist, setExist] = useState(true)

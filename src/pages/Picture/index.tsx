@@ -1,6 +1,6 @@
 import ControlPanel from '../../layouts/ControlPanel'
 
-export function Picture() {
+export default function Picture() {
   return (
     <ControlPanel href="/explore">
       <h1>Picture</h1>

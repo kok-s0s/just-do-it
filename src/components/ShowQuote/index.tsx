@@ -9,7 +9,7 @@ interface QuoteProps {
   sentence: string
 }
 
-export function ShowQuote() {
+export default function ShowQuote() {
   const [quote, setQuote] = useLocalStorage<QuoteProps>('quote', {} as QuoteProps)
   const [quotesID, setQuotesID] = useLocalStorage<Array<string>>('quotesID', [])
   const [over, setOver] = useState(false)

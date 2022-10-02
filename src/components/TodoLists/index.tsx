@@ -1,9 +1,9 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { TodoListView } from '../TodoListView'
+import TodoListView from '../TodoListView'
 import { db } from '../../db/db'
 import { PlanScreen } from './styles'
 
-export function TodoLists() {
+export default function TodoLists() {
   const lists = useLiveQuery(() => db.todoLists.toArray())
 
   if (!lists)

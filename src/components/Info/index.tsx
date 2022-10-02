@@ -8,10 +8,10 @@ import BookOutlinedIcon from '@mui/icons-material/BookOutlined'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { Weather } from '../Weather'
-import { Time } from '../Time'
+import Weather from '../Weather'
+import Time from '../Time'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
-import { Abandoned } from '../Abandoned'
+import Abandoned from '../Abandoned'
 import { InfoFooter, GithubInfo, GithubInfoText, Blog, ActionButton, Icon, GithubInfoImage, InfoScreen, Location, OtherInfo, UserName } from './styles'
 
 interface InfoProps {
@@ -54,7 +54,7 @@ const style = {
   p: 4,
 }
 
-export function Info() {
+export default function Info() {
   const [name, setName] = useLocalStorage('name', 'kok-s0s')
   const [info, setInfo] = useLocalStorage<InfoProps>('info', {} as InfoProps)
   const [exist, setExist] = useLocalStorage('exist', true)

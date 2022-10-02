@@ -11,7 +11,7 @@ interface Props {
   setHidden: Dispatch<SetStateAction<boolean>>
 }
 
-export function AddTodoItem({ todoList, hidden, setHidden }: Props) {
+export default function AddTodoItem({ todoList, hidden, setHidden }: Props) {
   const [item, setItem] = useState({
     todoListId: typeof todoList.id === 'number' ? todoList.id : 0,
     title: '',

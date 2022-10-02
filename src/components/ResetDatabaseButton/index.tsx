@@ -25,7 +25,7 @@ const style = {
   p: 4,
 }
 
-export function ResetDatabaseButton() {
+export default function ResetDatabaseButton() {
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)

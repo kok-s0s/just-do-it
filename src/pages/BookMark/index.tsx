@@ -72,7 +72,7 @@ const SortableList = SortableContainer((props: { [x: string]: any; items: any })
   )
 })
 
-export function BookMark() {
+export default function BookMark() {
   const [bookmarkCategory, setBookmarkCategory] = useLocalStorage(
     'bookmarkCategory',
     [],

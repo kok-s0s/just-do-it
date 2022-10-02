@@ -1,7 +1,7 @@
 import { useCurTime } from '../../hooks/useCurTime'
 import { Item, TimeCard } from './styles'
 
-export function Time() {
+export default function Time() {
   const [hour, minute, seconds] = useCurTime()
 
   return (

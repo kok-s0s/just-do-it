@@ -1,7 +1,7 @@
 {
   "name": "just-do-it",
-  "version": "1.2.2",
-  "description": "just-for-fun",
+  "version": "2.0.0",
+  "description": "just-for-fun && just-for-me",
   "keywords": [],
   "license": "MIT",
   "author": "kok-s0s",
@@ -70,7 +70,7 @@
       "packagerConfig": {
         "name": "just-do-it",
         "executableName": "electron-starter",
-        "icon": "assets/do-it.icns",
+        "icon": "assets/kok-s0s.icns",
         "extraResource": [
           "assets"
         ]

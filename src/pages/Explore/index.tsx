@@ -37,7 +37,7 @@ const DataList = [
   },
 ]
 
-export function Explore() {
+export default function Explore() {
   return (
     <ControlPanel href="/">
       <Container>

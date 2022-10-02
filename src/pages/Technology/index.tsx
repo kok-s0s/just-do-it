@@ -7,7 +7,7 @@ import ListItemText from '@mui/material/ListItemText'
 import { useEffect } from 'react'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { getArticles, getWebSites } from '../../api/websites'
-import { Projects } from '../../components/Projects'
+import Projects from '../../components/Projects'
 import ControlPanel from '../../layouts/ControlPanel'
 import { Icon, LinkWeb, MesBorder, WebSites } from './styles'
 
@@ -23,7 +23,7 @@ interface Article {
   link: string
 }
 
-export function Technology() {
+export default function Technology() {
   const [webSites, setWebSites] = useLocalStorage<Array<WebSite>>('websites', [])
   const [articles, setArticles] = useLocalStorage<Array<Article>>('articles', [])
 

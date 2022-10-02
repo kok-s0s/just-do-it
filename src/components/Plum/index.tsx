@@ -109,7 +109,7 @@ function draw(ctx: any) {
   init()
 }
 
-export function Plum() {
+export default function Plum() {
   const canvasRef = useRef(null as HTMLCanvasElement | null)
 
   useEffect(() => {

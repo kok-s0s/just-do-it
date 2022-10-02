@@ -3,7 +3,7 @@ import { giveSkillsIcon } from '../../utils/SkillsIcon'
 import { data } from './data'
 import { Container, Eimg, Equipment, Etitle, Exhibit, IconImg, Icons, IconsCard, IconsList, IconsTitle, LeftContainer } from './styles'
 
-export const Stack = () => {
+export default function Stack() {
   return (
     <ControlPanel href="/explore">
       <Container>

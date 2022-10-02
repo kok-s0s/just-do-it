@@ -4,7 +4,7 @@ import TravelExploreRoundedIcon from '@mui/icons-material/TravelExploreRounded'
 import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper'
 import { Link } from 'react-router-dom'
-import { Plum } from '../../components/Plum'
+import Plum from '../../components/Plum'
 import {
   BClickLeft,
   BClickRight,
@@ -31,7 +31,7 @@ const iconStyle = {
   color: '#bae8e8',
 }
 
-export function HomePage() {
+export default function HomePage() {
   return (
     <>
       <Plum />

@@ -1,12 +1,12 @@
 import Drawer from '@mui/material/Drawer'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useState } from 'react'
-import { ResetDatabaseButton } from '../ResetDatabaseButton'
-import { AbandonedList } from '../AbandonedList'
+import ResetDatabaseButton from '../ResetDatabaseButton'
+import AbandonedList from '../AbandonedList'
 import { db } from '../../db/db'
 import { Icon } from './styles'
 
-export function Abandoned() {
+export default function Abandoned() {
   const lists = useLiveQuery(() => db.todoLists.toArray())
 
   const [state, setState] = useState(false)

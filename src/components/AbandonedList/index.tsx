@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { AbandonedItem } from '../AbandonedItem'
+import AbandonedItem from '../AbandonedItem'
 import { db } from '../../db/db'
 import type { TodoList } from '../../db/TodoList'
 import { Content } from './styles'
@@ -8,7 +8,7 @@ interface Props {
   todoList: TodoList
 }
 
-export function AbandonedList({ todoList }: Props) {
+export default function AbandonedList({ todoList }: Props) {
   const items = useLiveQuery(
     () => db.todoItems.where({ todoListId: todoList.id }).toArray(),
     [todoList.id],

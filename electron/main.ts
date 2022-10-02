@@ -10,7 +10,7 @@ async function createWindow() {
   const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
 
   mainWindow = new BrowserWindow({
-    icon: 'assets/do-it.icns',
+    icon: 'assets/kok-s0s.icns',
     width,
     height,
     minWidth: 1280,
@@ -27,6 +27,7 @@ async function createWindow() {
 
   await mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
 
+  // If you want to package, remember to turn off the developer extension.
   mainWindow.webContents.openDevTools()
 
   mainWindow.on('closed', () => {

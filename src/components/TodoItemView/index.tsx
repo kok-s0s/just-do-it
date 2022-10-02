@@ -15,7 +15,7 @@ interface Props {
   item: TodoItem
 }
 
-export function TodoItemView({ item }: Props) {
+export default function TodoItemView({ item }: Props) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const [hidden, setHidden] = useState(false)
   const [tempTitle, setTempTitle] = useState('')

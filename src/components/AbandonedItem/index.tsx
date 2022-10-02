@@ -8,7 +8,7 @@ interface Props {
   item: TodoItem
 }
 
-export function AbandonedItem({ item }: Props) {
+export default function AbandonedItem({ item }: Props) {
   const date = item.time
     ? `Added on ${Month.get(item.time.getMonth())} ${ordinalNumber(
       item.time.getDate(),
