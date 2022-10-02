@@ -24,7 +24,6 @@ export default function Books() {
     'bookClassification',
     [],
   )
-  const [books, setBooks] = useLocalStorage<Array<Array<Book>>>('books', [])
 
   useEffect(() => {
     const getData = async () => {
@@ -32,11 +31,6 @@ export default function Books() {
 
       if (res.status === 200) {
         setBookClassification(res.data)
-        const TempData: Array<any> = []
-        res.data.forEach((item: BookClassification) => {
-          TempData.push(item.books)
-        })
-        setBooks(TempData)
       }
     }
 
@@ -49,23 +43,18 @@ export default function Books() {
         (item: BookClassification, index: number) => (
           <>
             {item.name}
+            {item.description}
+            {item.books.map((book: Book) => (
+              <>
+                <Image src={book.image} alt={book.name} />
+                {book.name}
+                {book.author}
+                {book.description}
+              </>
+            ))}
           </>
         ),
       )}
-
-      {books.map((item: Array<Book>, index: number) => (
-        <>
-          {bookClassification[index].description}
-          {item.map((book: Book) => (
-            <>
-              <Image src={book.image} alt={book.name} />
-              {book.name}
-              {book.author}
-              {book.description}
-            </>
-          ))}
-        </>
-      ))}
 
     </ControlPanel >
   )
