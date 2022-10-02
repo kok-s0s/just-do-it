@@ -10,7 +10,7 @@ async function createWindow() {
   const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
 
   mainWindow = new BrowserWindow({
-    icon: 'assets/kok-s0s.icns',
+    icon: 'assets/do-it.icns',
     width,
     height,
     minWidth: 1280,

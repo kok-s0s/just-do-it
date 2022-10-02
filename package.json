@@ -70,7 +70,7 @@
       "packagerConfig": {
         "name": "just-do-it",
         "executableName": "electron-starter",
-        "icon": "assets/kok-s0s.icns",
+        "icon": "assets/do-it.icns",
         "extraResource": [
           "assets"
         ]
