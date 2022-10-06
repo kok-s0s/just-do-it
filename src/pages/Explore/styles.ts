@@ -68,6 +68,8 @@ export const Idx = styled.h2`
 `
 
 export const Title = styled.h3`
+  font-family: -apple-system;
+  text-transform: capitalize;
   font-size: 2.5rem;
   color: #fffffe;
   z-index: 1;

@@ -1,10 +1,9 @@
-import Round from '../../components/Round'
 import ControlPanel from '../../layouts/ControlPanel'
 
 export default function Culture() {
   return (
     <ControlPanel href="/explore">
-      <Round />
+      <h1>Game</h1>
     </ControlPanel>
   )
 }

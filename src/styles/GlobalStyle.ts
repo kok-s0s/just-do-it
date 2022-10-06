@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     user-select: none;
     font-family: 'Macondo','Noto Serif SC';
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   a {
