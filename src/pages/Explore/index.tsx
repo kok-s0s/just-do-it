@@ -46,10 +46,13 @@ export default function Explore() {
             <Card key={index}>
               <Box>
                 <Content>
-                  <Idx>{`0${index + 1}`}</Idx>
+                  <Idx>
+                    <span>0</span>
+                    <span>{index + 1}</span>
+                  </Idx>
                   <Title>{item.title}</Title>
                   <Link to={item.href}>
-                    <Next>Let's Go!</Next>
+                    <Next>Go!</Next>
                   </Link>
                 </Content>
               </Box>
