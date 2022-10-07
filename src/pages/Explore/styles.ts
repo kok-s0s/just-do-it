@@ -1,3 +1,4 @@
+import { BClick } from './../../components/AddTodoItem/styles'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -26,13 +27,21 @@ export const Box = styled.div`
   bottom: 16px;
   background: #2a2b2f;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: first;
   overflow: hidden;
   transition: 0.5s;
+  & .next {
+    display: flex;
+    transition: 0.5s;
+    z-index: 1;
+  }
   &:hover {
     transform: translateY(-30px);
+  }
+  &:hover .title {
+    transform: translateX(-20px);
+  }
+  &:hover .next {
+    transform: translateY(10px);
   }
   &:before {
     content: '';
@@ -46,59 +55,48 @@ export const Box = styled.div`
 `
 
 export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
   width: 100%;
   height: 100%;
-  padding: 1rem 0 0 0;
 `
 
 export const Idx = styled.div`
   position: absolute;
-  top: -20px;
-  width: 90%;
-  height: 100%;
-  font-size: 11rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  row-gap: 1.5rem;
+  width: 100%;
+  font-size: 9rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.1);
-  & > span:nth-child(2) {
-    position: absolute;
-    left: 55%;
-    display: flex;
-    width: 50%;
-    justify-content: center;
-  }
 `
 
 export const Title = styled.div`
-  // font-family: -apple-system;
-  // text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   font-size: 2.5rem;
   font-weight: 600;
   color: #deeded;
   letter-spacing: 1px;
+  transition: 0.5s;
 `
 
 export const Next = styled.a`
-  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  font-size: 3rem;
   font-weight: 600;
-  letter-spacing: 2px;
-  position: relative;
-  display: inline-block;
-  padding: 8px 20px;
-  background: black;
-  border-radius: 5px;
-  text-decoration: none;
-  color: rgba(80, 80, 80);
-  background-color: #bae8e8;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
   &:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-    background: #fff;
-    color: #000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+    background: #bae8e8;
+    color: rgba(0, 0, 0, 0.5);
   }
 `

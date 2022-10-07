@@ -47,13 +47,16 @@ export default function Explore() {
               <Box>
                 <Content>
                   <Idx>
-                    <span>0</span>
-                    <span>{index + 1}</span>
+                    <div>0</div>
+                    <Link to={item.href} className='next'>
+                      <Next>
+                        Go
+                      </Next>
+                    </Link>
+                    <div>{index + 1}</div>
+                    <div>0</div>
                   </Idx>
-                  <Title>{item.title}</Title>
-                  <Link to={item.href}>
-                    <Next>Go!</Next>
-                  </Link>
+                  <Title className='title'>{item.title}</Title>
                 </Content>
               </Box>
             </Card>
