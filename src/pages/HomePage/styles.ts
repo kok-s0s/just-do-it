@@ -11,32 +11,53 @@ const rotate = keyframes`
 
 export const Image = styled.div`
   animation: ${rotate} 3s linear infinite;
+  & svg {
+    z-index: -1;
+  }
 `;
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100vw;
   height: 100vh;
+  padding: 12rem;
 `;
 
-export const BClickSame = styled.div`
-  height: 70vh;
+export const Entry = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  padding: 0 2rem 0 2rem;
+  background-color: #fffffe;
+  border-radius: 50px;
+  transition: 0.5s;
+  & svg {
+    padding: 2rem;
+    transition: 0.5s;
+  }
+  &:hover {
+    transform: translateY(-40px);
+  }
+  &:hover div:first-child {
+    transform: scale(1.2);
+  }
+  &:hover svg {
+    transform: rotate(360deg) scale(1.1);
+  }
 `;
 
-export const BClickLeft = styled(BClickSame)`
-  padding-left: 8rem;
-`;
-
-export const BClickRight = styled(BClickSame)`
-  padding-right: 8rem;
-`;
-
-export const BTitle = styled.div`
-  font-size: 2.3rem;
-  font-weight: 500;
-  letter-spacing: 2px;
+export const Title = styled.div`
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
   color: #272343;
+  transition: 0.5s;
 `;
 
 export const Button = styled.button`

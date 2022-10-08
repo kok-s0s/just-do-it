@@ -17,7 +17,6 @@ export const Card = styled.div`
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 36px;
-  transition: 0.5s;
 `;
 
 export const Box = styled.div`
