@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -12,4 +12,4 @@ export const Container = styled.div`
     flex: 1;
     margin-right: 0.5rem;
   }
-`
+`;

@@ -1,7 +1,19 @@
-import ControlPanel from '../../layouts/ControlPanel'
-import { giveSkillsIcon } from '../../utils/SkillsIcon'
-import { data } from './data'
-import { Container, Eimg, Equipment, Etitle, Exhibit, IconImg, Icons, IconsCard, IconsList, IconsTitle, LeftContainer } from './styles'
+import ControlPanel from "../../layouts/ControlPanel";
+import { giveSkillsIcon } from "../../utils/SkillsIcon";
+import { data } from "./data";
+import {
+  Container,
+  Eimg,
+  Equipment,
+  Etitle,
+  Exhibit,
+  IconImg,
+  Icons,
+  IconsCard,
+  IconsList,
+  IconsTitle,
+  LeftContainer,
+} from "./styles";
 
 export default function Stack() {
   return (
@@ -14,8 +26,12 @@ export default function Stack() {
               <IconsList>
                 {data.tools.map((_tool) => {
                   return (
-                    <IconImg src={giveSkillsIcon(_tool.name)} alt={_tool.name} key={_tool.name} />
-                  )
+                    <IconImg
+                      src={giveSkillsIcon(_tool.name)}
+                      alt={_tool.name}
+                      key={_tool.name}
+                    />
+                  );
                 })}
               </IconsList>
             </IconsCard>
@@ -25,8 +41,12 @@ export default function Stack() {
               <IconsList>
                 {data.web.map((_web) => {
                   return (
-                    <IconImg src={giveSkillsIcon(_web.name)} alt={_web.name} key={_web.name} />
-                  )
+                    <IconImg
+                      src={giveSkillsIcon(_web.name)}
+                      alt={_web.name}
+                      key={_web.name}
+                    />
+                  );
                 })}
               </IconsList>
             </IconsCard>
@@ -36,8 +56,12 @@ export default function Stack() {
               <IconsList>
                 {data.Languages.using.map((_language) => {
                   return (
-                    <IconImg src={giveSkillsIcon(_language.name)} alt={_language.name} key={_language.name} />
-                  )
+                    <IconImg
+                      src={giveSkillsIcon(_language.name)}
+                      alt={_language.name}
+                      key={_language.name}
+                    />
+                  );
                 })}
               </IconsList>
             </IconsCard>
@@ -47,8 +71,12 @@ export default function Stack() {
               <IconsList>
                 {data.Languages.learned.map((_language) => {
                   return (
-                    <IconImg src={giveSkillsIcon(_language.name)} alt={_language.name} key={_language.name} />
-                  )
+                    <IconImg
+                      src={giveSkillsIcon(_language.name)}
+                      alt={_language.name}
+                      key={_language.name}
+                    />
+                  );
                 })}
               </IconsList>
             </IconsCard>
@@ -61,11 +89,11 @@ export default function Stack() {
                   <Etitle>{_equipment.name}</Etitle>
                   <Eimg src={_equipment.link} alt={_equipment.name} />
                 </Exhibit>
-              )
+              );
             })}
           </Equipment>
         </LeftContainer>
       </Container>
     </ControlPanel>
-  )
+  );
 }

@@ -1,32 +1,34 @@
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Typography from '@mui/material/Typography'
-import { useEffect } from 'react'
-import { useLocalStorage } from '../../hooks/useLocalStorage'
-import { getProjects } from '../../api/practicalproject'
-import { ProjectLink, ProjectList } from './styles'
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { useEffect } from "react";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { getProjects } from "../../api/practicalproject";
+import { ProjectLink, ProjectList } from "./styles";
 
 interface ProjectProps {
-  name: string
-  description: string
-  link: string
-  image: string
+  name: string;
+  description: string;
+  link: string;
+  image: string;
 }
 
 export default function Projects() {
-  const [projects, setProjects] = useLocalStorage<Array<ProjectProps>>('projects', [] as Array<ProjectProps>)
+  const [projects, setProjects] = useLocalStorage<Array<ProjectProps>>(
+    "projects",
+    [] as Array<ProjectProps>
+  );
 
   useEffect(() => {
     const getData = async () => {
-      const res = await getProjects()
+      const res = await getProjects();
 
-      if (res.status === 200)
-        setProjects(res.data)
-    }
+      if (res.status === 200) setProjects(res.data);
+    };
 
-    getData()
-  }, [])
+    getData();
+  }, []);
 
   return (
     <ProjectList>
@@ -37,13 +39,13 @@ export default function Projects() {
             color="#fffffe"
             variant="outlined"
             sx={{
-              'maxWidth': '45%',
-              'minHeight': '500px',
-              'margin': '1rem 0',
-              '&:first-child': {
+              maxWidth: "45%",
+              minHeight: "500px",
+              margin: "1rem 0",
+              "&:first-child": {
                 marginTop: 0,
               },
-              '&:last-child': {
+              "&:last-child": {
                 marginBottom: 0,
               },
             }}
@@ -53,19 +55,21 @@ export default function Projects() {
                 sx={{
                   fontSize: 24,
                   fontWeight: 500,
-                  letterSpacing: '0.1rem',
-                  color: 'rgba(80, 80, 80)',
+                  letterSpacing: "0.1rem",
+                  color: "rgba(80, 80, 80)",
                 }}
                 gutterBottom
               >
-                <ProjectLink href={project.link} target="_blank">{project.name}</ProjectLink>
+                <ProjectLink href={project.link} target="_blank">
+                  {project.name}
+                </ProjectLink>
               </Typography>
               <Typography
                 sx={{
-                  fontSize: '1.1rem',
-                  fontFamily: '\'Gill Sans\', \'Noto Serif SC\'',
-                  letterSpacing: '0.3rem',
-                  color: 'rgba(80, 80, 80, 0.8)',
+                  fontSize: "1.1rem",
+                  fontFamily: "'Gill Sans', 'Noto Serif SC'",
+                  letterSpacing: "0.3rem",
+                  color: "rgba(80, 80, 80, 0.8)",
                 }}
               >
                 {project.description}
@@ -73,14 +77,14 @@ export default function Projects() {
             </CardContent>
             <CardMedia
               component="img"
-              sx={{ width: '100%' }}
+              sx={{ width: "100%" }}
               height="300"
               image={project.image}
               alt={project.name}
             />
           </Card>
-        )
+        );
       })}
     </ProjectList>
-  )
+  );
 }

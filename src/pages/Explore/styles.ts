@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
@@ -9,14 +9,16 @@ export const Container = styled.div`
   height: 100vh;
   padding: 2rem;
   background: #232427;
-`
+`;
 
 export const Card = styled.div`
   position: relative;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 36px;
   transition: 0.5s;
-`
+`;
 
 export const Box = styled.div`
   position: absolute;
@@ -43,7 +45,7 @@ export const Box = styled.div`
     transform: translateY(10px);
   }
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -51,12 +53,12 @@ export const Box = styled.div`
     height: 100%;
     background: rgba(255, 255, 255, 0.03);
   }
-`
+`;
 
 export const Content = styled.div`
   width: 100%;
   height: 100%;
-`
+`;
 
 export const Idx = styled.div`
   position: absolute;
@@ -69,7 +71,7 @@ export const Idx = styled.div`
   font-size: 9rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.1);
-`
+`;
 
 export const Title = styled.div`
   display: flex;
@@ -82,7 +84,7 @@ export const Title = styled.div`
   color: #deeded;
   letter-spacing: 1px;
   transition: 0.5s;
-`
+`;
 
 export const Next = styled.a`
   color: rgba(255, 255, 255, 0.1);
@@ -98,4 +100,4 @@ export const Next = styled.a`
     background: #bae8e8;
     color: rgba(0, 0, 0, 0.5);
   }
-`
+`;

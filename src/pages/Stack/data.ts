@@ -1,131 +1,131 @@
-import macbookAir from '../../../assets/images/equipment/macbook-air.png'
-import Ipad from '../../../assets/images/equipment/ipad-2020.png'
-import IPhone from '../../../assets/images/equipment/iphone-13-blue.png'
+import macbookAir from "../../../assets/images/equipment/macbook-air.png";
+import Ipad from "../../../assets/images/equipment/ipad-2020.png";
+import IPhone from "../../../assets/images/equipment/iphone-13-blue.png";
 
 const equipments = [
   {
-    name: 'MacBook Air M1',
+    name: "MacBook Air M1",
     link: macbookAir,
   },
   {
-    name: 'Ipad 2020',
+    name: "Ipad 2020",
     link: Ipad,
   },
   {
-    name: 'Iphone 13',
+    name: "Iphone 13",
     link: IPhone,
   },
-]
+];
 
 const Languages = {
   learned: [
     {
-      name: 'c',
+      name: "c",
     },
     {
-      name: 'cpp',
+      name: "cpp",
     },
     {
-      name: 'java',
+      name: "java",
     },
     {
-      name: 'py',
+      name: "py",
     },
     {
-      name: 'linux',
+      name: "linux",
     },
     {
-      name: 'latex',
+      name: "latex",
     },
   ],
   using: [
     {
-      name: 'html',
+      name: "html",
     },
     {
-      name: 'css',
+      name: "css",
     },
     {
-      name: 'js',
+      name: "js",
     },
     {
-      name: 'ts',
+      name: "ts",
     },
     {
-      name: 'md',
+      name: "md",
     },
   ],
-}
+};
 
 const web = [
   {
-    name: 'react',
+    name: "react",
   },
   {
-    name: 'vuejs',
+    name: "vuejs",
   },
   {
-    name: 'nestjs',
+    name: "nestjs",
   },
   {
-    name: 'electron',
+    name: "electron",
   },
   {
-    name: 'materialui',
+    name: "materialui",
   },
   {
-    name: 'mongodb',
+    name: "mongodb",
   },
   {
-    name: 'nextjs',
+    name: "nextjs",
   },
   {
-    name: 'nodejs',
+    name: "nodejs",
   },
   {
-    name: 'prisma',
+    name: "prisma",
   },
   {
-    name: 'tailwind',
+    name: "tailwind",
   },
   {
-    name: 'vite',
+    name: "vite",
   },
   {
-    name: 'sass',
+    name: "sass",
   },
   {
-    name: 'styledcomponents',
+    name: "styledcomponents",
   },
-]
+];
 
 const tools = [
   {
-    name: 'bash',
+    name: "bash",
   },
   {
-    name: 'vim',
+    name: "vim",
   },
   {
-    name: 'vscode',
+    name: "vscode",
   },
   {
-    name: 'codepen',
+    name: "codepen",
   },
   {
-    name: 'git',
+    name: "git",
   },
   {
-    name: 'github',
+    name: "github",
   },
   {
-    name: 'photoshop',
+    name: "photoshop",
   },
-]
+];
 
 export const data = {
   equipments,
   Languages,
   web,
   tools,
-}
+};

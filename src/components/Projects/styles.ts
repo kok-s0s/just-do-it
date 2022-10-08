@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
+import { motion } from "framer-motion";
+import styled from "styled-components";
 
 export const ProjectList = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const ProjectList = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-`
+`;
 
 export const ProjectLink = styled(motion.a)`
   margin: 0.5rem;
@@ -33,4 +33,4 @@ export const ProjectLink = styled(motion.a)`
     background: #fff;
     color: #000;
   }
-`
+`;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const TimeCard = styled.div`
   display: flex;
@@ -10,8 +10,8 @@ export const TimeCard = styled.div`
   background-color: #edf6f7;
   font-size: 2.5rem;
   border-radius: 10px;
-`
+`;
 
 export const Item = styled.div`
   letter-spacing: 0.5rem;
-`
+`;

@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from "styled-components";
 
 const rotate = keyframes`
   from {
@@ -7,37 +7,37 @@ const rotate = keyframes`
   to {
     transform: rotate(360deg);
   }
-`
+`;
 
 export const Image = styled.div`
   animation: ${rotate} 3s linear infinite;
-`
+`;
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-`
+`;
 
 export const BClickSame = styled.div`
   height: 70vh;
-`
+`;
 
 export const BClickLeft = styled(BClickSame)`
   padding-left: 8rem;
-`
+`;
 
 export const BClickRight = styled(BClickSame)`
   padding-right: 8rem;
-`
+`;
 
 export const BTitle = styled.div`
   font-size: 2.3rem;
   font-weight: 500;
   letter-spacing: 2px;
   color: #272343;
-`
+`;
 
 export const Button = styled.button`
   width: 270px;
@@ -55,7 +55,7 @@ export const Button = styled.button`
   color: rgba(80, 80, 80);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Macondo','Noto Serif SC';
+  font-family: "Macondo", "Noto Serif SC";
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 23px;
@@ -76,4 +76,4 @@ export const Button = styled.button`
   &:focus {
     box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
   }
-`
+`;

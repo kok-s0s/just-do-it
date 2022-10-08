@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Content = styled.div`
   height: 200vh;
@@ -10,4 +10,4 @@ export const Content = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-`
+`;

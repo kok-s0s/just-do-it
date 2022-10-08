@@ -1,7 +1,7 @@
-import instance from '../axios.config'
+import instance from "../axios.config";
 
 export const getQuote = (data: Array<string>) => {
-  return instance.post('/quotes/one', {
+  return instance.post("/quotes/one", {
     quotesID: data,
-  })
-}
+  });
+};

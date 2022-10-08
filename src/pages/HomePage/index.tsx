@@ -1,10 +1,10 @@
-import ArrowCircleUpRoundedIcon from '@mui/icons-material/ArrowCircleUpRounded'
-import PunchClockRoundedIcon from '@mui/icons-material/PunchClockRounded'
-import TravelExploreRoundedIcon from '@mui/icons-material/TravelExploreRounded'
-import Grid from '@mui/material/Grid'
-import Paper from '@mui/material/Paper'
-import { Link } from 'react-router-dom'
-import Plum from '../../components/Plum'
+import ArrowCircleUpRoundedIcon from "@mui/icons-material/ArrowCircleUpRounded";
+import PunchClockRoundedIcon from "@mui/icons-material/PunchClockRounded";
+import TravelExploreRoundedIcon from "@mui/icons-material/TravelExploreRounded";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import { Link } from "react-router-dom";
+import Plum from "../../components/Plum";
 import {
   BClickLeft,
   BClickRight,
@@ -12,24 +12,24 @@ import {
   Button,
   Container,
   Image,
-} from './styles'
+} from "./styles";
 
 const paperStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  height: '100%',
-  backgroundColor: '#fffffe',
-  borderRadius: '50px',
-}
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "100%",
+  backgroundColor: "#fffffe",
+  borderRadius: "50px",
+};
 
 const iconStyle = {
-  marginTop: '1vh',
-  marginBottom: '1.5vh',
+  marginTop: "1vh",
+  marginBottom: "1.5vh",
   fontSize: 370,
-  color: '#bae8e8',
-}
+  color: "#bae8e8",
+};
 
 export default function HomePage() {
   return (
@@ -52,16 +52,16 @@ export default function HomePage() {
             item
             xs={2}
             sx={{
-              display: 'flex',
-              alignItems: 'center',
+              display: "flex",
+              alignItems: "center",
             }}
           >
             <Image>
               <ArrowCircleUpRoundedIcon
                 sx={{
                   fontSize: 180,
-                  width: '100%',
-                  color: '#8bb7b9',
+                  width: "100%",
+                  color: "#8bb7b9",
                   zIndex: -1,
                 }}
               />
@@ -81,5 +81,5 @@ export default function HomePage() {
         </Grid>
       </Container>
     </>
-  )
+  );
 }

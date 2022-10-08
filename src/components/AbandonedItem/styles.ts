@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Card = styled.div`
   position: relative;
@@ -8,7 +8,7 @@ export const Card = styled.div`
   margin: 0.6rem 0.5rem;
   background-color: #fffffe;
   border-radius: 5px;
-`
+`;
 
 export const Note = styled.p`
   margin: 0.5rem 2rem 1.5rem 0.5rem;
@@ -19,7 +19,7 @@ export const Note = styled.p`
   line-height: 150%;
   white-space: pre-line;
   word-wrap: break-word;
-`
+`;
 
 export const Time = styled.div`
   position: absolute;
@@ -29,4 +29,4 @@ export const Time = styled.div`
   font-size: 12.6px;
   line-height: 18.9px;
   color: rgba(80, 80, 80, 0.7);
-`
+`;

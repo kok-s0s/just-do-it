@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const PlanScreen = styled.div`
   display: flex;
@@ -13,4 +13,4 @@ export const PlanScreen = styled.div`
   & > div:last-child {
     margin-right: 0;
   }
-`
+`;

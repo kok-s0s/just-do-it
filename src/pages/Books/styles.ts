@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 95vw;
   height: 100vh;
   padding: 2rem;
-`
+`;
 
 export const Tab = styled.div`
   display: flex;
@@ -25,14 +25,14 @@ export const Tab = styled.div`
       color: #565f68;
       border: 0.125em solid #565f68;
       cursor: pointer;
-      font: 600 1.5rem/1.25 'Montserrat', sans-serif;
+      font: 600 1.5rem/1.25 "Montserrat", sans-serif;
       letter-spacing: 0.125em;
       padding: 0.5em 0.75em;
       position: relative;
       text-transform: uppercase;
       &:before,
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         transition: all 0.125s ease-in-out;
       }
@@ -52,7 +52,7 @@ export const Tab = styled.div`
       }
     }
   }
-`
+`;
 
 export const Content = styled.section`
   display: flex;
@@ -74,7 +74,7 @@ export const Content = styled.section`
     text-transform: uppercase;
     text-decoration: underline;
   }
-`
+`;
 
 export const List = styled.div`
   display: flex;
@@ -83,18 +83,18 @@ export const List = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-`
+`;
 
 export const Item = styled.div`
   position: relative;
   &:hover > div {
     opacity: 1;
   }
-`
+`;
 
 export const Image = styled.img`
   width: 220px;
-`
+`;
 
 export const Info = styled.div`
   position: absolute;
@@ -119,4 +119,4 @@ export const Info = styled.div`
     letter-spacing: 2.5px;
     padding-bottom: 0.5rem;
   }
-`
+`;

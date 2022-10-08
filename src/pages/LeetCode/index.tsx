@@ -1,86 +1,79 @@
-import TabContext from '@mui/lab/TabContext'
-import Box from '@mui/material/Box'
-import Tabs from '@mui/material/Tabs'
-import Tab from '@mui/material/Tab'
-import TabPanel from '@mui/lab/TabPanel'
-import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions'
-import CardContent from '@mui/material/CardContent'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
-import Chip from '@mui/material/Chip'
-import type { SyntheticEvent } from 'react'
-import { useEffect, useState } from 'react'
-import { useLocalStorage } from '../../hooks/useLocalStorage'
-import { getRandomQuestions, getTopicType } from '../../api/leetcode'
-import ControlPanel from '../../layouts/ControlPanel'
-import { Challenge, GoToCode, Questions, Random } from './styles'
+import TabContext from "@mui/lab/TabContext";
+import Box from "@mui/material/Box";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import TabPanel from "@mui/lab/TabPanel";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Chip from "@mui/material/Chip";
+import type { SyntheticEvent } from "react";
+import { useEffect, useState } from "react";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { getRandomQuestions, getTopicType } from "../../api/leetcode";
+import ControlPanel from "../../layouts/ControlPanel";
+import { Challenge, GoToCode, Questions, Random } from "./styles";
 
 interface Question {
-  topic: string
-  description: string
-  link: string
-  difficulty: string
+  topic: string;
+  description: string;
+  link: string;
+  difficulty: string;
 }
 
 interface TopicType {
-  name: string
-  questions: Array<Question>
+  name: string;
+  questions: Array<Question>;
 }
 
 export default function LeetCode() {
-  const [topictype, setTopicType] = useLocalStorage('topictype', [])
-  const [typeQ, setTypeQ] = useLocalStorage<Array<Array<Question>>>('typeQ', [])
-  const [randomQ, setRandomQ] = useLocalStorage('randomQ', [])
-  const [value, setValue] = useLocalStorage<string>('curDifficultyTab', '0')
-  const [visible, setVisible] = useState(false)
+  const [topictype, setTopicType] = useLocalStorage("topictype", []);
+  const [typeQ, setTypeQ] = useLocalStorage<Array<Array<Question>>>(
+    "typeQ",
+    []
+  );
+  const [randomQ, setRandomQ] = useLocalStorage("randomQ", []);
+  const [value, setValue] = useLocalStorage<string>("curDifficultyTab", "0");
+  const [visible, setVisible] = useState(false);
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
-    setValue(newValue.toString())
-  }
+    setValue(newValue.toString());
+  };
 
   useEffect(() => {
     const getData = async () => {
-      getTopicType()
-        .then((response) => {
-          if (response.status === 200) {
-            setTopicType(response.data)
-            const TempData: Array<any> = []
-            response.data.forEach((item: TopicType) => {
-              TempData.push(item.questions)
-            })
-            setTypeQ(TempData)
-          }
-        })
+      getTopicType().then((response) => {
+        if (response.status === 200) {
+          setTopicType(response.data);
+          const TempData: Array<any> = [];
+          response.data.forEach((item: TopicType) => {
+            TempData.push(item.questions);
+          });
+          setTypeQ(TempData);
+        }
+      });
 
-      getRandomQuestions()
-        .then((response) => {
-          if (response.status === 200)
-            setRandomQ(response.data)
-        })
-    }
+      getRandomQuestions().then((response) => {
+        if (response.status === 200) setRandomQ(response.data);
+      });
+    };
 
-    getData()
-  }, [])
+    getData();
+  }, []);
 
   return (
     <ControlPanel href="/explore">
-      <GoToCode
-        href="https://leetcode-cn.com/problemset/all/"
-        target="_blank"
-      >
+      <GoToCode href="https://leetcode-cn.com/problemset/all/" target="_blank">
         每日一题 每天一个小尝试
       </GoToCode>
 
       <TabContext value={value}>
-        <Box sx={{ width: '95vw', typography: 'body1' }}>
+        <Box sx={{ width: "95vw", typography: "body1" }}>
           <Tabs value={value} onChange={handleChange} centered>
             {topictype.map((item: TopicType, index: number) => (
-              <Tab
-                label={item.name}
-                value={index.toString()}
-                key={index}
-              />
+              <Tab label={item.name} value={index.toString()} key={index} />
             ))}
           </Tabs>
 
@@ -91,14 +84,14 @@ export default function LeetCode() {
                   <Card
                     key={`${que.topic} + ${que.link}`}
                     sx={{
-                      'minWidth': 250,
-                      'maxWidth': 250,
-                      'marginLeft': '0.5rem',
-                      'marginRight': '0.5rem',
-                      '&:first-child': {
+                      minWidth: 250,
+                      maxWidth: 250,
+                      marginLeft: "0.5rem",
+                      marginRight: "0.5rem",
+                      "&:first-child": {
                         marginLeft: 0,
                       },
-                      '&:last-child': {
+                      "&:last-child": {
                         marginRight: 0,
                       },
                     }}
@@ -129,40 +122,36 @@ export default function LeetCode() {
                       </Typography>
                     </CardContent>
                     <CardActions>
-                      {que.difficulty === '简单'
-                        ? (
-                          <Chip
-                            label="简单"
-                            size="small"
-                            sx={{
-                              marginLeft: '0.3rem',
-                            }}
-                          />
-                        )
-                        : que.difficulty === '中等'
-                          ? (
-                            <Chip
-                              label="中等"
-                              size="small"
-                              sx={{
-                                marginLeft: '0.3rem',
-                              }}
-                            />
-                          )
-                          : (
-                            <Chip
-                              label="困难"
-                              size="small"
-                              sx={{
-                                marginLeft: '0.3rem',
-                              }}
-                            />
-                          )}
+                      {que.difficulty === "简单" ? (
+                        <Chip
+                          label="简单"
+                          size="small"
+                          sx={{
+                            marginLeft: "0.3rem",
+                          }}
+                        />
+                      ) : que.difficulty === "中等" ? (
+                        <Chip
+                          label="中等"
+                          size="small"
+                          sx={{
+                            marginLeft: "0.3rem",
+                          }}
+                        />
+                      ) : (
+                        <Chip
+                          label="困难"
+                          size="small"
+                          sx={{
+                            marginLeft: "0.3rem",
+                          }}
+                        />
+                      )}
                       <a href={que.link} target="_blank" rel="noreferrer">
                         <Button
                           size="small"
                           sx={{
-                            marginLeft: '4.5rem',
+                            marginLeft: "4.5rem",
                           }}
                         >
                           Code Now 🖥
@@ -180,80 +169,74 @@ export default function LeetCode() {
       <Random>
         <Challenge onClick={() => setVisible(!visible)}>Try</Challenge>
 
-        {visible
-          ? (
-            <Questions>
-              {randomQ.map((que: Question) => (
-                <Card
-                  key={`${que.topic} + ${que.link} - ${que.difficulty}`}
-                  sx={{
-                    minWidth: 250,
-                    marginLeft: '0.5rem',
-                    marginRight: '0.5rem',
-                    height: 120,
-                  }}
-                  color="#fffffe"
-                  variant="outlined"
-                >
-                  <CardContent>
-                    <Typography
+        {visible ? (
+          <Questions>
+            {randomQ.map((que: Question) => (
+              <Card
+                key={`${que.topic} + ${que.link} - ${que.difficulty}`}
+                sx={{
+                  minWidth: 250,
+                  marginLeft: "0.5rem",
+                  marginRight: "0.5rem",
+                  height: 120,
+                }}
+                color="#fffffe"
+                variant="outlined"
+              >
+                <CardContent>
+                  <Typography
+                    sx={{
+                      fontSize: 18,
+                      fontWeight: 500,
+                    }}
+                    color="#272343"
+                    gutterBottom
+                  >
+                    {que.topic}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  {que.difficulty === "简单" ? (
+                    <Chip
+                      label="简单"
+                      size="small"
                       sx={{
-                        fontSize: 18,
-                        fontWeight: 500,
+                        marginLeft: "0.3rem",
                       }}
-                      color="#272343"
-                      gutterBottom
+                    />
+                  ) : que.difficulty === "中等" ? (
+                    <Chip
+                      label="中等"
+                      size="small"
+                      sx={{
+                        marginLeft: "0.3rem",
+                      }}
+                    />
+                  ) : (
+                    <Chip
+                      label="困难"
+                      size="small"
+                      sx={{
+                        marginLeft: "0.3rem",
+                      }}
+                    />
+                  )}
+                  <a href={que.link} target="_blank" rel="noreferrer">
+                    <Button
+                      size="small"
+                      sx={{
+                        marginLeft: "4.5rem",
+                      }}
                     >
-                      {que.topic}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    {que.difficulty === '简单'
-                      ? (
-                        <Chip
-                          label="简单"
-                          size="small"
-                          sx={{
-                            marginLeft: '0.3rem',
-                          }}
-                        />
-                      )
-                      : que.difficulty === '中等'
-                        ? (
-                          <Chip
-                            label="中等"
-                            size="small"
-                            sx={{
-                              marginLeft: '0.3rem',
-                            }}
-                          />
-                        )
-                        : (
-                          <Chip
-                            label="困难"
-                            size="small"
-                            sx={{
-                              marginLeft: '0.3rem',
-                            }}
-                          />
-                        )}
-                    <a href={que.link} target="_blank" rel="noreferrer">
-                      <Button
-                        size="small"
-                        sx={{
-                          marginLeft: '4.5rem',
-                        }}
-                      >
-                        Code Now 🖥
-                      </Button>
-                    </a>
-                  </CardActions>
-                </Card>
-              ))}
-            </Questions>
-          )
-          : null}
+                      Code Now 🖥
+                    </Button>
+                  </a>
+                </CardActions>
+              </Card>
+            ))}
+          </Questions>
+        ) : null}
       </Random>
     </ControlPanel>
-  )
+  );
 }

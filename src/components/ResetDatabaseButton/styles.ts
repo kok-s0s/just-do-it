@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const ResetButton = styled.button`
   padding: 0.7rem;
-  font-family: 'Macondo', 'Noto Serif SC';
+  font-family: "Macondo", "Noto Serif SC";
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 2px;
@@ -10,4 +10,4 @@ export const ResetButton = styled.button`
   background-color: #d4f7f7;
   border: none;
   cursor: pointer;
-`
+`;

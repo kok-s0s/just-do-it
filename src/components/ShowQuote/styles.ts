@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 interface QuoteProps {
-  family: string
-  size: string
+  family: string;
+  size: string;
 }
 
 export const Quote = styled.div<QuoteProps>`
@@ -12,4 +12,4 @@ export const Quote = styled.div<QuoteProps>`
   font-size: ${(props) => props.size};
   letter-spacing: 0.5rem;
   color: rgba(80, 80, 80, 0.7);
-`
+`;

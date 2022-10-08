@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Questions = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const Questions = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-`
+`;
 
 export const Random = styled.div`
   position: fixed;
@@ -18,7 +18,7 @@ export const Random = styled.div`
   left: 3rem;
   bottom: 8rem;
   text-align: center;
-`
+`;
 
 export const Challenge = styled.div`
   border: border;
@@ -32,7 +32,7 @@ export const Challenge = styled.div`
   color: #f0f7f8;
   cursor: pointer;
   border-radius: 10px;
-`
+`;
 
 export const GoToCode = styled.a`
   position: fixed;
@@ -52,4 +52,4 @@ export const GoToCode = styled.a`
   &:active {
     color: #d8efef;
   }
-`
+`;

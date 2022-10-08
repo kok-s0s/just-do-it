@@ -1,6 +1,6 @@
-import TodoLists from '../../components/TodoLists'
-import Info from '../../components/Info'
-import { Container } from './styles'
+import TodoLists from "../../components/TodoLists";
+import Info from "../../components/Info";
+import { Container } from "./styles";
 
 export default function Punch() {
   return (
@@ -8,5 +8,5 @@ export default function Punch() {
       <TodoLists />
       <Info />
     </Container>
-  )
+  );
 }

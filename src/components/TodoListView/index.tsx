@@ -1,10 +1,10 @@
-import AddIcon from '@mui/icons-material/Add'
-import { useState } from 'react'
-import { useLiveQuery } from 'dexie-react-hooks'
-import type { TodoList } from '../../db/TodoList'
-import TodoItemView from '../TodoItemView'
-import AddTodoItem from '../AddTodoItem'
-import { db } from '../../db/db'
+import AddIcon from "@mui/icons-material/Add";
+import { useState } from "react";
+import { useLiveQuery } from "dexie-react-hooks";
+import type { TodoList } from "../../db/TodoList";
+import TodoItemView from "../TodoItemView";
+import AddTodoItem from "../AddTodoItem";
+import { db } from "../../db/db";
 import {
   AddItem,
   Combination,
@@ -13,24 +13,23 @@ import {
   Header,
   ListTitle,
   PlanItem,
-} from './styles'
+} from "./styles";
 
 interface Props {
-  todoList: TodoList
+  todoList: TodoList;
 }
 
 export default function TodoListView({ todoList }: Props) {
   const items = useLiveQuery(
     () => db.todoItems.where({ todoListId: todoList.id }).toArray(),
-    [todoList.id],
-  )
+    [todoList.id]
+  );
 
-  const [hidden, setHidden] = useState(false)
+  const [hidden, setHidden] = useState(false);
 
-  if (!items)
-    return null
+  if (!items) return null;
 
-  const curListLen = items.length
+  const curListLen = items.length;
 
   return (
     <PlanItem>
@@ -40,30 +39,28 @@ export default function TodoListView({ todoList }: Props) {
           <ListTitle>{todoList.title}</ListTitle>
           <AddItem
             onClick={() => {
-              setHidden(!hidden)
+              setHidden(!hidden);
             }}
           >
             <AddIcon />
           </AddItem>
         </Combination>
-        {hidden
-          ? (
-            <AddTodoItem
-              todoList={todoList}
-              hidden={hidden}
-              setHidden={setHidden}
-            />
-          )
-          : (
-            ''
-          )}
+        {hidden ? (
+          <AddTodoItem
+            todoList={todoList}
+            hidden={hidden}
+            setHidden={setHidden}
+          />
+        ) : (
+          ""
+        )}
       </Header>
 
       <Content>
-        {items.map(item => (
+        {items.map((item) => (
           <TodoItemView key={item.id} item={item} />
         ))}
       </Content>
     </PlanItem>
-  )
+  );
 }

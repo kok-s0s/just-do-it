@@ -1,61 +1,61 @@
-const electron = require('electron')
-import { BrowserWindow, app, ipcMain } from 'electron'
+const electron = require("electron");
+import { BrowserWindow, app, ipcMain } from "electron";
 
-let mainWindow: BrowserWindow | null
+let mainWindow: BrowserWindow | null;
 
-declare const MAIN_WINDOW_WEBPACK_ENTRY: string
-declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
+declare const MAIN_WINDOW_WEBPACK_ENTRY: string;
+declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
 
 async function createWindow() {
-  const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
+  const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize;
 
   mainWindow = new BrowserWindow({
-    icon: 'assets/do-it.icns',
+    icon: "assets/do-it.icns",
     width,
     height,
     minWidth: 1400,
     minHeight: 900,
     frame: false,
     show: false,
-    backgroundColor: '#d8efef',
+    backgroundColor: "#d8efef",
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
     },
-  })
+  });
 
-  await mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
+  await mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
   // If you want to package, remember to turn off the developer extension.
-  mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools();
 
-  mainWindow.on('closed', () => {
-    mainWindow = null
-  })
+  mainWindow.on("closed", () => {
+    mainWindow = null;
+  });
 
-  mainWindow.show()
+  mainWindow.show();
 }
 
 async function registerListeners() {
   /**
    * This comes from bridge integration, check bridge.ts
    */
-  ipcMain.on('message', (_, message) => {
-    console.log(message)
-  })
+  ipcMain.on("message", (_, message) => {
+    console.log(message);
+  });
 }
 
 app
-  .on('ready', createWindow)
+  .on("ready", createWindow)
   .whenReady()
   .then(registerListeners)
-  .catch((e) => console.error(e))
+  .catch((e) => console.error(e));
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit()
-})
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") app.quit();
+});
 
-app.on('activate', () => {
-  if (BrowserWindow.getAllWindows().length === 0) createWindow()
-})
+app.on("activate", () => {
+  if (BrowserWindow.getAllWindows().length === 0) createWindow();
+});

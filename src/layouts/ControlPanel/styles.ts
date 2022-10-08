@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
+import { motion } from "framer-motion";
+import styled from "styled-components";
 
 export const SideBar = styled.div`
   position: fixed;
@@ -13,7 +13,7 @@ export const SideBar = styled.div`
   height: 100vh;
   padding: 1rem 0.2rem;
   background-color: #bae8e8;
-`
+`;
 
 export const Options = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ export const Options = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 30vh;
-`
+`;
 
 export const Image = styled.img`
   display: block;
@@ -29,10 +29,10 @@ export const Image = styled.img`
   height: auto;
   margin: 1rem 0;
   border-radius: 50%;
-`
+`;
 
 export const Icon = styled(motion.div)`
   display: flex;
   font-size: 3rem;
   color: rgba(80, 80, 80);
-`
+`;

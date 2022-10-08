@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const WeatherCard = styled.div`
   display: flex;
@@ -12,18 +12,18 @@ export const WeatherCard = styled.div`
   font-weight: 800;
   letter-spacing: 1px;
   color: rgba(80, 80, 80, 0.5);
-`
+`;
 
 export const RightContainer = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-`
+`;
 
 export const Icon = styled.img`
   height: 30px;
-`
+`;
 
 export const Location = styled.div`
   cursor: pointer;
-`
+`;

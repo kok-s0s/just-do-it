@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
+import { motion } from "framer-motion";
+import styled from "styled-components";
 
 export const Manage = styled(motion.div)`
   display: grid;
@@ -8,16 +8,16 @@ export const Manage = styled(motion.div)`
   padding: 1rem;
   align-items: center;
   justify-items: center;
-`
+`;
 
 export const Card = styled.div`
   width: 285px;
   margin: 0.5rem;
-`
+`;
 
 export const Header = styled(motion.div)`
   position: relative;
-`
+`;
 
 export const Title = styled(motion.div)`
   font-size: 1.5rem;
@@ -27,7 +27,7 @@ export const Title = styled(motion.div)`
   text-align: center;
   color: rgba(80, 80, 80, 0.6);
   cursor: pointer;
-`
+`;
 
 export const Icon = styled(motion.div)`
   position: absolute;
@@ -36,7 +36,7 @@ export const Icon = styled(motion.div)`
   font-size: 1.3rem;
   cursor: pointer;
   color: rgba(80, 80, 80, 0.9);
-`
+`;
 
 export const Border = styled(motion.ul)`
   border: 2.5mm ridge rgba(255, 255, 255, 0.5);
@@ -50,7 +50,7 @@ export const Border = styled(motion.ul)`
   &::-webkit-scrollbar {
     display: none;
   }
-`
+`;
 
 export const Option = styled(motion.a)`
   margin: 0.5rem;
@@ -73,7 +73,7 @@ export const Option = styled(motion.a)`
     background: #fff;
     color: #000;
   }
-`
+`;
 
 export const Search = styled(Card)`
   position: fixed;
@@ -83,26 +83,26 @@ export const Search = styled(Card)`
   width: 270px;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 export const SearchHeader = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
   width: 80%;
-`
+`;
 
 export const SearchInput = styled.input`
-  font-family: 'Macondo', cursive;
+  font-family: "Macondo", cursive;
   font-size: 1.2rem;
   border: none;
-  outline:none;
+  outline: none;
   border-bottom: solid 5px rgba(0, 0, 0, 0.4);
   background-color: inherit;
   letter-spacing: 2px;
   padding-left: 0.5rem;
   border-radius: 4px;
-`
+`;
 
 export const Answer = styled(Border)`
   height: auto;
@@ -110,14 +110,14 @@ export const Answer = styled(Border)`
   max-height: 600px;
   margin-right: 0.5rem;
   border: 4mm ridge rgba(255, 255, 255, 0.5);
-`
+`;
 
 export const HighLight = styled.span`
   background-color: #ffef0ade;
-`
+`;
 
 export const False = styled(motion.div)`
   font-size: 10rem;
   cursor: pointer;
   color: rgba(80, 80, 80, 0.5);
-`
+`;
