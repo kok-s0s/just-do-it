@@ -11,8 +11,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "release": "electron-forge publish",
-    "publish": "GITHUB_TOKEN=$just_do_it_GITHUB_TOKEN electron-forge publish",
-    "test": "jest"
+    "publish": "GITHUB_TOKEN=$just_do_it_GITHUB_TOKEN electron-forge publish"
   },
   "dependencies": {
     "@emotion/react": "^11.8.1",
