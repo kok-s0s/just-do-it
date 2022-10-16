@@ -1,4 +1,3 @@
-import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
 import { useLiveQuery } from "dexie-react-hooks";
 import type { TodoList } from "../../db/TodoList";
@@ -8,7 +7,6 @@ import { db } from "../../db/db";
 import {
   AddItem,
   Combination,
-  Content,
   Count,
   Header,
   ListTitle,
@@ -33,7 +31,7 @@ export default function TodoListView({ todoList }: Props) {
 
   return (
     <PlanItem>
-      <Header>
+      <Header className={hidden ? "headerUnderscore" : ""}>
         <Combination>
           <Count>{curListLen}</Count>
           <ListTitle>{todoList.title}</ListTitle>
@@ -42,9 +40,19 @@ export default function TodoListView({ todoList }: Props) {
               setHidden(!hidden);
             }}
           >
-            <AddIcon />
+            <svg
+              className={hidden ? "rotate" : "rotateBack"}
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 32 32"
+            >
+              <path fill="currentColor" d="M17 15V8h-2v7H8v2h7v7h2v-7h7v-2z" />
+            </svg>
           </AddItem>
         </Combination>
+
         {hidden ? (
           <AddTodoItem
             todoList={todoList}
@@ -56,11 +64,9 @@ export default function TodoListView({ todoList }: Props) {
         )}
       </Header>
 
-      <Content>
-        {items.map((item) => (
-          <TodoItemView key={item.id} item={item} />
-        ))}
-      </Content>
+      {items.map((item) => (
+        <TodoItemView key={item.id} item={item} />
+      ))}
     </PlanItem>
   );
 }
