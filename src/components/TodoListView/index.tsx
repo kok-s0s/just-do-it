@@ -31,7 +31,7 @@ export default function TodoListView({ todoList }: Props) {
 
   return (
     <PlanItem>
-      <Header className={hidden ? "headerUnderscore" : ""}>
+      <Header>
         <Combination>
           <Count>{curListLen}</Count>
           <ListTitle>{todoList.title}</ListTitle>

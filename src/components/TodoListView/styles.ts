@@ -2,14 +2,11 @@ import styled from "styled-components";
 
 export const PlanItem = styled.div`
   width: 100%;
-  background-color: #f6f8fa;
+  background-color: rgb(246, 248, 250);
   border-radius: 5px;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;
-  }
-  & .headerUnderscore {
-    border-bottom: 1px solid #e1e4e8;
   }
 `;
 
@@ -18,7 +15,7 @@ export const Header = styled.div`
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: #f6f8fa;
+  background-color: rgb(246, 248, 250);
 `;
 
 export const Combination = styled.div`
@@ -31,7 +28,7 @@ export const Combination = styled.div`
 export const Count = styled.span`
   width: 1.4rem;
   height: 1.4rem;
-  background-color: #afb8c1;
+  background-color: rgb(175, 184, 193);
   font-family: -apple-system;
   font-size: 0.8rem;
   font-weight: 500;
