@@ -1,9 +1,8 @@
-import Box from "@mui/material/Box";
 import type { Dispatch, SetStateAction } from "react";
 import { useEffect, useRef, useState } from "react";
 import { db } from "../../db/db";
 import type { TodoList } from "../../db/TodoList";
-import { Cancel, Confirm, FlexBox, Input } from "./styles";
+import { Container, Cancel, Confirm, Options, Input } from "./styles";
 
 interface Props {
   todoList: TodoList;
@@ -27,28 +26,24 @@ export default function AddTodoItem({ todoList, hidden, setHidden }: Props) {
 
   useEffect(() => {
     if (textareaRef && textareaRef.current) {
-      textareaRef.current.style.height = "60px";
+      textareaRef.current.style.height = "85px";
       const scrollHeight = textareaRef.current.scrollHeight;
       textareaRef.current.style.height = `${scrollHeight}px`;
     }
   }, [item]);
 
   return (
-    <Box
-      sx={{
-        width: "100%",
-        height: "auto",
-        padding: "0.8rem",
-      }}
-    >
+    <Container>
       <Input
-        placeholder="Enter a note"
+        placeholder="What do you want to do?"
         value={item.title}
         ref={textareaRef}
         onChange={textAreaChange}
       />
-      <FlexBox>
+      <Options>
         <Confirm
+          className={item.title === "" ? "disabled" : ""}
+          disabled={item.title === ""}
           onClick={() => {
             if (item.title !== "") {
               const curDate = new Date();
@@ -63,10 +58,10 @@ export default function AddTodoItem({ todoList, hidden, setHidden }: Props) {
             }
           }}
         >
-          确认
+          Confirm
         </Confirm>
-        <Cancel onClick={() => setHidden(!hidden)}>取消</Cancel>
-      </FlexBox>
-    </Box>
+        <Cancel onClick={() => setHidden(!hidden)}>Cancel</Cancel>
+      </Options>
+    </Container>
   );
 }
