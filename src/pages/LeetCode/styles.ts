@@ -4,7 +4,7 @@ export const Questions = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  scrollbar-width: none; /* for Firefox */
+  scrollbar-width: none;
   overflow-x: scroll;
   &::-webkit-scrollbar {
     display: none;

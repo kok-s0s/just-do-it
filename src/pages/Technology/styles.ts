@@ -4,7 +4,7 @@ export const WebSites = styled.div`
   display: flex;
   max-height: 85vh;
   padding: 1rem;
-  scrollbar-width: none; /* for Firefox */
+  scrollbar-width: none;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;
@@ -30,7 +30,7 @@ export const MesBorder = styled.div`
 
 export const Articles = styled.div`
   margin: 1rem;
-  scrollbar-width: none; /* for Firefox */
+  scrollbar-width: none;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;
