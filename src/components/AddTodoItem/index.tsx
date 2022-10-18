@@ -58,9 +58,9 @@ export default function AddTodoItem({ todoList, hidden, setHidden }: Props) {
             }
           }}
         >
-          Confirm
+          确定
         </Confirm>
-        <Cancel onClick={() => setHidden(!hidden)}>Cancel</Cancel>
+        <Cancel onClick={() => setHidden(!hidden)}>取消</Cancel>
       </Options>
     </Container>
   );
