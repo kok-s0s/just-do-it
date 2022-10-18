@@ -1,15 +1,20 @@
-import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import type { MouseEvent } from "react";
 import { useEffect, useRef, useState } from "react";
 import { useLiveQuery } from "dexie-react-hooks";
 import { db } from "../../db/db";
 import type { TodoItem } from "../../db/TodoItem";
 import { Month, appendZero, ordinalNumber } from "../../utils/DateHandle";
-import { Input, More, Note, ShowItem, Time } from "./styles";
+import {
+  ShowItem,
+  More,
+  Note,
+  Time,
+  Input,
+  Button,
+  ButtonContainer,
+} from "./styles";
 
 interface Props {
   item: TodoItem;
@@ -79,22 +84,26 @@ export default function TodoItemView({ item }: Props) {
             ref={textareaRef}
             onChange={textAreaChange}
           />
-          <Grid container justifyContent="space-around" alignItems="center">
-            <Grid item>
-              <Button
-                onClick={() => {
-                  reviseNote(item, tempTitle);
-                  setTempTitle("");
-                  setHidden(!hidden);
-                }}
-              >
-                确定
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button onClick={() => setHidden(!hidden)}>取消</Button>
-            </Grid>
-          </Grid>
+          <ButtonContainer>
+            <Button
+              onClick={() => {
+                reviseNote(item, tempTitle);
+                setTempTitle("");
+                setHidden(!hidden);
+              }}
+            >
+              确定
+            </Button>
+
+            <Button
+              onClick={() => {
+                setTempTitle("");
+                setHidden(!hidden);
+              }}
+            >
+              取消
+            </Button>
+          </ButtonContainer>
         </>
       ) : (
         <>
@@ -104,12 +113,19 @@ export default function TodoItemView({ item }: Props) {
             aria-expanded={open ? "true" : undefined}
             onClick={handleClick}
           >
-            <MoreHorizIcon
-              sx={{
-                color: "#595F69",
-                cursor: "pointer",
-              }}
-            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <g fill="none" stroke="#595f69" stroke-width="2">
+                <circle cx="4" cy="12" r="1" />
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="20" cy="12" r="1" />
+              </g>
+            </svg>
           </More>
           <Menu
             anchorEl={anchorEl}
