@@ -1,6 +1,6 @@
 export interface TodoItem {
   id?: number;
   todoListId: number;
-  title: string;
+  note: string;
   time: Date;
 }

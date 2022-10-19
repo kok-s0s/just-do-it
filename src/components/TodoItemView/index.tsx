@@ -23,7 +23,7 @@ interface Props {
 export default function TodoItemView({ item }: Props) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [hidden, setHidden] = useState(false);
-  const [tempTitle, setTempTitle] = useState("");
+  const [note, setNote] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
@@ -54,16 +54,16 @@ export default function TodoItemView({ item }: Props) {
     curItem.id && db.todoItems.delete(curItem.id);
     db.todoItems.add(copyItem);
   };
-  const reviseNote = (curItem: TodoItem, title: string) => {
+  const reviseNote = (curItem: TodoItem, note: string) => {
     const copyItem: TodoItem = curItem;
-    copyItem.title = title;
+    copyItem.note = note;
     copyItem.time = new Date();
     curItem.id && db.todoItems.delete(curItem.id);
     db.todoItems.add(copyItem);
   };
 
   const textAreaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setTempTitle(event.target.value);
+    setNote(event.target.value);
   };
 
   useEffect(() => {
@@ -72,7 +72,7 @@ export default function TodoItemView({ item }: Props) {
       const scrollHeight = textareaRef.current.scrollHeight;
       textareaRef.current.style.height = `${scrollHeight}px`;
     }
-  }, [tempTitle]);
+  }, [note]);
 
   return (
     <ShowItem>
@@ -80,15 +80,15 @@ export default function TodoItemView({ item }: Props) {
         <>
           <Input
             placeholder="Revise a note"
-            value={tempTitle}
+            value={note}
             ref={textareaRef}
             onChange={textAreaChange}
           />
           <ButtonContainer>
             <Button
               onClick={() => {
-                reviseNote(item, tempTitle);
-                setTempTitle("");
+                reviseNote(item, note);
+                setNote("");
                 setHidden(!hidden);
               }}
             >
@@ -97,7 +97,7 @@ export default function TodoItemView({ item }: Props) {
 
             <Button
               onClick={() => {
-                setTempTitle("");
+                setNote("");
                 setHidden(!hidden);
               }}
             >
@@ -167,7 +167,7 @@ export default function TodoItemView({ item }: Props) {
             <MenuItem
               sx={mItem("#009999", "#1d7373", "#000000")}
               onClick={() => {
-                setTempTitle(item.title);
+                setNote(item.note);
                 setHidden(!hidden);
                 handleClose();
               }}
@@ -207,7 +207,7 @@ export default function TodoItemView({ item }: Props) {
             </MenuItem>
           </Menu>
 
-          <Note>{item.title}</Note>
+          <Note>{item.note}</Note>
           <Time>{date}</Time>
         </>
       )}

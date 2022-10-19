@@ -30,7 +30,7 @@ export default function AbandonedItem({ item }: Props) {
           if (item.id) db.todoItems.delete(item.id);
         }}
       />
-      <Note>{item.title}</Note>
+      <Note>{item.note}</Note>
       <Time>{date}</Time>
     </Card>
   );

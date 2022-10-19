@@ -13,14 +13,14 @@ interface Props {
 export default function AddTodoItem({ todoList, hidden, setHidden }: Props) {
   const [item, setItem] = useState({
     todoListId: typeof todoList.id === "number" ? todoList.id : 0,
-    title: "",
+    note: "",
     time: new Date(),
   });
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const textAreaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setItem((item) => ({
       ...item,
-      title: event.target.value,
+      note: event.target.value,
     }));
   };
 
@@ -36,22 +36,22 @@ export default function AddTodoItem({ todoList, hidden, setHidden }: Props) {
     <Container>
       <Input
         placeholder="What do you want to do?"
-        value={item.title}
+        value={item.note}
         ref={textareaRef}
         onChange={textAreaChange}
       />
       <Options>
         <Confirm
-          className={item.title === "" ? "disabled" : ""}
-          disabled={item.title === ""}
+          className={item.note === "" ? "disabled" : ""}
+          disabled={item.note === ""}
           onClick={() => {
-            if (item.title !== "") {
+            if (item.note !== "") {
               const curDate = new Date();
               item.time = curDate;
               db.todoItems.add(item);
               setItem({
                 todoListId: typeof todoList.id === "number" ? todoList.id : 0,
-                title: "",
+                note: "",
                 time: new Date(),
               });
               setHidden(!hidden);

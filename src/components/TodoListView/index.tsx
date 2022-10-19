@@ -34,7 +34,7 @@ export default function TodoListView({ todoList }: Props) {
       <Header>
         <Combination>
           <Count>{curListLen}</Count>
-          <ListTitle>{todoList.title}</ListTitle>
+          <ListTitle>{todoList.note}</ListTitle>
           <AddItem
             onClick={() => {
               setHidden(!hidden);
