@@ -4,7 +4,7 @@ export const PlanScreen = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
-  height: 100%;
+  height: 60%;
   background-color: #fffffe;
   border-radius: 10px;
   & > div {

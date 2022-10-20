@@ -7,9 +7,12 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 1rem;
+`;
 
-  & > div:first-child {
-    flex: 1;
-    margin-right: 0.5rem;
-  }
+export const LocalDBPanel = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-right: 0.5rem;
 `;
