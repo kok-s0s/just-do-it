@@ -6,7 +6,6 @@ export const PlanScreen = styled.div`
   padding: 0.5rem;
   height: 60%;
   background-color: #fffffe;
-  border-radius: 10px;
   & > div {
     margin-right: 0.5rem;
   }

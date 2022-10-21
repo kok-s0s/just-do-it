@@ -22,7 +22,7 @@ export const Combination = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 0.8rem 0 0.8rem;
+  padding: 0.8rem 0.8rem 0.5rem 0.8rem;
 `;
 
 export const Count = styled.span`
